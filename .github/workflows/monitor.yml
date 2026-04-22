@@ -1,0 +1,63 @@
+name: GA Polling Location Monitor
+
+on:
+  schedule:
+    # Runs every 4 hours (minute 0 of hours 0,4,8,12,16,20 UTC)
+    - cron: "0 */4 * * *"
+  workflow_dispatch:   # allows manual "Run workflow" trigger from GitHub UI
+
+permissions:
+  contents: write      # needed to commit updated CSV + log back to repo
+
+jobs:
+  check-for-changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Checkout repo ────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Set up Python ────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # ── 3. Install Python deps ──────────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 4. Install Playwright + Chromium (with system deps) ─────────────────
+      - name: Install Playwright browsers
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+
+      # ── 5. Run the change checker ───────────────────────────────────────────
+      - name: Run change checker
+        env:
+          CI: "true"
+          EMAIL_SENDER:       ${{ secrets.EMAIL_SENDER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_RECIPIENT:    ${{ secrets.EMAIL_RECIPIENT }}
+        run: python check_for_changes.py
+
+      # ── 6. Commit any changed files back to the repo ────────────────────────
+      #    This runs even if the checker found no changes (git will just skip
+      #    the commit if there's nothing new to stage).
+      - name: Commit updated baseline and log (if changed)
+        run: |
+          git config user.name  "GA Polling Monitor [bot]"
+          git config user.email "actions@github.com"
+          git add ga_may_2026_primary_polling_locations.csv change_log.json || true
+          # Only commit if there is something staged
+          if git diff --cached --quiet; then
+            echo "No file changes to commit."
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "chore: polling location data update — ${TIMESTAMP}"
+            git push
+          fi
