@@ -445,6 +445,18 @@ async def main():
     save_baseline(current)
     send_email(diff, timestamp)
 
+    # 5. Sync to Google Sheet (only runs if GOOGLE_CREDENTIALS is set)
+    if os.getenv("GOOGLE_CREDENTIALS"):
+        print("\n[5/5] Syncing changes to Google Sheet...")
+        try:
+            from update_sheet import sync_changes
+            sheet_result = sync_changes(diff)
+            print(f"  Sheet result: {sheet_result}")
+        except Exception as e:
+            print(f"  [!] Sheet sync failed: {e}")
+    else:
+        print("\n[5/5] GOOGLE_CREDENTIALS not set — skipping sheet sync.")
+
     print("\nDone.")
 
 

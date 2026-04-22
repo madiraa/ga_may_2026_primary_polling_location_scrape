@@ -40,9 +40,10 @@ jobs:
       - name: Run change checker
         env:
           CI: "true"
-          EMAIL_SENDER:       ${{ secrets.EMAIL_SENDER }}
-          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-          EMAIL_RECIPIENT:    ${{ secrets.EMAIL_RECIPIENT }}
+          EMAIL_SENDER:        ${{ secrets.EMAIL_SENDER }}
+          EMAIL_APP_PASSWORD:  ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_RECIPIENT:     ${{ secrets.EMAIL_RECIPIENT }}
+          GOOGLE_CREDENTIALS:  ${{ secrets.GOOGLE_CREDENTIALS }}
         run: python check_for_changes.py
 
       # ── 6. Commit any changed files back to the repo ────────────────────────

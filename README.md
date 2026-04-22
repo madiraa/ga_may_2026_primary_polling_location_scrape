@@ -145,6 +145,36 @@ EMAIL_RECIPIENT=you@gmail.com \
 python check_for_changes.py
 ```
 
+### Google Sheets auto-sync
+
+When changes are detected, the monitor also pushes them to the tracking sheet automatically:
+
+**Sheet:** [2026 GA EV Primary Election Locations](https://docs.google.com/spreadsheets/d/192ufA2ffXqTTsQQxJylg1mMC5TBbHndfgIu5UI4WDGQ)
+
+| Change type | What happens in the sheet |
+|-------------|--------------------------|
+| New location | New row appended (columns A–D filled; E–F left blank for your team) |
+| Address changed | Column C updated in the existing row |
+| Hours changed | Column D updated in the existing row |
+| Removed location | Row is **kept** in the sheet — flagged in email only |
+
+**One-time setup (Google Service Account):**
+
+1. Go to [console.cloud.google.com](https://console.cloud.google.com)
+2. Create a project (or use an existing one) → **APIs & Services → Enable APIs**
+3. Enable: **Google Sheets API** and **Google Drive API**
+4. Go to **IAM & Admin → Service Accounts → Create Service Account**
+5. Name it `ga-polling-monitor`, click Create
+6. Click the service account → **Keys → Add Key → JSON** → download the file
+7. **Share the spreadsheet** with the service account email (ends in `@...iam.gserviceaccount.com`) as **Editor**
+8. Add a GitHub secret named `GOOGLE_CREDENTIALS` — paste the **entire contents** of the downloaded JSON file as the value
+
+To run a one-time full sync from your local machine:
+```bash
+source venv/bin/activate
+GOOGLE_CREDENTIALS=$(cat your-service-account.json) python update_sheet.py
+```
+
 ### Change log
 
 All detected changes are appended to `change_log.json` with full before/after
