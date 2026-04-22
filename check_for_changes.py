@@ -2,18 +2,24 @@
 GA Polling Location Change Monitor
 ===================================
 Runs every 4 hours via GitHub Actions. Scrapes the current data from the GA
-SOS MVP portal, compares it against the stored baseline CSV, and:
+SOS MVP portal, compares it against the Google Sheet (primary baseline), and:
 
   • Sends an email notification if anything changed (new location, removed
     location, address change, hours change)
+  • Updates the Google Sheet with the changes
   • Appends a structured entry to change_log.json
-  • Overwrites the baseline CSV so the next run compares against the latest
+  • Overwrites the baseline CSV (kept as a backup/archive)
   • Exits with code 0 always (GitHub Actions will commit any file changes)
+
+Baseline priority:
+  1. Google Sheet (columns A–D) — when GOOGLE_CREDENTIALS is set
+  2. Local baseline CSV               — fallback for local runs without credentials
 
 Required environment variables (set as GitHub Actions secrets):
   EMAIL_SENDER        Gmail address to send from
   EMAIL_APP_PASSWORD  Gmail app password (not your account password)
   EMAIL_RECIPIENT     Address(es) to notify — comma-separated for multiple
+  GOOGLE_CREDENTIALS  Full JSON of Google service account key
 """
 
 import asyncio
@@ -214,33 +220,76 @@ async def scrape_current() -> list[dict]:
 
 # ── Comparison logic ──────────────────────────────────────────────────────────
 
-def load_baseline() -> dict[str, dict]:
-    """Returns dict keyed by Salesforce record id."""
+def _row_key(row: dict) -> str:
+    """Normalised matching key: 'COUNTY||NAME'."""
+    return f"{row.get('county','').strip().upper()}||{row.get('name','').strip().upper()}"
+
+
+def load_baseline_from_sheet() -> dict[str, dict]:
+    """
+    Read columns A–D from the Google Sheet and return a dict keyed by
+    'COUNTY||NAME'.  Called when GOOGLE_CREDENTIALS is available.
+    """
+    from update_sheet import _get_client, _get_worksheet
+    print("  Loading baseline from Google Sheet...")
+    client = _get_client()
+    ws     = _get_worksheet(client)
+    rows   = ws.get_all_values()
+
+    baseline: dict[str, dict] = {}
+    for i, row in enumerate(rows):
+        if i == 0:
+            continue  # skip header
+        county  = row[0].strip() if len(row) > 0 else ""
+        name    = row[1].strip() if len(row) > 1 else ""
+        address = row[2].strip() if len(row) > 2 else ""
+        hours   = row[3].strip() if len(row) > 3 else ""
+        if county or name:
+            key = f"{county.upper()}||{name.upper()}"
+            baseline[key] = {
+                "county":  county,
+                "name":    name,
+                "address": address,
+                "hours":   hours,
+            }
+    print(f"  Sheet baseline: {len(baseline)} rows")
+    return baseline
+
+
+def load_baseline_from_csv() -> dict[str, dict]:
+    """
+    Fallback: read the local CSV when Google credentials are not available.
+    Keyed by 'COUNTY||NAME'.
+    """
     if not BASELINE_CSV.exists():
         return {}
     with open(BASELINE_CSV, newline="", encoding="utf-8") as f:
-        return {row["id"]: row for row in csv.DictReader(f) if row.get("id")}
+        return {_row_key(row): row for row in csv.DictReader(f) if row.get("county")}
 
 
 def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
-    current_by_id = {r["id"]: r for r in current if r.get("id")}
+    """
+    Compare scraped current data against the baseline dict (keyed by COUNTY||NAME).
+    Works whether the baseline came from the sheet or the CSV.
+    """
+    current_by_key = {_row_key(r): r for r in current}
 
     added, removed, modified = [], [], []
 
-    for rid, rec in current_by_id.items():
-        if rid not in baseline:
+    for key, rec in current_by_key.items():
+        if key not in baseline:
             added.append(rec)
         else:
-            base = baseline[rid]
+            base = baseline[key]
             changes: dict[str, dict] = {}
-            for field in ("county", "name", "address", "hours"):
-                if rec.get(field, "") != base.get(field, ""):
+            for field in ("address", "hours"):
+                if rec.get(field, "").strip() != base.get(field, "").strip():
                     changes[field] = {"from": base.get(field, ""), "to": rec.get(field, "")}
             if changes:
                 modified.append({"record": rec, "changes": changes})
 
-    for rid, rec in baseline.items():
-        if rid not in current_by_id:
+    for key, rec in baseline.items():
+        if key not in current_by_key:
             removed.append(rec)
 
     return {"added": added, "removed": removed, "modified": modified}
@@ -418,9 +467,17 @@ async def main():
     print(f"GA Polling Monitor  —  {timestamp}")
     print(f"{'=' * 60}")
 
-    # 1. Load baseline
-    print("\n[1/4] Loading baseline CSV...")
-    baseline = load_baseline()
+    # 1. Load baseline — prefer Google Sheet, fall back to CSV
+    if os.getenv("GOOGLE_CREDENTIALS"):
+        print("\n[1/4] Loading baseline from Google Sheet...")
+        try:
+            baseline = load_baseline_from_sheet()
+        except Exception as e:
+            print(f"  [!] Sheet read failed ({e}), falling back to CSV...")
+            baseline = load_baseline_from_csv()
+    else:
+        print("\n[1/4] Loading baseline from CSV (no Google credentials)...")
+        baseline = load_baseline_from_csv()
     print(f"  Baseline records: {len(baseline)}")
 
     # 2. Scrape current data
