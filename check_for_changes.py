@@ -270,7 +270,17 @@ def load_baseline_from_csv() -> dict[str, dict]:
 def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
     """
     Compare scraped current data against the baseline dict (keyed by COUNTY||NAME).
-    Works whether the baseline came from the sheet or the CSV.
+
+    Every meaningful field is checked for changes:
+      county   — checked (county reassignment)
+      name     — checked (location renamed)
+      address  — checked (location moved)
+      hours    — checked (schedule updated)
+
+    Rows are matched by COUNTY||NAME. If a record's county+name combo is not
+    found in the baseline it is flagged as ADDED; if it disappears from the
+    current data it is flagged as REMOVED. Any field-level change on a matched
+    row is flagged as MODIFIED with a before/after for each changed field.
     """
     current_by_key = {_row_key(r): r for r in current}
 
@@ -280,11 +290,13 @@ def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
         if key not in baseline:
             added.append(rec)
         else:
-            base = baseline[key]
+            base    = baseline[key]
             changes: dict[str, dict] = {}
-            for field in ("address", "hours"):
-                if rec.get(field, "").strip() != base.get(field, "").strip():
-                    changes[field] = {"from": base.get(field, ""), "to": rec.get(field, "")}
+            for field in ("county", "name", "address", "hours"):
+                before = base.get(field, "").strip()
+                after  = rec.get(field,  "").strip()
+                if before != after:
+                    changes[field] = {"from": before, "to": after}
             if changes:
                 modified.append({"record": rec, "changes": changes})
 
