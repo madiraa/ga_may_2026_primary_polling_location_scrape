@@ -42,6 +42,7 @@ RECORDS_PER_PAGE = 50
 
 BASELINE_CSV     = Path("ga_may_2026_primary_polling_locations.csv")
 CHANGE_LOG       = Path("change_log.json")
+CHECK_LOG_TXT    = Path("check_log.txt")
 REPO_URL         = "https://github.com/madiraa/ga_may_2026_primary_polling_location_scrape"
 
 # Run headless in CI (GitHub Actions sets CI=true), visible locally
@@ -248,7 +249,34 @@ def has_changes(diff: dict) -> bool:
     return bool(diff["added"] or diff["removed"] or diff["modified"])
 
 
-# ── Change log ────────────────────────────────────────────────────────────────
+# ── Plain-text check log (one line per run, mirrors VA check_log.txt) ────────
+
+def append_to_check_log(diff: dict, timestamp: str, total_current: int):
+    """
+    Appends one line to check_log.txt regardless of whether changes occurred:
+      2026-04-20 16:00:01 UTC | NO CHANGE | 300 locations, 132 counties
+      2026-04-20 20:00:03 UTC | CHANGED   | +2 added, 0 removed, 1 modified
+    """
+    n_added    = len(diff["added"])
+    n_removed  = len(diff["removed"])
+    n_modified = len(diff["modified"])
+
+    if n_added or n_removed or n_modified:
+        status  = "CHANGED  "
+        detail  = f"+{n_added} added, {n_removed} removed, {n_modified} modified"
+    else:
+        status  = "NO CHANGE"
+        detail  = f"{total_current} locations checked"
+
+    line = f"{timestamp} | {status} | {detail}\n"
+
+    with open(CHECK_LOG_TXT, "a", encoding="utf-8") as f:
+        f.write(line)
+
+    print(f"  check_log.txt → {line.strip()}")
+
+
+# ── JSON change log ───────────────────────────────────────────────────────────
 
 def append_to_log(diff: dict, timestamp: str, total_current: int):
     log: list[dict] = []
@@ -403,6 +431,9 @@ async def main():
     print(f"  Added:    {len(diff['added'])}")
     print(f"  Removed:  {len(diff['removed'])}")
     print(f"  Modified: {len(diff['modified'])}")
+
+    # Always write to the plain-text check log (every run)
+    append_to_check_log(diff, timestamp, len(current))
 
     if not has_changes(diff):
         print("\n  No changes detected. Baseline unchanged.")

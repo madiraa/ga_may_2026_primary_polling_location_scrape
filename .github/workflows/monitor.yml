@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name  "GA Polling Monitor [bot]"
           git config user.email "actions@github.com"
-          git add ga_may_2026_primary_polling_locations.csv change_log.json || true
+          git add ga_may_2026_primary_polling_locations.csv change_log.json check_log.txt || true
           # Only commit if there is something staged
           if git diff --cached --quiet; then
             echo "No file changes to commit."
