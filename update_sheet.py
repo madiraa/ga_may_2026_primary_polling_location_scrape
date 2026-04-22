@@ -14,6 +14,12 @@ Column layout (must match the sheet exactly):
   D  hours
   E  google bucket link   ← never touched by this script
   F  image                ← never touched by this script
+  G  status               ← written/cleared automatically by this script
+
+Status column (G) lifecycle:
+  • On ADDED row   → stamped "ADDED MM/DD/YYYY"
+  • On MODIFIED row → stamped "MODIFIED: address, hours MM/DD/YYYY"
+  • Next run where that row's data is stable (matches current SOS data) → cleared automatically
 
 Matching key: (county, name)  — case-insensitive strip comparison
 
@@ -28,6 +34,7 @@ Run standalone:
 import json
 import os
 import time
+from datetime import datetime, timezone
 from typing import Optional
 
 import gspread
@@ -43,6 +50,11 @@ COL_NAME    = 2   # B
 COL_ADDRESS = 3   # C
 COL_HOURS   = 4   # D
 # Columns E (5) and F (6) are never written by this script
+COL_STATUS  = 7   # G — auto-stamped on change, auto-cleared when stable
+
+
+def _today() -> str:
+    return datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -130,17 +142,25 @@ def sync_changes(diff: dict) -> dict[str, int]:
 
         if row_idx is None:
             print(f"  [NEW via modified] {rec['county']} — {rec['name']}")
-            fallback_new.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
+            fallback_new.append([rec["county"], rec["name"], rec["address"], rec["hours"],
+                                  "", "", f"ADDED {_today()}"])
             continue
 
         sheet_row_num = row_idx + 1
+        changed_fields = [f for f in ("county", "name", "address", "hours") if f in changes]
+        if "county" in changes:
+            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_COUNTY, rec["county"]))
+        if "name" in changes:
+            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_NAME, rec["name"]))
         if "address" in changes:
             all_cell_updates.append(gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"]))
-            print(f"  [UPDATE address] row {sheet_row_num}: {rec['county']} — {rec['name']}")
         if "hours" in changes:
             all_cell_updates.append(gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"]))
-            print(f"  [UPDATE hours]   row {sheet_row_num}: {rec['county']} — {rec['name']}")
-        if "address" in changes or "hours" in changes:
+        if changed_fields:
+            status = f"MODIFIED: {', '.join(changed_fields)} {_today()}"
+            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_STATUS, status))
+            print(f"  [UPDATE {'+'.join(changed_fields)}] row {sheet_row_num}: "
+                  f"{rec['county']} — {rec['name']}")
             updated += 1
 
     if all_cell_updates:
@@ -148,10 +168,12 @@ def sync_changes(diff: dict) -> dict[str, int]:
         time.sleep(1.2)
 
     # ── Handle new locations (append rows) ────────────────────────────────────
+    # Columns: A county | B name | C address | D hours | E blank | F blank | G status
     new_rows = fallback_new[:]
     for rec in diff.get("added", []):
         print(f"  [APPEND] {rec['county']} — {rec['name']}  |  {rec['address']}")
-        new_rows.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
+        new_rows.append([rec["county"], rec["name"], rec["address"], rec["hours"],
+                         "", "", f"ADDED {_today()}"])
 
     if new_rows:
         ws.append_rows(new_rows, value_input_option="RAW",
@@ -168,6 +190,63 @@ def sync_changes(diff: dict) -> dict[str, int]:
     print(f"\n  Sheet sync complete — appended: {appended}, updated: {updated}, "
           f"removals skipped: {skipped}")
     return {"appended": appended, "updated": updated, "skipped_removed": skipped}
+
+
+def clear_resolved_statuses(current: list[dict]) -> int:
+    """
+    For every row in the sheet that has a status tag in column G:
+      - If the row's county, name, address, and hours now match the current
+        scraped data → clear column G (the change has been resolved / confirmed)
+      - Otherwise → leave the tag in place
+
+    Called on every monitor run so tags auto-clear one cycle after the data
+    stabilises.  Returns the number of cells cleared.
+    """
+    print("  Checking for resolved status tags to clear...")
+    client = _get_client()
+    ws     = _get_worksheet(client)
+
+    all_rows = ws.get_all_values()
+
+    # Build lookup: COUNTY||NAME → scraped row dict
+    current_lookup: dict[str, dict] = {
+        _normalize_key(r.get("county", ""), r.get("name", "")): r
+        for r in current
+    }
+
+    clears: list[gspread.Cell] = []
+
+    for i, row in enumerate(all_rows):
+        if i == 0:
+            continue  # header
+        status = row[6].strip() if len(row) > 6 else ""
+        if not status:
+            continue  # no tag, skip
+
+        county  = row[0].strip() if len(row) > 0 else ""
+        name    = row[1].strip() if len(row) > 1 else ""
+        address = row[2].strip() if len(row) > 2 else ""
+        hours   = row[3].strip() if len(row) > 3 else ""
+
+        key = _normalize_key(county, name)
+        scraped = current_lookup.get(key)
+
+        if scraped and (
+            scraped.get("address", "").strip() == address
+            and scraped.get("hours",   "").strip() == hours
+            and scraped.get("county",  "").strip().upper() == county.upper()
+            and scraped.get("name",    "").strip().upper() == name.upper()
+        ):
+            clears.append(gspread.Cell(i + 1, COL_STATUS, ""))
+            print(f"  [CLEAR status] row {i+1}: {county} — {name}  (was: {status})")
+
+    if clears:
+        ws.update_cells(clears, value_input_option="RAW")
+        print(f"  Cleared {len(clears)} resolved status tag(s)")
+    else:
+        print("  No resolved tags to clear.")
+
+    return len(clears)
 
 
 def full_sync(current_rows: list[dict]) -> dict[str, int]:

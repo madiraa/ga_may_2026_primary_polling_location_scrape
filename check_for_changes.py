@@ -509,8 +509,15 @@ async def main():
     print(f"  Removed:  {len(diff['removed'])}")
     print(f"  Modified: {len(diff['modified'])}")
 
+    # Always attempt to clear resolved status tags from previous runs
+    if os.getenv("GOOGLE_CREDENTIALS"):
+        try:
+            from update_sheet import clear_resolved_statuses
+            clear_resolved_statuses(current)
+        except Exception as e:
+            print(f"  [!] Status clear failed: {e}")
+
     if not has_changes(diff):
-        # Always write to the plain-text check log (every run)
         append_to_check_log(diff, timestamp, len(current))
         print("\n  No changes detected. Baseline unchanged.")
         return
