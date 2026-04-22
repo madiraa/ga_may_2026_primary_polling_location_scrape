@@ -27,6 +27,7 @@ from datetime import datetime, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
+from typing import Optional
 from playwright.async_api import async_playwright
 
 # ── Constants ────────────────────────────────────────────────────────────────
@@ -251,22 +252,29 @@ def has_changes(diff: dict) -> bool:
 
 # ── Plain-text check log (one line per run, mirrors VA check_log.txt) ────────
 
-def append_to_check_log(diff: dict, timestamp: str, total_current: int):
+def append_to_check_log(diff: dict, timestamp: str, total_current: int,
+                        sheet_result: Optional[dict] = None):
     """
-    Appends one line to check_log.txt regardless of whether changes occurred:
-      2026-04-20 16:00:01 UTC | NO CHANGE | 300 locations, 132 counties
-      2026-04-20 20:00:03 UTC | CHANGED   | +2 added, 0 removed, 1 modified
+    Appends one line to check_log.txt on every run:
+      NO CHANGE: 2026-04-20 16:00:01 UTC | NO CHANGE | 300 locations checked
+      CHANGED:   2026-04-20 20:00:03 UTC | CHANGED   | +2 added, 0 removed, 1 modified | Sheet: 2 appended, 1 updated
     """
     n_added    = len(diff["added"])
     n_removed  = len(diff["removed"])
     n_modified = len(diff["modified"])
 
     if n_added or n_removed or n_modified:
-        status  = "CHANGED  "
-        detail  = f"+{n_added} added, {n_removed} removed, {n_modified} modified"
+        status = "CHANGED  "
+        detail = f"+{n_added} added, {n_removed} removed, {n_modified} modified"
+        if sheet_result:
+            sa = sheet_result.get("appended", 0)
+            su = sheet_result.get("updated",  0)
+            detail += f" | Sheet: {sa} appended, {su} updated"
+        elif sheet_result is None and (n_added or n_modified):
+            detail += " | Sheet: sync not configured"
     else:
-        status  = "NO CHANGE"
-        detail  = f"{total_current} locations checked"
+        status = "NO CHANGE"
+        detail = f"{total_current} locations checked"
 
     line = f"{timestamp} | {status} | {detail}\n"
 
@@ -432,10 +440,9 @@ async def main():
     print(f"  Removed:  {len(diff['removed'])}")
     print(f"  Modified: {len(diff['modified'])}")
 
-    # Always write to the plain-text check log (every run)
-    append_to_check_log(diff, timestamp, len(current))
-
     if not has_changes(diff):
+        # Always write to the plain-text check log (every run)
+        append_to_check_log(diff, timestamp, len(current))
         print("\n  No changes detected. Baseline unchanged.")
         return
 
@@ -446,6 +453,7 @@ async def main():
     send_email(diff, timestamp)
 
     # 5. Sync to Google Sheet (only runs if GOOGLE_CREDENTIALS is set)
+    sheet_result: Optional[dict] = None
     if os.getenv("GOOGLE_CREDENTIALS"):
         print("\n[5/5] Syncing changes to Google Sheet...")
         try:
@@ -454,8 +462,12 @@ async def main():
             print(f"  Sheet result: {sheet_result}")
         except Exception as e:
             print(f"  [!] Sheet sync failed: {e}")
+            sheet_result = {"appended": 0, "updated": 0, "error": str(e)}
     else:
         print("\n[5/5] GOOGLE_CREDENTIALS not set — skipping sheet sync.")
+
+    # Write to check log AFTER sheet sync so the result is included
+    append_to_check_log(diff, timestamp, len(current), sheet_result)
 
     print("\nDone.")
 
