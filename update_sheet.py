@@ -118,7 +118,10 @@ def sync_changes(diff: dict) -> dict[str, int]:
     appended = 0
     updated  = 0
 
-    # ── Handle modified rows (update address and/or hours in-place) ───────────
+    # ── Handle modified rows — collect all cell updates, write in one batch ───
+    all_cell_updates: list[gspread.Cell] = []
+    fallback_new: list[list] = []
+
     for entry in diff.get("modified", []):
         rec     = entry["record"]
         changes = entry["changes"]
@@ -126,55 +129,34 @@ def sync_changes(diff: dict) -> dict[str, int]:
         row_idx = key_index.get(key)
 
         if row_idx is None:
-            # Not found in sheet — treat as new
             print(f"  [NEW via modified] {rec['county']} — {rec['name']}")
-            ws.append_row(
-                [rec["county"], rec["name"], rec["address"], rec["hours"]],
-                value_input_option="RAW",
-                insert_data_option="INSERT_ROWS",
-                table_range="A1",
-            )
-            appended += 1
-            time.sleep(0.3)
+            fallback_new.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
             continue
 
-        sheet_row_num = row_idx + 1  # gspread uses 1-based row numbers
-        cell_updates  = []
-
+        sheet_row_num = row_idx + 1
         if "address" in changes:
-            cell_updates.append(
-                gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"])
-            )
+            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"]))
             print(f"  [UPDATE address] row {sheet_row_num}: {rec['county']} — {rec['name']}")
-
         if "hours" in changes:
-            cell_updates.append(
-                gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"])
-            )
+            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"]))
             print(f"  [UPDATE hours]   row {sheet_row_num}: {rec['county']} — {rec['name']}")
-
-        if cell_updates:
-            ws.update_cells(cell_updates, value_input_option="RAW")
+        if "address" in changes or "hours" in changes:
             updated += 1
-            time.sleep(0.3)
+
+    if all_cell_updates:
+        ws.update_cells(all_cell_updates, value_input_option="RAW")
+        time.sleep(1.2)
 
     # ── Handle new locations (append rows) ────────────────────────────────────
-    if diff.get("added"):
-        new_rows = []
-        for rec in diff["added"]:
-            print(f"  [APPEND] {rec['county']} — {rec['name']}  |  {rec['address']}")
-            new_rows.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
+    new_rows = fallback_new[:]
+    for rec in diff.get("added", []):
+        print(f"  [APPEND] {rec['county']} — {rec['name']}  |  {rec['address']}")
+        new_rows.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
 
-        # Batch-append all new rows at once
-        if new_rows:
-            ws.append_rows(
-                new_rows,
-                value_input_option="RAW",
-                insert_data_option="INSERT_ROWS",
-                table_range="A1",
-            )
-            appended += len(new_rows)
-            time.sleep(0.5)
+    if new_rows:
+        ws.append_rows(new_rows, value_input_option="RAW",
+                       insert_data_option="INSERT_ROWS", table_range="A1")
+        appended += len(new_rows)
 
     # ── Removed locations: log only, don't delete from sheet ─────────────────
     skipped = 0
@@ -192,7 +174,9 @@ def full_sync(current_rows: list[dict]) -> dict[str, int]:
     """
     One-shot: compare ALL scraped rows against the sheet and push any missing
     or changed county/name/address/hours values.  Preserves columns E and F.
-    Called from the standalone __main__ block below.
+
+    Batches ALL cell updates into a single API call to stay within the
+    Google Sheets write-quota (60 requests/min).
     """
     print("  Connecting to Google Sheets (full sync)...")
     client = _get_client()
@@ -200,9 +184,9 @@ def full_sync(current_rows: list[dict]) -> dict[str, int]:
 
     all_sheet_rows, key_index = _read_sheet(ws)
 
-    appended = 0
-    updated  = 0
-    new_batch = []
+    all_cell_updates: list[gspread.Cell] = []
+    new_batch: list[list] = []
+    updated = 0
 
     for rec in current_rows:
         key     = _normalize_key(rec["county"], rec["name"])
@@ -212,29 +196,42 @@ def full_sync(current_rows: list[dict]) -> dict[str, int]:
             new_batch.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
             print(f"  [NEW] {rec['county']} — {rec['name']}")
         else:
-            sheet_row  = all_sheet_rows[row_idx]
-            sheet_addr = sheet_row[2] if len(sheet_row) > 2 else ""
-            sheet_hrs  = sheet_row[3] if len(sheet_row) > 3 else ""
-
-            cell_updates = []
+            sheet_row     = all_sheet_rows[row_idx]
+            sheet_addr    = sheet_row[2] if len(sheet_row) > 2 else ""
+            sheet_hrs     = sheet_row[3] if len(sheet_row) > 3 else ""
             sheet_row_num = row_idx + 1
+            row_changed   = False
 
             if rec["address"].strip() != sheet_addr.strip():
-                cell_updates.append(gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"]))
+                all_cell_updates.append(gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"]))
+                row_changed = True
             if rec["hours"].strip() != sheet_hrs.strip():
-                cell_updates.append(gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"]))
+                all_cell_updates.append(gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"]))
+                row_changed = True
 
-            if cell_updates:
-                ws.update_cells(cell_updates, value_input_option="RAW")
+            if row_changed:
                 updated += 1
                 print(f"  [UPDATE] row {sheet_row_num}: {rec['county']} — {rec['name']}")
-                time.sleep(0.3)
 
+    # Single batched write for all cell changes
+    if all_cell_updates:
+        print(f"\n  Writing {len(all_cell_updates)} cell updates in one batch...")
+        # Google Sheets API limits to 2MB per request; chunk at 1000 cells to be safe
+        chunk_size = 1000
+        for i in range(0, len(all_cell_updates), chunk_size):
+            chunk = all_cell_updates[i:i + chunk_size]
+            ws.update_cells(chunk, value_input_option="RAW")
+            if i + chunk_size < len(all_cell_updates):
+                time.sleep(1.2)   # stay under 60 writes/min quota
+
+    # Append all new rows at once
     if new_batch:
+        print(f"\n  Appending {len(new_batch)} new rows...")
+        time.sleep(1.2)
         ws.append_rows(new_batch, value_input_option="RAW",
                        insert_data_option="INSERT_ROWS", table_range="A1")
-        appended += len(new_batch)
 
+    appended = len(new_batch)
     print(f"\n  Full sync done — appended: {appended}, updated: {updated}")
     return {"appended": appended, "updated": updated}
 
