@@ -562,6 +562,14 @@ async def main():
     # Write to check log AFTER sheet sync so the result is included
     append_to_check_log(diff, timestamp, len(current), sheet_result)
 
+    # Keep local CSV in sync with the sheet after every change run
+    if os.getenv("GOOGLE_CREDENTIALS"):
+        try:
+            from update_sheet import pull_from_sheet
+            pull_from_sheet()
+        except Exception as e:
+            print(f"  [!] CSV pull from sheet failed: {e}")
+
     print("\nDone.")
 
 

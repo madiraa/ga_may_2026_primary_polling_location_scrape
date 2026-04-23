@@ -315,20 +315,71 @@ def full_sync(current_rows: list[dict]) -> dict[str, int]:
     return {"appended": appended, "updated": updated}
 
 
+def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv") -> int:
+    """
+    Export the Google Sheet (columns A–D: county, name, address, hours) to the
+    local baseline CSV.  Preserves the same column order as the scraper output.
+    Skips the header row and any completely empty rows.
+    Returns the number of rows written.
+    """
+    import csv as _csv
+    from pathlib import Path
+
+    print("  Connecting to Google Sheets (pull to CSV)...")
+    client = _get_client()
+    ws     = _get_worksheet(client)
+    rows   = ws.get_all_values()
+
+    out_rows = []
+    for i, row in enumerate(rows):
+        if i == 0:
+            continue  # skip header
+        county  = row[0].strip() if len(row) > 0 else ""
+        name    = row[1].strip() if len(row) > 1 else ""
+        address = row[2].strip() if len(row) > 2 else ""
+        hours   = row[3].strip() if len(row) > 3 else ""
+        if not county and not name:
+            continue  # blank row
+        out_rows.append({
+            "county":   county,
+            "name":     name,
+            "address":  address,
+            "hours":    hours,
+        })
+
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = _csv.DictWriter(f, fieldnames=["county", "name", "address", "hours"])
+        writer.writeheader()
+        writer.writerows(out_rows)
+
+    print(f"  Pulled {len(out_rows)} rows from sheet → {csv_path}")
+    return len(out_rows)
+
+
 # ── Standalone entry point ────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    import csv
+    import sys
+    import csv as _csv
     from pathlib import Path
 
-    csv_path = Path("ga_may_2026_primary_polling_locations.csv")
-    if not csv_path.exists():
-        print(f"[!] {csv_path} not found. Run scrape_polling_places.py first.")
-        raise SystemExit(1)
+    # Usage:
+    #   python update_sheet.py          → full sync (push local CSV → sheet)
+    #   python update_sheet.py pull     → pull sheet → local CSV
+    mode = sys.argv[1] if len(sys.argv) > 1 else "push"
 
-    with open(csv_path, newline="", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+    if mode == "pull":
+        count = pull_from_sheet()
+        print(f"\nDone — {count} rows saved to ga_may_2026_primary_polling_locations.csv")
+    else:
+        csv_path = Path("ga_may_2026_primary_polling_locations.csv")
+        if not csv_path.exists():
+            print(f"[!] {csv_path} not found. Run scrape_polling_places.py first.")
+            raise SystemExit(1)
 
-    print(f"Loaded {len(rows)} rows from {csv_path}")
-    result = full_sync(rows)
-    print(f"\nResult: {result}")
+        with open(csv_path, newline="", encoding="utf-8") as f:
+            rows = list(_csv.DictReader(f))
+
+        print(f"Loaded {len(rows)} rows from {csv_path}")
+        result = full_sync(rows)
+        print(f"\nResult: {result}")
