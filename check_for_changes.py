@@ -141,14 +141,27 @@ async def fetch_page(page, aura_context: dict, skip: int, per_page: int) -> dict
     return await page.evaluate(js)
 
 
+def is_dropbox_only(rec: dict) -> bool:
+    """Returns True if every event is a Dropbox Polling Location (no staffed voting)."""
+    events = rec.get("eventList", [])
+    if not events:
+        return False
+    return all(
+        e.get("eventType", "") == "Dropbox Polling Location"
+        for e in events
+        if isinstance(e, dict)
+    )
+
+
 def record_to_row(rec: dict) -> dict:
     addr = rec.get("address", "").replace("<br>", ", ").replace("<BR>", ", ").strip()
     return {
-        "id":      rec.get("id", ""),
-        "county":  rec.get("county", ""),
-        "name":    rec.get("name", ""),
-        "address": addr,
-        "hours":   flatten_hours(rec.get("eventList", [])),
+        "id":       rec.get("id", ""),
+        "county":   rec.get("county", ""),
+        "election": rec.get("electionDateName", ""),
+        "name":     rec.get("name", ""),
+        "address":  addr,
+        "hours":    flatten_hours(rec.get("eventList", [])),
     }
 
 
@@ -215,7 +228,11 @@ async def scrape_current() -> list[dict]:
 
         await browser.close()
 
-    return [record_to_row(r) for r in all_raw]
+    filtered = [r for r in all_raw if not is_dropbox_only(r)]
+    dropped  = len(all_raw) - len(filtered)
+    if dropped:
+        print(f"    Filtered out {dropped} dropbox-only location(s)")
+    return [record_to_row(r) for r in filtered]
 
 
 # ── Comparison logic ──────────────────────────────────────────────────────────

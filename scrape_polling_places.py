@@ -176,15 +176,32 @@ async def fetch_page(page, aura_context: dict, skip: int, per_page: int) -> dict
     return await page.evaluate(js)
 
 
+def is_dropbox_only(rec: dict) -> bool:
+    """
+    Returns True if every event for this location is a Dropbox Polling Location
+    and there are no Advanced Polling Location events.  These rows are excluded
+    from the output — they are dropoff boxes, not staffed voting sites.
+    """
+    events = rec.get("eventList", [])
+    if not events:
+        return False
+    return all(
+        e.get("eventType", "") == "Dropbox Polling Location"
+        for e in events
+        if isinstance(e, dict)
+    )
+
+
 def extract_record_fields(rec: dict) -> dict:
     """
     Normalise a single polling place record into our CSV columns.
 
     Known API field names (from probe):
-      name, county, address (with <br> separator), eventList
+      name, county, address (with <br> separator), eventList, electionDateName
     """
-    county  = safe_str(rec.get("county", rec.get("countyName", "")))
-    name    = safe_str(rec.get("name",   rec.get("locationName", "")))
+    county   = safe_str(rec.get("county", rec.get("countyName", "")))
+    name     = safe_str(rec.get("name",   rec.get("locationName", "")))
+    election = safe_str(rec.get("electionDateName", ""))
 
     # Address comes as "STREET<br>CITY STATE ZIP" — replace <br> with ", "
     raw_addr = rec.get("address", rec.get("locationAddress", ""))
@@ -197,6 +214,7 @@ def extract_record_fields(rec: dict) -> dict:
 
     return {
         "county":    county,
+        "election":  election,
         "name":      name,
         "address":   address,
         "hours":     hours,
@@ -348,13 +366,20 @@ async def main():
         print(f"\n[✓] Collected {len(all_records)} total records")
 
         # ── Step 4: Write CSV ─────────────────────────────────────────────────
-        csv_fields = ["county", "name", "address", "hours"]
-        rows = [extract_record_fields(r) for r in all_records]
+        csv_fields = ["county", "election", "name", "address", "hours"]
+
+        # Filter dropbox-only locations, then extract fields
+        filtered_records = [r for r in all_records if not is_dropbox_only(r)]
+        dropped = len(all_records) - len(filtered_records)
+        if dropped:
+            print(f"  Filtered out {dropped} dropbox-only location(s)")
+
+        rows = [extract_record_fields(r) for r in filtered_records]
 
         # De-duplicate (same id may appear across pages in some Salesforce setups)
         seen_keys: set[str] = set()
         unique_rows = []
-        for r, raw in zip(rows, all_records):
+        for r, raw in zip(rows, filtered_records):
             key = raw.get("id") or f"{r['county']}|{r['name']}|{r['address']}"
             if key not in seen_keys:
                 seen_keys.add(key)
