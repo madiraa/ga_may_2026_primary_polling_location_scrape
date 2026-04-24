@@ -4726,5 +4726,32 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-24T20:39:25Z",
+    "total_records": 304,
+    "added_count": 0,
+    "removed_count": 4,
+    "modified_count": 0,
+    "added": [],
+    "removed": [
+      {
+        "county": "COBB",
+        "name": "AIP MAIN OFFICE MANSOUR"
+      },
+      {
+        "county": "FULTON",
+        "name": "AIP-FLIPPER TEMPLE AME CHURCH FELLOWSHIP HALL"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY OAKLAND LIBRARY"
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER - BANQUET RM"
+      }
+    ],
+    "modified": []
   }
 ]
