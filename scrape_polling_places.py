@@ -421,7 +421,7 @@ async def main():
             "polling_place_address_full", "polling_place_address_line_1",
             "polling_place_address_city", "polling_place_address_state",
             "polling_place_address_zip", "hours_raw", "image_url",
-            "hours_advanced_polling", "Latitude", "Longitude", "status",
+            "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added",
         ]
 
         # Filter dropbox-only locations, then extract fields

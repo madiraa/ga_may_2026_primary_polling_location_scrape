@@ -71,6 +71,7 @@ COL_HOURS_ADV     = 13   # M
 COL_LATITUDE      = 14   # N  ← blank for new rows
 COL_LONGITUDE     = 15   # O  ← blank for new rows
 COL_STATUS        = 16   # P  ← auto-stamped, auto-cleared
+COL_DATE_ADDED    = 17   # Q  ← stamped once on first append, never cleared
 
 # Fields used for change detection (compared against sheet columns)
 COMPARE_FIELDS = {
@@ -163,6 +164,7 @@ def _build_new_row(rec: dict) -> list:
         "",                                        # N Latitude (blank)
         "",                                        # O Longitude (blank)
         f"ADDED {_today()}",                       # P status
+        _today(),                                  # Q date_added (permanent)
     ]
 
 
@@ -422,7 +424,7 @@ def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv")
         "polling_place_address_full", "polling_place_address_line_1",
         "polling_place_address_city", "polling_place_address_state",
         "polling_place_address_zip", "hours_raw", "image_url",
-        "hours_advanced_polling", "Latitude", "Longitude", "status",
+        "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added",
     ]
 
     print("  Connecting to Google Sheets (pull to CSV)...")
@@ -434,16 +436,16 @@ def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv")
     for i, row in enumerate(rows):
         if i == 0:
             continue  # skip header
-        # Pad row to full width
-        row = row + [""] * (16 - len(row))
+        # Pad row to full width (17 columns now)
+        row = row + [""] * (17 - len(row))
         county   = row[COL_COUNTY   - 1].strip()
         name_raw = row[COL_NAME_RAW - 1].strip()
         if not county and not name_raw:
             continue
-        out_rows.append(dict(zip(FIELDS, [v.strip() for v in row[:16]])))
+        out_rows.append(dict(zip(FIELDS, [v.strip() for v in row[:17]])))
 
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = _csv.DictWriter(f, fieldnames=FIELDS)
+        writer = _csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(out_rows)
 

@@ -308,15 +308,15 @@ def load_baseline_from_sheet() -> dict[str, dict]:
         "polling_place_address_full", "polling_place_address_line_1",
         "polling_place_address_city", "polling_place_address_state",
         "polling_place_address_zip", "hours_raw", "image_url",
-        "hours_advanced_polling", "Latitude", "Longitude", "status",
+        "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added",
     ]
 
     baseline: dict[str, dict] = {}
     for i, row in enumerate(rows):
         if i == 0:
             continue
-        row = row + [""] * (16 - len(row))
-        rec = dict(zip(FIELDS, [v.strip() for v in row[:16]]))
+        row = row + [""] * (17 - len(row))
+        rec = dict(zip(FIELDS, [v.strip() for v in row[:17]]))
         county   = rec["polling_place_county"]
         name_raw = rec["polling_place_name_raw"]
         if county or name_raw:
@@ -551,7 +551,7 @@ CSV_FIELDS = [
     "polling_place_address_full", "polling_place_address_line_1",
     "polling_place_address_city", "polling_place_address_state",
     "polling_place_address_zip", "hours_raw", "image_url",
-    "hours_advanced_polling", "Latitude", "Longitude", "status",
+    "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added",
 ]
 
 
