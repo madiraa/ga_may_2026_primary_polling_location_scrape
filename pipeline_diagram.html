@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GA Polling Monitor — Pipeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f0f1f4;
+    --panel: #ffffff;
+    --border: #d8dae0;
+    --accent: #1a6b3c;
+    --accent2: #1a5fa8;
+    --accent3: #c0392b;
+    --accent4: #6d3fa8;
+    --text: #1a1c24;
+    --muted: #7a8090;
+    --green: #1a6b3c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 40px 32px 60px;
+    overflow-x: hidden;
+  }
+
+  header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .title-block h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  .title-block p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 6px;
+    font-weight: 300;
+  }
+
+  .badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    background: var(--border);
+    border: 1px solid var(--muted);
+    color: var(--muted);
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+
+  /* ── Main pipeline canvas ── */
+  .pipeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+    margin-bottom: 56px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .stage {
+    flex: 0 0 auto;
+    width: 180px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .stage:nth-child(1) { animation-delay: 0.1s; }
+  .stage:nth-child(2) { animation-delay: 0.25s; }
+  .stage:nth-child(3) { animation-delay: 0.4s; }
+  .stage:nth-child(4) { animation-delay: 0.55s; }
+  .stage:nth-child(5) { animation-delay: 0.7s; }
+  .stage:nth-child(6) { animation-delay: 0.85s; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .arrow {
+    flex: 0 0 auto;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 28px;
+    color: var(--muted);
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards;
+  }
+  .arrow:nth-child(2)  { animation-delay: 0.18s; }
+  .arrow:nth-child(4)  { animation-delay: 0.33s; }
+  .arrow:nth-child(6)  { animation-delay: 0.48s; }
+  .arrow:nth-child(8)  { animation-delay: 0.63s; }
+  .arrow:nth-child(10) { animation-delay: 0.78s; }
+
+  .arrow svg { width: 28px; height: 28px; }
+
+  .stage-inner {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel);
+    padding: 16px 14px 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stage-inner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .stage-inner:hover {
+    border-color: var(--accent);
+    background: #181b24;
+    transform: translateY(-2px);
+  }
+
+  .stage-inner:hover::before { background: var(--accent); }
+
+  .stage-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .stage-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .stage-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .stage-sub {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* color accents per stage */
+  .stage[data-type="trigger"] .stage-inner:hover { border-color: var(--accent4); }
+  .stage[data-type="trigger"] .stage-inner:hover::before { background: var(--accent4); }
+  .stage[data-type="scrape"]  .stage-inner:hover { border-color: var(--accent2); }
+  .stage[data-type="scrape"]  .stage-inner:hover::before { background: var(--accent2); }
+  .stage[data-type="compare"] .stage-inner:hover { border-color: var(--accent); }
+  .stage[data-type="compare"] .stage-inner:hover::before { background: var(--accent); }
+  .stage[data-type="sheet"]   .stage-inner:hover { border-color: var(--green); }
+  .stage[data-type="sheet"]   .stage-inner:hover::before { background: var(--green); }
+  .stage[data-type="notify"]  .stage-inner:hover { border-color: var(--accent3); }
+  .stage[data-type="notify"]  .stage-inner:hover::before { background: var(--accent3); }
+  .stage[data-type="log"]     .stage-inner:hover { border-color: var(--muted); }
+
+  /* ── Status tags legend ── */
+  .section-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  .info-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+  }
+
+  .info-panel h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .tag-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .tag.added    { background: #e6f4ec; color: #1a6b3c; border: 1px solid #b6d9c4; }
+  .tag.modified { background: #fdf6e3; color: #8a6000; border: 1px solid #e8d48a; }
+  .tag.removed  { background: #fdecea; color: #c0392b; border: 1px solid #f0b8b3; }
+  .tag.cleared  { background: #f0f1f4; color: var(--muted); border: 1px solid var(--border); }
+
+  .tag-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── Schema columns ── */
+  .schema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px;
+  }
+
+  .col-chip {
+    background: #f5f6f8;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 11px;
+    opacity: 0;
+    animation: fadeUp 0.3s ease forwards;
+  }
+
+  .col-chip:nth-child(1)  { animation-delay: 0.05s; }
+  .col-chip:nth-child(2)  { animation-delay: 0.08s; }
+  .col-chip:nth-child(3)  { animation-delay: 0.11s; }
+  .col-chip:nth-child(4)  { animation-delay: 0.14s; }
+  .col-chip:nth-child(5)  { animation-delay: 0.17s; }
+  .col-chip:nth-child(6)  { animation-delay: 0.20s; }
+  .col-chip:nth-child(7)  { animation-delay: 0.23s; }
+  .col-chip:nth-child(8)  { animation-delay: 0.26s; }
+  .col-chip:nth-child(9)  { animation-delay: 0.29s; }
+  .col-chip:nth-child(10) { animation-delay: 0.32s; }
+  .col-chip:nth-child(11) { animation-delay: 0.35s; }
+  .col-chip:nth-child(12) { animation-delay: 0.38s; }
+  .col-chip:nth-child(13) { animation-delay: 0.41s; }
+  .col-chip:nth-child(14) { animation-delay: 0.44s; }
+  .col-chip:nth-child(15) { animation-delay: 0.47s; }
+  .col-chip:nth-child(16) { animation-delay: 0.50s; }
+
+  .col-letter {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+
+  .col-name {
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .col-chip.highlight-addr { border-left: 3px solid var(--accent2); }
+  .col-chip.highlight-hours { border-left: 3px solid #8a6000; }
+  .col-chip.highlight-image { border-left: 3px solid var(--accent4); }
+  .col-chip.highlight-geo { border-left: 3px solid var(--green); }
+  .col-chip.highlight-status { border-left: 3px solid var(--accent3); }
+
+  /* ── Schedule banner ── */
+  .schedule-banner {
+    background: #eaf4ee;
+    border: 1px solid rgba(26,107,60,0.25);
+    border-radius: 6px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .pulse {
+    width: 10px; height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(26,107,60,0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(26,107,60,0); }
+  }
+
+  .schedule-text {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .schedule-text strong {
+    color: var(--green);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+  }
+
+  .schedule-text span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* ── Tooltip ── */
+  .tooltip {
+    position: fixed;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: var(--text);
+    max-width: 240px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 100;
+    line-height: 1.6;
+  }
+
+  .tooltip.visible { opacity: 1; }
+  .tooltip strong { color: var(--accent); font-family: 'Space Mono', monospace; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="title-block">
+    <div class="badge">MOVEMENT LABS — ELECTION DATA OPS</div>
+    <h1>GA PRIMARY POLLING MONITOR</h1>
+    <p>Automated scrape → compare → sync → notify pipeline · May 2026</p>
+  </div>
+</header>
+
+<!-- Schedule banner -->
+<div class="schedule-banner">
+  <div class="pulse"></div>
+  <div class="schedule-text">
+    <strong>Every 4 hours</strong> via GitHub Actions
+    <span> · madisonraasch@movementlabs.com · virgiemadrigal@movementlabs.com · hannahburt@movementlabs.com</span>
+  </div>
+</div>
+
+<!-- Pipeline stages -->
+<p class="section-title" style="margin-bottom:16px;">Pipeline Stages</p>
+<div class="pipeline">
+
+  <div class="stage" data-type="trigger"
+       data-tip="<strong>GitHub Actions</strong><br>Cron: every 4 hours.<br>Runs check_for_changes.py in a Ubuntu runner with Playwright + Python deps installed.">
+    <div class="stage-inner">
+      <div class="stage-num">01</div>
+      <span class="stage-icon">⚙️</span>
+      <div class="stage-label">GitHub Actions Trigger</div>
+      <div class="stage-sub">Cron: 0 */4 * * *<br>Ubuntu runner</div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M6 14h16M16 8l6 6-6 6" stroke="#c0c4ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="stage" data-type="scrape"
+       data-tip="<strong>Playwright Scraper</strong><br>Headless Chromium navigates mvp.sos.ga.gov, intercepts the Salesforce Aura API, and paginates through all polling places. Dropbox-only locations are filtered out.">
+    <div class="stage-inner">
+      <div class="stage-num">02</div>
+      <span class="stage-icon">🌐</span>
+      <div class="stage-label">Scrape SOS Portal</div>
+      <div class="stage-sub">Playwright headless<br>Salesforce Aura API<br>Filter dropbox-only</div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M6 14h16M16 8l6 6-6 6" stroke="#c0c4ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="stage" data-type="compare"
+       data-tip="<strong>Compare vs Google Sheet</strong><br>Baseline is loaded live from the Google Sheet (source of truth). Matched by COUNTY + NAME. Checks: county, name, address, hours_raw. Flags ADDED / REMOVED / MODIFIED.">
+    <div class="stage-inner">
+      <div class="stage-num">03</div>
+      <span class="stage-icon">🔍</span>
+      <div class="stage-label">Compare vs Sheet</div>
+      <div class="stage-sub">Key: county + name<br>Checks address<br>+ hours changes</div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M6 14h16M16 8l6 6-6 6" stroke="#c0c4ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="stage" data-type="sheet"
+       data-tip="<strong>Sync Google Sheet</strong><br>Targeted cell updates only — never rewrites the whole sheet. Appends new rows, updates changed fields, stamps column P status tags, clears resolved tags.">
+    <div class="stage-inner">
+      <div class="stage-num">04</div>
+      <span class="stage-icon">📊</span>
+      <div class="stage-label">Update Google Sheet</div>
+      <div class="stage-sub">Targeted cell writes<br>Append new rows<br>Stamp status col P</div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M6 14h16M16 8l6 6-6 6" stroke="#c0c4ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="stage" data-type="notify"
+       data-tip="<strong>Email Notification</strong><br>Gmail SMTP. Sends a summary of all ADDED / REMOVED / MODIFIED locations with before/after field values. Only fires if changes were detected.">
+    <div class="stage-inner">
+      <div class="stage-num">05</div>
+      <span class="stage-icon">📧</span>
+      <div class="stage-label">Email Notification</div>
+      <div class="stage-sub">Gmail SMTP<br>3 recipients<br>Changes only</div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M6 14h16M16 8l6 6-6 6" stroke="#c0c4ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="stage" data-type="log"
+       data-tip="<strong>Logging</strong><br>check_log.txt: one line per run (human-readable). change_log.json: structured diff with before/after for every changed field. Both committed to the GitHub repo automatically.">
+    <div class="stage-inner">
+      <div class="stage-num">06</div>
+      <span class="stage-icon">📝</span>
+      <div class="stage-label">Log & Commit</div>
+      <div class="stage-sub">check_log.txt<br>change_log.json<br>Auto git commit</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Two-column: Status tags + Data sources -->
+<div class="two-col">
+
+  <div class="info-panel">
+    <h3>SHEET STATUS TAGS (col P)</h3>
+    <div class="tag-row">
+      <span class="tag added">ADDED 04/24/2026</span>
+      <div class="tag-desc">New location appeared on the SOS site. Auto-clears next stable run.</div>
+    </div>
+    <div class="tag-row">
+      <span class="tag modified">MODIFIED: hours_raw 04/24</span>
+      <div class="tag-desc">One or more fields changed. Lists which fields. Auto-clears when data stabilizes.</div>
+    </div>
+    <div class="tag-row">
+      <span class="tag removed">REMOVED 04/24/2026</span>
+      <div class="tag-desc">Location disappeared from SOS site. Row kept in sheet. Clears if location reappears.</div>
+    </div>
+    <div class="tag-row">
+      <span class="tag cleared">—</span>
+      <div class="tag-desc">Empty = data matches live SOS site. No action needed.</div>
+    </div>
+  </div>
+
+  <div class="info-panel">
+    <h3>DATA SOURCES & STORAGE</h3>
+    <div class="tag-row" style="margin-bottom:10px;">
+      <span style="font-size:18px;flex-shrink:0;">🌐</span>
+      <div class="tag-desc"><strong style="color:var(--text);">mvp.sos.ga.gov</strong><br>Live source. Scraped via Playwright every 4 hrs.</div>
+    </div>
+    <div class="tag-row" style="margin-bottom:10px;">
+      <span style="font-size:18px;flex-shrink:0;">📊</span>
+      <div class="tag-desc"><strong style="color:var(--text);">Google Sheet</strong><br>Source of truth for comparison. Holds geocoded lat/lng + image URLs that the scraper can't provide.</div>
+    </div>
+    <div class="tag-row" style="margin-bottom:10px;">
+      <span style="font-size:18px;flex-shrink:0;">💾</span>
+      <div class="tag-desc"><strong style="color:var(--text);">GitHub Repo (private)</strong><br>Stores scripts, local CSV backup, and both log files. Auto-committed after each run.</div>
+    </div>
+    <div class="tag-row">
+      <span style="font-size:18px;flex-shrink:0;">🔐</span>
+      <div class="tag-desc"><strong style="color:var(--text);">GitHub Secrets</strong><br>EMAIL_SENDER · EMAIL_APP_PASSWORD · EMAIL_RECIPIENT · GOOGLE_CREDENTIALS</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Schema columns -->
+<p class="section-title">Output Schema — 16 Columns (A–P)</p>
+<div class="info-panel" style="margin-bottom:0;">
+  <div class="schema-grid">
+    <div class="col-chip"><div class="col-letter">A</div><div class="col-name">address_id</div></div>
+    <div class="col-chip"><div class="col-letter">B</div><div class="col-name">polling_place_county</div></div>
+    <div class="col-chip"><div class="col-letter">C</div><div class="col-name">polling_place_name_raw</div></div>
+    <div class="col-chip"><div class="col-letter">D</div><div class="col-name">polling_place_name</div></div>
+    <div class="col-chip highlight-addr"><div class="col-letter">E</div><div class="col-name">polling_place_address_raw</div></div>
+    <div class="col-chip highlight-addr"><div class="col-letter">F</div><div class="col-name">polling_place_address_full</div></div>
+    <div class="col-chip highlight-addr"><div class="col-letter">G</div><div class="col-name">address_line_1</div></div>
+    <div class="col-chip highlight-addr"><div class="col-letter">H</div><div class="col-name">address_city</div></div>
+    <div class="col-chip highlight-addr"><div class="col-letter">I</div><div class="col-name">address_state</div></div>
+    <div class="col-chip highlight-addr"><div class="col-letter">J</div><div class="col-name">address_zip</div></div>
+    <div class="col-chip highlight-hours"><div class="col-letter">K</div><div class="col-name">hours_raw</div></div>
+    <div class="col-chip highlight-image"><div class="col-letter">L</div><div class="col-name">image_url</div></div>
+    <div class="col-chip highlight-hours"><div class="col-letter">M</div><div class="col-name">hours_advanced_polling</div></div>
+    <div class="col-chip highlight-geo"><div class="col-letter">N</div><div class="col-name">Latitude</div></div>
+    <div class="col-chip highlight-geo"><div class="col-letter">O</div><div class="col-name">Longitude</div></div>
+    <div class="col-chip highlight-status"><div class="col-letter">P</div><div class="col-name">status</div></div>
+  </div>
+  <div style="display:flex;gap:20px;margin-top:16px;flex-wrap:wrap;">
+    <span style="font-size:11px;color:#1a5fa8;">■ Address components</span>
+    <span style="font-size:11px;color:#8a6000;">■ Hours</span>
+    <span style="font-size:11px;color:#6d3fa8;">■ Image</span>
+    <span style="font-size:11px;color:#1a6b3c;">■ Geocoded (manual)</span>
+    <span style="font-size:11px;color:#c0392b;">■ Auto-managed status</span>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+  const tooltip = document.getElementById('tooltip');
+  document.querySelectorAll('.stage').forEach(stage => {
+    const tip = stage.dataset.tip;
+    if (!tip) return;
+    stage.addEventListener('mousemove', e => {
+      tooltip.innerHTML = tip;
+      tooltip.classList.add('visible');
+      let x = e.clientX + 16, y = e.clientY + 16;
+      if (x + 250 > window.innerWidth) x = e.clientX - 260;
+      tooltip.style.left = x + 'px';
+      tooltip.style.top  = y + 'px';
+    });
+    stage.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+  });
+</script>
+</body>
+</html>
