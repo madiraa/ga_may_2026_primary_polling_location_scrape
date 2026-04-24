@@ -245,12 +245,28 @@ def sync_changes(diff: dict) -> dict[str, int]:
                        insert_data_option="INSERT_ROWS", table_range="A1")
         appended += len(new_rows)
 
-    # ── Removed: log only ─────────────────────────────────────────────────────
+    # ── Removed: stamp status column, keep row ────────────────────────────────
     skipped = 0
+    remove_updates: list[gspread.Cell] = []
     for rec in diff.get("removed", []):
-        print(f"  [SKIP REMOVE] {rec.get('polling_place_county','')} — "
-              f"{rec.get('polling_place_name_raw','')} (kept in sheet)")
+        county   = rec.get("polling_place_county", "")
+        name_raw = rec.get("polling_place_name_raw", "")
+        key      = _normalize_key(county, name_raw)
+        row_idx  = key_index.get(key)
+        if row_idx is not None:
+            sheet_row_num = row_idx + 1
+            remove_updates.append(
+                gspread.Cell(sheet_row_num, COL_STATUS, f"REMOVED {_today()}")
+            )
+            print(f"  [REMOVED tag] row {sheet_row_num}: {county} — {name_raw}")
+        else:
+            print(f"  [SKIP REMOVE — not found in sheet] {county} — {name_raw}")
         skipped += 1
+
+    if remove_updates:
+        if all_cell_updates or new_rows:
+            time.sleep(1.2)
+        ws.update_cells(remove_updates, value_input_option="RAW")
 
     print(f"\n  Sheet sync complete — appended: {appended}, updated: {updated}, "
           f"removals skipped: {skipped}")
@@ -295,6 +311,12 @@ def clear_resolved_statuses(current: list[dict]) -> int:
 
         key     = _normalize_key(county, name_raw)
         scraped = current_lookup.get(key)
+
+        # For REMOVED rows: clear if the location reappears in current data
+        if status.startswith("REMOVED") and scraped:
+            clears.append(gspread.Cell(i + 1, COL_STATUS, ""))
+            print(f"  [CLEAR status] row {i+1}: {county} — {name_raw}  (was: {status}, location reappeared)")
+            continue
 
         if scraped and (
             scraped.get("polling_place_county",    "").strip().upper() == county.upper()
