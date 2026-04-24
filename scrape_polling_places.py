@@ -176,6 +176,48 @@ async def fetch_page(page, aura_context: dict, skip: int, per_page: int) -> dict
     return await page.evaluate(js)
 
 
+def parse_address(raw_addr: str) -> dict:
+    """
+    Parse "STREET, CITY STATE ZIP" into components.
+    Returns dict with keys: line_1, city, state, zip, full, address_id
+    """
+    raw_addr = raw_addr.strip()
+    parts = raw_addr.split(", ", 1)
+    if len(parts) != 2:
+        return {"line_1": raw_addr.title(), "city": "", "state": "", "zip": "",
+                "full": raw_addr.title(), "address_id": raw_addr.replace(" ", "_")}
+
+    street, city_state_zip = parts[0].strip(), parts[1].strip()
+    tokens = city_state_zip.split()
+    if len(tokens) >= 3:
+        zip_code, state, city = tokens[-1], tokens[-2], " ".join(tokens[:-2])
+    elif len(tokens) == 2:
+        zip_code, state, city = "", tokens[-1], tokens[0]
+    else:
+        zip_code = state = ""; city = city_state_zip
+
+    line_1 = street.title()
+    city_tc = city.title()
+    full = f"{line_1}, {city_tc}, {state} {zip_code}".strip(", ")
+    address_id = f"{street}_{city}_{state}_{zip_code}"
+
+    return {"line_1": line_1, "city": city_tc, "state": state, "zip": zip_code,
+            "full": full, "address_id": address_id}
+
+
+def hours_advanced_only(event_list: list) -> str:
+    """Return only Advanced Polling Location events, newline-separated."""
+    parts = []
+    for e in event_list:
+        if isinstance(e, dict) and e.get("eventType") == "Advanced Polling Location":
+            parts.append(
+                f"{e.get('startDate','')} - {e.get('endDate','')} "
+                f"{e.get('openTime','')} - {e.get('closeTime','')} "
+                f"(Advanced Polling Location)"
+            )
+    return "\n".join(parts)
+
+
 def is_dropbox_only(rec: dict) -> bool:
     """
     Returns True if every event for this location is a Dropbox Polling Location
@@ -194,30 +236,37 @@ def is_dropbox_only(rec: dict) -> bool:
 
 def extract_record_fields(rec: dict) -> dict:
     """
-    Normalise a single polling place record into our CSV columns.
-
-    Known API field names (from probe):
-      name, county, address (with <br> separator), eventList, electionDateName
+    Normalise a single API record into the 16-column schema.
     """
-    county   = safe_str(rec.get("county", rec.get("countyName", "")))
-    name     = safe_str(rec.get("name",   rec.get("locationName", "")))
-    election = safe_str(rec.get("electionDateName", ""))
+    county   = safe_str(rec.get("county", ""))
+    name_raw = safe_str(rec.get("name",   ""))
+    events   = rec.get("eventList", [])
 
-    # Address comes as "STREET<br>CITY STATE ZIP" — replace <br> with ", "
-    raw_addr = rec.get("address", rec.get("locationAddress", ""))
+    raw_addr = rec.get("address", "")
     if isinstance(raw_addr, str):
-        address = raw_addr.replace("<br>", ", ").replace("<BR>", ", ").strip()
-    else:
-        address = safe_str(raw_addr)
+        raw_addr = raw_addr.replace("<br>", ", ").replace("<BR>", ", ").strip()
 
-    hours = flatten_hours(rec.get("eventList", rec.get("hoursOfOperation", [])))
+    addr = parse_address(raw_addr)
+    hours_raw = flatten_hours(events)
+    hours_adv = hours_advanced_only(events)
 
     return {
-        "county":    county,
-        "election":  election,
-        "name":      name,
-        "address":   address,
-        "hours":     hours,
+        "address_id":                addr["address_id"],
+        "polling_place_county":      county,
+        "polling_place_name_raw":    name_raw,
+        "polling_place_name":        name_raw,
+        "polling_place_address_raw": raw_addr,
+        "polling_place_address_full":addr["full"],
+        "polling_place_address_line_1": addr["line_1"],
+        "polling_place_address_city":   addr["city"],
+        "polling_place_address_state":  addr["state"],
+        "polling_place_address_zip":    addr["zip"],
+        "hours_raw":                 hours_raw,
+        "image_url":                 "",
+        "hours_advanced_polling":    hours_adv,
+        "Latitude":                  "",
+        "Longitude":                 "",
+        "status":                    "",
     }
 
 
@@ -366,7 +415,14 @@ async def main():
         print(f"\n[✓] Collected {len(all_records)} total records")
 
         # ── Step 4: Write CSV ─────────────────────────────────────────────────
-        csv_fields = ["county", "election", "name", "address", "hours"]
+        csv_fields = [
+            "address_id", "polling_place_county", "polling_place_name_raw",
+            "polling_place_name", "polling_place_address_raw",
+            "polling_place_address_full", "polling_place_address_line_1",
+            "polling_place_address_city", "polling_place_address_state",
+            "polling_place_address_zip", "hours_raw", "image_url",
+            "hours_advanced_polling", "Latitude", "Longitude", "status",
+        ]
 
         # Filter dropbox-only locations, then extract fields
         filtered_records = [r for r in all_records if not is_dropbox_only(r)]

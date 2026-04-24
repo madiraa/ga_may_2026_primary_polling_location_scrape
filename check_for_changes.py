@@ -153,15 +153,61 @@ def is_dropbox_only(rec: dict) -> bool:
     )
 
 
+def _parse_address(raw_addr: str) -> dict:
+    """Parse 'STREET, CITY STATE ZIP' into components."""
+    raw_addr = raw_addr.strip()
+    parts = raw_addr.split(", ", 1)
+    if len(parts) != 2:
+        return {"line_1": raw_addr.title(), "city": "", "state": "", "zip": "",
+                "full": raw_addr.title(), "address_id": raw_addr.replace(" ", "_")}
+    street, city_state_zip = parts[0].strip(), parts[1].strip()
+    tokens = city_state_zip.split()
+    if len(tokens) >= 3:
+        zip_code, state, city = tokens[-1], tokens[-2], " ".join(tokens[:-2])
+    elif len(tokens) == 2:
+        zip_code, state, city = "", tokens[-1], tokens[0]
+    else:
+        zip_code = state = ""; city = city_state_zip
+    line_1 = street.title()
+    city_tc = city.title()
+    full = f"{line_1}, {city_tc}, {state} {zip_code}".strip(", ")
+    return {"line_1": line_1, "city": city_tc, "state": state, "zip": zip_code,
+            "full": full, "address_id": f"{street}_{city}_{state}_{zip_code}"}
+
+
+def _hours_advanced_only(events: list) -> str:
+    parts = []
+    for e in events:
+        if isinstance(e, dict) and e.get("eventType") == "Advanced Polling Location":
+            parts.append(
+                f"{e.get('startDate','')} - {e.get('endDate','')} "
+                f"{e.get('openTime','')} - {e.get('closeTime','')} "
+                f"(Advanced Polling Location)"
+            )
+    return "\n".join(parts)
+
+
 def record_to_row(rec: dict) -> dict:
-    addr = rec.get("address", "").replace("<br>", ", ").replace("<BR>", ", ").strip()
+    events   = rec.get("eventList", [])
+    raw_addr = rec.get("address", "").replace("<br>", ", ").replace("<BR>", ", ").strip()
+    addr     = _parse_address(raw_addr)
     return {
-        "id":       rec.get("id", ""),
-        "county":   rec.get("county", ""),
-        "election": rec.get("electionDateName", ""),
-        "name":     rec.get("name", ""),
-        "address":  addr,
-        "hours":    flatten_hours(rec.get("eventList", [])),
+        "address_id":                   addr["address_id"],
+        "polling_place_county":         rec.get("county", ""),
+        "polling_place_name_raw":       rec.get("name", ""),
+        "polling_place_name":           rec.get("name", ""),
+        "polling_place_address_raw":    raw_addr,
+        "polling_place_address_full":   addr["full"],
+        "polling_place_address_line_1": addr["line_1"],
+        "polling_place_address_city":   addr["city"],
+        "polling_place_address_state":  addr["state"],
+        "polling_place_address_zip":    addr["zip"],
+        "hours_raw":                    flatten_hours(events),
+        "image_url":                    "",
+        "hours_advanced_polling":       _hours_advanced_only(events),
+        "Latitude":                     "",
+        "Longitude":                    "",
+        "status":                       "",
     }
 
 
@@ -238,14 +284,16 @@ async def scrape_current() -> list[dict]:
 # ── Comparison logic ──────────────────────────────────────────────────────────
 
 def _row_key(row: dict) -> str:
-    """Normalised matching key: 'COUNTY||NAME'."""
-    return f"{row.get('county','').strip().upper()}||{row.get('name','').strip().upper()}"
+    """Normalised matching key: 'COUNTY||NAME_RAW'."""
+    county   = row.get("polling_place_county",   row.get("county", "")).strip().upper()
+    name_raw = row.get("polling_place_name_raw", row.get("name",   "")).strip().upper()
+    return f"{county}||{name_raw}"
 
 
 def load_baseline_from_sheet() -> dict[str, dict]:
     """
-    Read columns A–D from the Google Sheet and return a dict keyed by
-    'COUNTY||NAME'.  Called when GOOGLE_CREDENTIALS is available.
+    Read all 16 columns from the Google Sheet.
+    Returns a dict keyed by 'COUNTY||NAME_RAW'.
     """
     from update_sheet import _get_client, _get_worksheet
     print("  Loading baseline from Google Sheet...")
@@ -253,22 +301,27 @@ def load_baseline_from_sheet() -> dict[str, dict]:
     ws     = _get_worksheet(client)
     rows   = ws.get_all_values()
 
+    FIELDS = [
+        "address_id", "polling_place_county", "polling_place_name_raw",
+        "polling_place_name", "polling_place_address_raw",
+        "polling_place_address_full", "polling_place_address_line_1",
+        "polling_place_address_city", "polling_place_address_state",
+        "polling_place_address_zip", "hours_raw", "image_url",
+        "hours_advanced_polling", "Latitude", "Longitude", "status",
+    ]
+
     baseline: dict[str, dict] = {}
     for i, row in enumerate(rows):
         if i == 0:
-            continue  # skip header
-        county  = row[0].strip() if len(row) > 0 else ""
-        name    = row[1].strip() if len(row) > 1 else ""
-        address = row[2].strip() if len(row) > 2 else ""
-        hours   = row[3].strip() if len(row) > 3 else ""
-        if county or name:
-            key = f"{county.upper()}||{name.upper()}"
-            baseline[key] = {
-                "county":  county,
-                "name":    name,
-                "address": address,
-                "hours":   hours,
-            }
+            continue
+        row = row + [""] * (16 - len(row))
+        rec = dict(zip(FIELDS, [v.strip() for v in row[:16]]))
+        county   = rec["polling_place_county"]
+        name_raw = rec["polling_place_name_raw"]
+        if county or name_raw:
+            key = f"{county.upper()}||{name_raw.upper()}"
+            baseline[key] = rec
+
     print(f"  Sheet baseline: {len(baseline)} rows")
     return baseline
 
@@ -276,28 +329,28 @@ def load_baseline_from_sheet() -> dict[str, dict]:
 def load_baseline_from_csv() -> dict[str, dict]:
     """
     Fallback: read the local CSV when Google credentials are not available.
-    Keyed by 'COUNTY||NAME'.
+    Keyed by 'COUNTY||NAME_RAW'.
     """
     if not BASELINE_CSV.exists():
         return {}
     with open(BASELINE_CSV, newline="", encoding="utf-8") as f:
-        return {_row_key(row): row for row in csv.DictReader(f) if row.get("county")}
+        return {_row_key(row): row for row in csv.DictReader(f)
+                if row.get("polling_place_county")}
 
 
 def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
     """
-    Compare scraped current data against the baseline dict (keyed by COUNTY||NAME).
+    Compare scraped current data against the baseline (keyed by COUNTY||NAME_RAW).
 
-    Every meaningful field is checked for changes:
-      county   — checked (county reassignment)
-      name     — checked (location renamed)
-      address  — checked (location moved)
-      hours    — checked (schedule updated)
+    Fields checked for changes:
+      polling_place_county      — county reassignment
+      polling_place_name_raw    — location renamed
+      polling_place_address_raw — location moved
+      hours_raw                 — schedule updated
 
-    Rows are matched by COUNTY||NAME. If a record's county+name combo is not
-    found in the baseline it is flagged as ADDED; if it disappears from the
-    current data it is flagged as REMOVED. Any field-level change on a matched
-    row is flagged as MODIFIED with a before/after for each changed field.
+    ADDED  = county+name combo not found in baseline
+    REMOVED = combo disappeared from current data
+    MODIFIED = any field-level change on a matched row
     """
     current_by_key = {_row_key(r): r for r in current}
 
@@ -309,7 +362,8 @@ def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
         else:
             base    = baseline[key]
             changes: dict[str, dict] = {}
-            for field in ("county", "name", "address", "hours"):
+            for field in ("polling_place_county", "polling_place_name_raw",
+                          "polling_place_address_raw", "hours_raw"):
                 before = base.get(field, "").strip()
                 after  = rec.get(field,  "").strip()
                 if before != after:
@@ -480,9 +534,19 @@ def send_email(diff: dict, timestamp: str):
 
 # ── Baseline CSV writer ───────────────────────────────────────────────────────
 
+CSV_FIELDS = [
+    "address_id", "polling_place_county", "polling_place_name_raw",
+    "polling_place_name", "polling_place_address_raw",
+    "polling_place_address_full", "polling_place_address_line_1",
+    "polling_place_address_city", "polling_place_address_state",
+    "polling_place_address_zip", "hours_raw", "image_url",
+    "hours_advanced_polling", "Latitude", "Longitude", "status",
+]
+
+
 def save_baseline(rows: list[dict]):
     with open(BASELINE_CSV, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["id", "county", "name", "address", "hours"])
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
     print(f"  Baseline updated: {BASELINE_CSV} ({len(rows)} rows)")

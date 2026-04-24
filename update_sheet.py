@@ -7,28 +7,38 @@ Can also be run standalone to do a full sync at any time.
 Spreadsheet : https://docs.google.com/spreadsheets/d/192ufA2ffXqTTsQQxJylg1mMC5TBbHndfgIu5UI4WDGQ
 Tab (gid)   : 571990717
 
-Column layout (must match the sheet exactly):
-  A  county
-  B  name
-  C  address
-  D  hours
-  E  google bucket link   ← never touched by this script
-  F  image                ← never touched by this script
-  G  status               ← written/cleared automatically by this script
+Column layout (A–P):
+  A  address_id                  ← {STREET}_{CITY}_{STATE}_{ZIP}
+  B  polling_place_county
+  C  polling_place_name_raw
+  D  polling_place_name
+  E  polling_place_address_raw
+  F  polling_place_address_full
+  G  polling_place_address_line_1
+  H  polling_place_address_city
+  I  polling_place_address_state
+  J  polling_place_address_zip
+  K  hours_raw                   ← all events, pipe-separated
+  L  image_url                   ← never overwritten if already set
+  M  hours_advanced_polling      ← Advanced Polling Location only, newline-separated
+  N  Latitude                    ← blank for new rows (requires geocoding)
+  O  Longitude                   ← blank for new rows (requires geocoding)
+  P  status                      ← auto-stamped on change, auto-cleared when stable
 
-Status column (G) lifecycle:
-  • On ADDED row   → stamped "ADDED MM/DD/YYYY"
-  • On MODIFIED row → stamped "MODIFIED: address, hours MM/DD/YYYY"
-  • Next run where that row's data is stable (matches current SOS data) → cleared automatically
+Status column (P) lifecycle:
+  • On ADDED row    → "ADDED MM/DD/YYYY"
+  • On MODIFIED row → "MODIFIED: field1, field2 MM/DD/YYYY"
+  • Next stable run → cleared automatically
 
-Matching key: (county, name)  — case-insensitive strip comparison
+Matching key: polling_place_county || polling_place_name_raw
 
 Required env var:
   GOOGLE_CREDENTIALS  — full JSON content of a Google Service Account key
                         that has been granted Editor access to the sheet.
 
 Run standalone:
-  GOOGLE_CREDENTIALS=$(cat your-service-account.json) python update_sheet.py
+  GOOGLE_CREDENTIALS=$(cat your-service-account.json) python update_sheet.py        # push
+  GOOGLE_CREDENTIALS=$(cat your-service-account.json) python update_sheet.py pull   # pull
 """
 
 import json
@@ -44,13 +54,31 @@ from google.oauth2.service_account import Credentials
 SPREADSHEET_ID = "192ufA2ffXqTTsQQxJylg1mMC5TBbHndfgIu5UI4WDGQ"
 WORKSHEET_GID  = 571990717
 
-# Columns (1-indexed for gspread row updates)
-COL_COUNTY  = 1   # A
-COL_NAME    = 2   # B
-COL_ADDRESS = 3   # C
-COL_HOURS   = 4   # D
-# Columns E (5) and F (6) are never written by this script
-COL_STATUS  = 7   # G — auto-stamped on change, auto-cleared when stable
+# Columns (1-indexed for gspread)
+COL_ADDRESS_ID    =  1   # A
+COL_COUNTY        =  2   # B
+COL_NAME_RAW      =  3   # C
+COL_NAME          =  4   # D
+COL_ADDRESS_RAW   =  5   # E
+COL_ADDRESS_FULL  =  6   # F
+COL_ADDRESS_LINE1 =  7   # G
+COL_ADDRESS_CITY  =  8   # H
+COL_ADDRESS_STATE =  9   # I
+COL_ADDRESS_ZIP   = 10   # J
+COL_HOURS_RAW     = 11   # K
+COL_IMAGE_URL     = 12   # L  ← never overwritten if already populated
+COL_HOURS_ADV     = 13   # M
+COL_LATITUDE      = 14   # N  ← blank for new rows
+COL_LONGITUDE     = 15   # O  ← blank for new rows
+COL_STATUS        = 16   # P  ← auto-stamped, auto-cleared
+
+# Fields used for change detection (compared against sheet columns)
+COMPARE_FIELDS = {
+    "polling_place_county":   COL_COUNTY,
+    "polling_place_name_raw": COL_NAME_RAW,
+    "polling_place_address_raw": COL_ADDRESS_RAW,
+    "hours_raw":              COL_HOURS_RAW,
+}
 
 
 def _today() -> str:
@@ -93,27 +121,51 @@ def _normalize_key(county: str, name: str) -> str:
 def _read_sheet(ws: gspread.Worksheet) -> tuple[list[list], dict[str, int]]:
     """
     Returns (all_rows, key_to_row_index).
-    all_rows is 0-indexed list of lists (row 0 = header).
-    key_to_row_index maps normalized 'COUNTY||NAME' → 0-based row index.
+    all_rows is 0-indexed (row 0 = header).
+    key_to_row_index maps 'COUNTY||NAME_RAW' → 0-based row index.
+    Column B = county (index 1), Column C = name_raw (index 2).
     """
     all_rows = ws.get_all_values()
     index: dict[str, int] = {}
     for i, row in enumerate(all_rows):
         if i == 0:
-            continue  # skip header
-        county = row[0] if len(row) > 0 else ""
-        name   = row[1] if len(row) > 1 else ""
-        if county or name:
-            index[_normalize_key(county, name)] = i
+            continue
+        county   = row[COL_COUNTY   - 1] if len(row) >= COL_COUNTY   else ""
+        name_raw = row[COL_NAME_RAW - 1] if len(row) >= COL_NAME_RAW else ""
+        if county or name_raw:
+            index[_normalize_key(county, name_raw)] = i
     return all_rows, index
+
+
+def _build_new_row(rec: dict) -> list:
+    """
+    Build a 16-column sheet row from a scraped record dict.
+    Latitude/Longitude left blank (require geocoding).
+    image_url left blank for new rows.
+    """
+    return [
+        rec.get("address_id",              ""),   # A
+        rec.get("polling_place_county",    ""),   # B
+        rec.get("polling_place_name_raw",  ""),   # C
+        rec.get("polling_place_name",      ""),   # D
+        rec.get("polling_place_address_raw",  ""), # E
+        rec.get("polling_place_address_full", ""), # F
+        rec.get("polling_place_address_line_1",""),# G
+        rec.get("polling_place_address_city", ""), # H
+        rec.get("polling_place_address_state",""), # I
+        rec.get("polling_place_address_zip",  ""), # J
+        rec.get("hours_raw",               ""),   # K
+        rec.get("image_url",               ""),   # L
+        rec.get("hours_advanced_polling",  ""),   # M
+        "",                                        # N Latitude (blank)
+        "",                                        # O Longitude (blank)
+        f"ADDED {_today()}",                       # P status
+    ]
 
 
 def sync_changes(diff: dict) -> dict[str, int]:
     """
     Apply a diff (from check_for_changes.compare()) to the Google Sheet.
-
-    diff keys: added (list of row dicts), removed (list), modified (list of {record, changes})
-
     Returns counts: {"appended": N, "updated": N, "skipped_removed": N}
     """
     if not (diff.get("added") or diff.get("modified")):
@@ -125,66 +177,79 @@ def sync_changes(diff: dict) -> dict[str, int]:
     ws     = _get_worksheet(client)
 
     all_rows, key_index = _read_sheet(ws)
-    total_rows = len(all_rows)
-
     appended = 0
     updated  = 0
 
-    # ── Handle modified rows — collect all cell updates, write in one batch ───
+    # ── Modified rows — collect all cell updates, write in one batch ──────────
     all_cell_updates: list[gspread.Cell] = []
     fallback_new: list[list] = []
+
+    # Map from diff field names → column numbers
+    field_col_map = {
+        "polling_place_county":      COL_COUNTY,
+        "polling_place_name_raw":    COL_NAME_RAW,
+        "polling_place_name":        COL_NAME,
+        "polling_place_address_raw": COL_ADDRESS_RAW,
+        "polling_place_address_full":COL_ADDRESS_FULL,
+        "polling_place_address_line_1": COL_ADDRESS_LINE1,
+        "polling_place_address_city":COL_ADDRESS_CITY,
+        "polling_place_address_state":COL_ADDRESS_STATE,
+        "polling_place_address_zip": COL_ADDRESS_ZIP,
+        "hours_raw":                 COL_HOURS_RAW,
+        "hours_advanced_polling":    COL_HOURS_ADV,
+    }
 
     for entry in diff.get("modified", []):
         rec     = entry["record"]
         changes = entry["changes"]
-        key     = _normalize_key(rec["county"], rec["name"])
+        key     = _normalize_key(
+            rec.get("polling_place_county", ""),
+            rec.get("polling_place_name_raw", "")
+        )
         row_idx = key_index.get(key)
 
         if row_idx is None:
-            print(f"  [NEW via modified] {rec['county']} — {rec['name']}")
-            fallback_new.append([rec["county"], rec["name"], rec["address"], rec["hours"],
-                                  "", "", f"ADDED {_today()}"])
+            print(f"  [NEW via modified] {rec.get('polling_place_county','')} — "
+                  f"{rec.get('polling_place_name_raw','')}")
+            fallback_new.append(_build_new_row(rec))
             continue
 
-        sheet_row_num = row_idx + 1
-        changed_fields = [f for f in ("county", "name", "address", "hours") if f in changes]
-        if "county" in changes:
-            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_COUNTY, rec["county"]))
-        if "name" in changes:
-            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_NAME, rec["name"]))
-        if "address" in changes:
-            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"]))
-        if "hours" in changes:
-            all_cell_updates.append(gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"]))
+        sheet_row_num  = row_idx + 1
+        changed_fields = list(changes.keys())
+
+        for field, col in field_col_map.items():
+            if field in changes:
+                all_cell_updates.append(gspread.Cell(sheet_row_num, col, rec.get(field, "")))
+
         if changed_fields:
             status = f"MODIFIED: {', '.join(changed_fields)} {_today()}"
             all_cell_updates.append(gspread.Cell(sheet_row_num, COL_STATUS, status))
             print(f"  [UPDATE {'+'.join(changed_fields)}] row {sheet_row_num}: "
-                  f"{rec['county']} — {rec['name']}")
+                  f"{rec.get('polling_place_county','')} — {rec.get('polling_place_name_raw','')}")
             updated += 1
 
     if all_cell_updates:
         ws.update_cells(all_cell_updates, value_input_option="RAW")
         time.sleep(1.2)
 
-    # ── Handle new locations (append rows) ────────────────────────────────────
-    # Columns: A county | B name | C address | D hours | E blank | F blank | G status
+    # ── New locations ─────────────────────────────────────────────────────────
     new_rows = fallback_new[:]
     for rec in diff.get("added", []):
-        print(f"  [APPEND] {rec['county']} — {rec['name']}  |  {rec['address']}")
-        new_rows.append([rec["county"], rec["name"], rec["address"], rec["hours"],
-                         "", "", f"ADDED {_today()}"])
+        print(f"  [APPEND] {rec.get('polling_place_county','')} — "
+              f"{rec.get('polling_place_name_raw','')}  |  "
+              f"{rec.get('polling_place_address_raw','')}")
+        new_rows.append(_build_new_row(rec))
 
     if new_rows:
         ws.append_rows(new_rows, value_input_option="RAW",
                        insert_data_option="INSERT_ROWS", table_range="A1")
         appended += len(new_rows)
 
-    # ── Removed locations: log only, don't delete from sheet ─────────────────
+    # ── Removed: log only ─────────────────────────────────────────────────────
     skipped = 0
     for rec in diff.get("removed", []):
-        print(f"  [SKIP REMOVE] {rec.get('county','')} — {rec.get('name','')} "
-              f"(kept in sheet; check manually)")
+        print(f"  [SKIP REMOVE] {rec.get('polling_place_county','')} — "
+              f"{rec.get('polling_place_name_raw','')} (kept in sheet)")
         skipped += 1
 
     print(f"\n  Sheet sync complete — appended: {appended}, updated: {updated}, "
@@ -194,23 +259,23 @@ def sync_changes(diff: dict) -> dict[str, int]:
 
 def clear_resolved_statuses(current: list[dict]) -> int:
     """
-    For every row in the sheet that has a status tag in column G:
-      - If the row's county, name, address, and hours now match the current
-        scraped data → clear column G (the change has been resolved / confirmed)
-      - Otherwise → leave the tag in place
+    For every row in the sheet with a status tag in column P:
+      - If the row's county, name_raw, address_raw, and hours_raw now match
+        the current scraped data → clear column P
+      - Otherwise → leave the tag
 
-    Called on every monitor run so tags auto-clear one cycle after the data
-    stabilises.  Returns the number of cells cleared.
+    Returns the number of cells cleared.
     """
     print("  Checking for resolved status tags to clear...")
     client = _get_client()
     ws     = _get_worksheet(client)
-
     all_rows = ws.get_all_values()
 
-    # Build lookup: COUNTY||NAME → scraped row dict
     current_lookup: dict[str, dict] = {
-        _normalize_key(r.get("county", ""), r.get("name", "")): r
+        _normalize_key(
+            r.get("polling_place_county", ""),
+            r.get("polling_place_name_raw", "")
+        ): r
         for r in current
     }
 
@@ -218,27 +283,27 @@ def clear_resolved_statuses(current: list[dict]) -> int:
 
     for i, row in enumerate(all_rows):
         if i == 0:
-            continue  # header
-        status = row[6].strip() if len(row) > 6 else ""
+            continue
+        status = row[COL_STATUS - 1].strip() if len(row) >= COL_STATUS else ""
         if not status:
-            continue  # no tag, skip
+            continue
 
-        county  = row[0].strip() if len(row) > 0 else ""
-        name    = row[1].strip() if len(row) > 1 else ""
-        address = row[2].strip() if len(row) > 2 else ""
-        hours   = row[3].strip() if len(row) > 3 else ""
+        county   = row[COL_COUNTY   - 1].strip() if len(row) >= COL_COUNTY   else ""
+        name_raw = row[COL_NAME_RAW - 1].strip() if len(row) >= COL_NAME_RAW else ""
+        addr_raw = row[COL_ADDRESS_RAW - 1].strip() if len(row) >= COL_ADDRESS_RAW else ""
+        hrs_raw  = row[COL_HOURS_RAW   - 1].strip() if len(row) >= COL_HOURS_RAW   else ""
 
-        key = _normalize_key(county, name)
+        key     = _normalize_key(county, name_raw)
         scraped = current_lookup.get(key)
 
         if scraped and (
-            scraped.get("address", "").strip() == address
-            and scraped.get("hours",   "").strip() == hours
-            and scraped.get("county",  "").strip().upper() == county.upper()
-            and scraped.get("name",    "").strip().upper() == name.upper()
+            scraped.get("polling_place_county",    "").strip().upper() == county.upper()
+            and scraped.get("polling_place_name_raw",    "").strip().upper() == name_raw.upper()
+            and scraped.get("polling_place_address_raw", "").strip() == addr_raw
+            and scraped.get("hours_raw",                 "").strip() == hrs_raw
         ):
             clears.append(gspread.Cell(i + 1, COL_STATUS, ""))
-            print(f"  [CLEAR status] row {i+1}: {county} — {name}  (was: {status})")
+            print(f"  [CLEAR status] row {i+1}: {county} — {name_raw}  (was: {status})")
 
     if clears:
         ws.update_cells(clears, value_input_option="RAW")
@@ -252,58 +317,61 @@ def clear_resolved_statuses(current: list[dict]) -> int:
 def full_sync(current_rows: list[dict]) -> dict[str, int]:
     """
     One-shot: compare ALL scraped rows against the sheet and push any missing
-    or changed county/name/address/hours values.  Preserves columns E and F.
-
-    Batches ALL cell updates into a single API call to stay within the
-    Google Sheets write-quota (60 requests/min).
+    or changed rows.  Preserves image_url / Latitude / Longitude if already set.
     """
     print("  Connecting to Google Sheets (full sync)...")
     client = _get_client()
     ws     = _get_worksheet(client)
-
     all_sheet_rows, key_index = _read_sheet(ws)
 
     all_cell_updates: list[gspread.Cell] = []
     new_batch: list[list] = []
     updated = 0
 
+    field_col_map = {
+        "polling_place_address_raw":  COL_ADDRESS_RAW,
+        "polling_place_address_full": COL_ADDRESS_FULL,
+        "polling_place_address_line_1": COL_ADDRESS_LINE1,
+        "polling_place_address_city": COL_ADDRESS_CITY,
+        "polling_place_address_state":COL_ADDRESS_STATE,
+        "polling_place_address_zip":  COL_ADDRESS_ZIP,
+        "hours_raw":                  COL_HOURS_RAW,
+        "hours_advanced_polling":     COL_HOURS_ADV,
+    }
+
     for rec in current_rows:
-        key     = _normalize_key(rec["county"], rec["name"])
+        key     = _normalize_key(
+            rec.get("polling_place_county", ""),
+            rec.get("polling_place_name_raw", "")
+        )
         row_idx = key_index.get(key)
 
         if row_idx is None:
-            new_batch.append([rec["county"], rec["name"], rec["address"], rec["hours"]])
-            print(f"  [NEW] {rec['county']} — {rec['name']}")
+            new_batch.append(_build_new_row(rec))
+            print(f"  [NEW] {rec.get('polling_place_county','')} — "
+                  f"{rec.get('polling_place_name_raw','')}")
         else:
             sheet_row     = all_sheet_rows[row_idx]
-            sheet_addr    = sheet_row[2] if len(sheet_row) > 2 else ""
-            sheet_hrs     = sheet_row[3] if len(sheet_row) > 3 else ""
             sheet_row_num = row_idx + 1
             row_changed   = False
-
-            if rec["address"].strip() != sheet_addr.strip():
-                all_cell_updates.append(gspread.Cell(sheet_row_num, COL_ADDRESS, rec["address"]))
-                row_changed = True
-            if rec["hours"].strip() != sheet_hrs.strip():
-                all_cell_updates.append(gspread.Cell(sheet_row_num, COL_HOURS, rec["hours"]))
-                row_changed = True
-
+            for field, col in field_col_map.items():
+                sheet_val = sheet_row[col - 1].strip() if len(sheet_row) >= col else ""
+                if rec.get(field, "").strip() != sheet_val:
+                    all_cell_updates.append(gspread.Cell(sheet_row_num, col, rec.get(field, "")))
+                    row_changed = True
             if row_changed:
                 updated += 1
-                print(f"  [UPDATE] row {sheet_row_num}: {rec['county']} — {rec['name']}")
+                print(f"  [UPDATE] row {sheet_row_num}: "
+                      f"{rec.get('polling_place_county','')} — "
+                      f"{rec.get('polling_place_name_raw','')}")
 
-    # Single batched write for all cell changes
     if all_cell_updates:
-        print(f"\n  Writing {len(all_cell_updates)} cell updates in one batch...")
-        # Google Sheets API limits to 2MB per request; chunk at 1000 cells to be safe
-        chunk_size = 1000
-        for i in range(0, len(all_cell_updates), chunk_size):
-            chunk = all_cell_updates[i:i + chunk_size]
-            ws.update_cells(chunk, value_input_option="RAW")
-            if i + chunk_size < len(all_cell_updates):
-                time.sleep(1.2)   # stay under 60 writes/min quota
+        print(f"\n  Writing {len(all_cell_updates)} cell updates...")
+        for i in range(0, len(all_cell_updates), 1000):
+            ws.update_cells(all_cell_updates[i:i+1000], value_input_option="RAW")
+            if i + 1000 < len(all_cell_updates):
+                time.sleep(1.2)
 
-    # Append all new rows at once
     if new_batch:
         print(f"\n  Appending {len(new_batch)} new rows...")
         time.sleep(1.2)
@@ -317,13 +385,20 @@ def full_sync(current_rows: list[dict]) -> dict[str, int]:
 
 def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv") -> int:
     """
-    Export the Google Sheet (columns A–D: county, name, address, hours) to the
-    local baseline CSV.  Preserves the same column order as the scraper output.
-    Skips the header row and any completely empty rows.
+    Export all 16 columns of the Google Sheet to the local baseline CSV.
+    Skips the header row and blank rows.
     Returns the number of rows written.
     """
     import csv as _csv
-    from pathlib import Path
+
+    FIELDS = [
+        "address_id", "polling_place_county", "polling_place_name_raw",
+        "polling_place_name", "polling_place_address_raw",
+        "polling_place_address_full", "polling_place_address_line_1",
+        "polling_place_address_city", "polling_place_address_state",
+        "polling_place_address_zip", "hours_raw", "image_url",
+        "hours_advanced_polling", "Latitude", "Longitude", "status",
+    ]
 
     print("  Connecting to Google Sheets (pull to CSV)...")
     client = _get_client()
@@ -334,21 +409,16 @@ def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv")
     for i, row in enumerate(rows):
         if i == 0:
             continue  # skip header
-        county  = row[0].strip() if len(row) > 0 else ""
-        name    = row[1].strip() if len(row) > 1 else ""
-        address = row[2].strip() if len(row) > 2 else ""
-        hours   = row[3].strip() if len(row) > 3 else ""
-        if not county and not name:
-            continue  # blank row
-        out_rows.append({
-            "county":   county,
-            "name":     name,
-            "address":  address,
-            "hours":    hours,
-        })
+        # Pad row to full width
+        row = row + [""] * (16 - len(row))
+        county   = row[COL_COUNTY   - 1].strip()
+        name_raw = row[COL_NAME_RAW - 1].strip()
+        if not county and not name_raw:
+            continue
+        out_rows.append(dict(zip(FIELDS, [v.strip() for v in row[:16]])))
 
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = _csv.DictWriter(f, fieldnames=["county", "name", "address", "hours"])
+        writer = _csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(out_rows)
 
