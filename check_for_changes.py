@@ -432,16 +432,17 @@ def append_to_log(diff: dict, timestamp: str, total_current: int):
         "added_count":   len(diff["added"]),
         "removed_count": len(diff["removed"]),
         "modified_count":len(diff["modified"]),
-        "added":   [{"id": r["id"], "county": r["county"], "name": r["name"], "address": r["address"]}
+        "added":   [{"county": r.get("polling_place_county",""),
+                     "name":   r.get("polling_place_name_raw",""),
+                     "address":r.get("polling_place_address_raw","")}
                     for r in diff["added"]],
-        "removed": [{"id": r["id"], "county": r["county"], "name": r["name"]}
+        "removed": [{"county": r.get("polling_place_county",""),
+                     "name":   r.get("polling_place_name_raw","")}
                     for r in diff["removed"]],
-        "modified":[{
-                        "id":      e["record"]["id"],
-                        "county":  e["record"]["county"],
-                        "name":    e["record"]["name"],
-                        "changes": e["changes"]
-                    } for e in diff["modified"]],
+        "modified":[{"county":  e["record"].get("polling_place_county",""),
+                     "name":    e["record"].get("polling_place_name_raw",""),
+                     "changes": e["changes"]}
+                    for e in diff["modified"]],
     }
     log.append(entry)
     CHANGE_LOG.write_text(json.dumps(log, indent=2))
@@ -453,22 +454,31 @@ def append_to_log(diff: dict, timestamp: str, total_current: int):
 def _fmt_added(records: list[dict]) -> str:
     lines = []
     for r in records:
-        lines.append(f"  + [{r['county']}]  {r['name']}")
-        lines.append(f"      {r['address']}")
-        if r.get("hours"):
-            lines.append(f"      Hours: {r['hours'][:120]}{'...' if len(r.get('hours','')) > 120 else ''}")
+        county = r.get("polling_place_county", "")
+        name   = r.get("polling_place_name_raw", "")
+        addr   = r.get("polling_place_address_raw", "")
+        hrs    = r.get("hours_raw", "")
+        lines.append(f"  + [{county}]  {name}")
+        lines.append(f"      {addr}")
+        if hrs:
+            lines.append(f"      Hours: {hrs[:120]}{'...' if len(hrs) > 120 else ''}")
     return "\n".join(lines)
 
 
 def _fmt_removed(records: list[dict]) -> str:
-    return "\n".join(f"  - [{r['county']}]  {r['name']}" for r in records)
+    return "\n".join(
+        f"  - [{r.get('polling_place_county','')}]  {r.get('polling_place_name_raw','')}"
+        for r in records
+    )
 
 
 def _fmt_modified(entries: list[dict]) -> str:
     lines = []
     for e in entries:
         r = e["record"]
-        lines.append(f"  ~ [{r['county']}]  {r['name']}")
+        county = r.get("polling_place_county", "")
+        name   = r.get("polling_place_name_raw", "")
+        lines.append(f"  ~ [{county}]  {name}")
         for field, chg in e["changes"].items():
             lines.append(f"      {field.upper()} changed:")
             lines.append(f"        Before: {chg['from'][:120]}")
