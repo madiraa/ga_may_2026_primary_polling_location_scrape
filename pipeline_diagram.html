@@ -296,7 +296,8 @@
   .col-chip.highlight-image { border-left: 3px solid var(--accent4); }
   .col-chip.highlight-geo { border-left: 3px solid var(--green); }
   .col-chip.highlight-status { border-left: 3px solid var(--accent3); }
-  .col-chip.highlight-dateadded { border-left: 3px solid #b06000; }
+  .col-chip.highlight-dateadded   { border-left: 3px solid #b06000; }
+  .col-chip.highlight-dateremoved { border-left: 3px solid #c0392b; }
 
   /* ── Schedule banner ── */
   .schedule-banner {
@@ -488,9 +489,13 @@
       <div class="tag-desc">Empty = data matches live SOS site. No action needed.</div>
     </div>
     <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
+      <div class="tag-row" style="margin-bottom:10px;">
+        <span class="tag" style="background:#fef3e2;color:#b06000;border:1px solid #f0d090;white-space:nowrap;">date_added (Q)</span>
+        <div class="tag-desc">Stamped once on first append. <strong style="color:var(--text);">Never cleared.</strong> Permanent record of when a location entered the sheet.</div>
+      </div>
       <div class="tag-row" style="margin-bottom:0;">
-        <span class="tag" style="background:#fef3e2;color:#b06000;border:1px solid #f0d090;white-space:nowrap;">date_added</span>
-        <div class="tag-desc">Col Q — stamped once on first append. <strong style="color:var(--text);">Never cleared.</strong> Permanent record of when a location entered the sheet.</div>
+        <span class="tag removed" style="white-space:nowrap;">date_removed (R)</span>
+        <div class="tag-desc">Stamped once on first removal from SOS site. <strong style="color:var(--text);">Never cleared.</strong> Permanent audit trail even if location later reappears.</div>
       </div>
     </div>
   </div>
@@ -518,7 +523,7 @@
 </div>
 
 <!-- Schema columns -->
-<p class="section-title">Output Schema — 17 Columns (A–Q)</p>
+<p class="section-title">Output Schema — 18 Columns (A–R)</p>
 <div class="info-panel" style="margin-bottom:0;">
   <div class="schema-grid">
     <div class="col-chip"><div class="col-letter">A</div><div class="col-name">address_id</div></div>
@@ -538,6 +543,7 @@
     <div class="col-chip highlight-geo"><div class="col-letter">O</div><div class="col-name">Longitude</div></div>
     <div class="col-chip highlight-status"><div class="col-letter">P</div><div class="col-name">status</div></div>
     <div class="col-chip highlight-dateadded"><div class="col-letter">Q</div><div class="col-name">date_added</div></div>
+    <div class="col-chip highlight-dateremoved"><div class="col-letter">R</div><div class="col-name">date_removed</div></div>
   </div>
   <div style="display:flex;gap:20px;margin-top:16px;flex-wrap:wrap;">
     <span style="font-size:11px;color:#1a5fa8;">■ Address components</span>

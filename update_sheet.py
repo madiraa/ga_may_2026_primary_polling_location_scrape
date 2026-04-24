@@ -72,6 +72,7 @@ COL_LATITUDE      = 14   # N  ← blank for new rows
 COL_LONGITUDE     = 15   # O  ← blank for new rows
 COL_STATUS        = 16   # P  ← auto-stamped, auto-cleared
 COL_DATE_ADDED    = 17   # Q  ← stamped once on first append, never cleared
+COL_DATE_REMOVED  = 18   # R  ← stamped once on first removal, never cleared
 
 # Fields used for change detection (compared against sheet columns)
 COMPARE_FIELDS = {
@@ -165,6 +166,7 @@ def _build_new_row(rec: dict) -> list:
         "",                                        # O Longitude (blank)
         f"ADDED {_today()}",                       # P status
         _today(),                                  # Q date_added (permanent)
+        "",                                        # R date_removed (blank for new rows)
     ]
 
 
@@ -260,9 +262,16 @@ def sync_changes(diff: dict) -> dict[str, int]:
         row_idx  = key_index.get(key)
         if row_idx is not None:
             sheet_row_num = row_idx + 1
+            sheet_row = all_rows[row_idx]
             remove_updates.append(
                 gspread.Cell(sheet_row_num, COL_STATUS, f"REMOVED {_today()}")
             )
+            # Only stamp date_removed if not already set (first removal)
+            existing_date_removed = sheet_row[COL_DATE_REMOVED - 1] if len(sheet_row) >= COL_DATE_REMOVED else ""
+            if not existing_date_removed.strip():
+                remove_updates.append(
+                    gspread.Cell(sheet_row_num, COL_DATE_REMOVED, _today())
+                )
             print(f"  [REMOVED tag] row {sheet_row_num}: {county} — {name_raw}")
         else:
             print(f"  [SKIP REMOVE — not found in sheet] {county} — {name_raw}")
@@ -424,7 +433,7 @@ def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv")
         "polling_place_address_full", "polling_place_address_line_1",
         "polling_place_address_city", "polling_place_address_state",
         "polling_place_address_zip", "hours_raw", "image_url",
-        "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added",
+        "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added", "date_removed",
     ]
 
     print("  Connecting to Google Sheets (pull to CSV)...")
@@ -436,13 +445,13 @@ def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv")
     for i, row in enumerate(rows):
         if i == 0:
             continue  # skip header
-        # Pad row to full width (17 columns now)
-        row = row + [""] * (17 - len(row))
+        # Pad row to full width (18 columns now)
+        row = row + [""] * (18 - len(row))
         county   = row[COL_COUNTY   - 1].strip()
         name_raw = row[COL_NAME_RAW - 1].strip()
         if not county and not name_raw:
             continue
-        out_rows.append(dict(zip(FIELDS, [v.strip() for v in row[:17]])))
+        out_rows.append(dict(zip(FIELDS, [v.strip() for v in row[:18]])))
 
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = _csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
