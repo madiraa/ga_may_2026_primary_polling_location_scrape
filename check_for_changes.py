@@ -284,9 +284,10 @@ async def scrape_current() -> list[dict]:
 # ── Comparison logic ──────────────────────────────────────────────────────────
 
 def _row_key(row: dict) -> str:
-    """Normalised matching key: 'COUNTY||NAME_RAW'."""
-    county   = row.get("polling_place_county",   row.get("county", "")).strip().upper()
-    name_raw = row.get("polling_place_name_raw", row.get("name",   "")).strip().upper()
+    """Normalised matching key: 'COUNTY||NAME_RAW' — collapses internal whitespace."""
+    import re
+    county   = re.sub(r'\s+', ' ', row.get("polling_place_county",   row.get("county", "")).strip()).upper()
+    name_raw = re.sub(r'\s+', ' ', row.get("polling_place_name_raw", row.get("name",   "")).strip()).upper()
     return f"{county}||{name_raw}"
 
 

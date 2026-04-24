@@ -115,7 +115,10 @@ def _get_worksheet(client: gspread.Client) -> gspread.Worksheet:
 # ── Core sync logic ───────────────────────────────────────────────────────────
 
 def _normalize_key(county: str, name: str) -> str:
-    return f"{county.strip().upper()}||{name.strip().upper()}"
+    import re
+    c = re.sub(r'\s+', ' ', county.strip()).upper()
+    n = re.sub(r'\s+', ' ', name.strip()).upper()
+    return f"{c}||{n}"
 
 
 def _read_sheet(ws: gspread.Worksheet) -> tuple[list[list], dict[str, int]]:
@@ -168,9 +171,9 @@ def sync_changes(diff: dict) -> dict[str, int]:
     Apply a diff (from check_for_changes.compare()) to the Google Sheet.
     Returns counts: {"appended": N, "updated": N, "skipped_removed": N}
     """
-    if not (diff.get("added") or diff.get("modified")):
-        print("  No adds/modifications to sync to sheet.")
-        return {"appended": 0, "updated": 0, "skipped_removed": len(diff.get("removed", []))}
+    if not (diff.get("added") or diff.get("modified") or diff.get("removed")):
+        print("  No changes to sync to sheet.")
+        return {"appended": 0, "updated": 0, "skipped_removed": 0}
 
     print("  Connecting to Google Sheets...")
     client = _get_client()
