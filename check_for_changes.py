@@ -301,14 +301,22 @@ def load_baseline_from_sheet() -> dict[str, dict]:
     rows   = ws.get_all_values()
 
     baseline: dict[str, dict] = {}
+    skipped_removed = 0
     for i, row in enumerate(rows):
         if i == 0:
             continue
         row = row + [""] * (15 - len(row))
         rec = dict(zip(SHEET_FIELDS, [v.strip() for v in row[:15]]))
-        if rec["polling_place_county"] or rec["polling_place_name"]:
-            baseline[_row_key(rec)] = rec
+        if not (rec["polling_place_county"] or rec["polling_place_name"]):
+            continue
+        # Skip rows already marked REMOVED — they are tracked history, not active locations
+        if rec.get("status", "").startswith("REMOVED"):
+            skipped_removed += 1
+            continue
+        baseline[_row_key(rec)] = rec
 
+    if skipped_removed:
+        print(f"  Skipped {skipped_removed} already-REMOVED row(s) from baseline")
     print(f"  Sheet baseline: {len(baseline)} rows")
     return baseline
 
