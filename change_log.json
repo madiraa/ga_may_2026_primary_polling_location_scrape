@@ -8004,5 +8004,40 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-25T20:32:07Z",
+    "total_records": 304,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 2,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "COOK",
+        "name": "COOK COUNTY ADMINISTRATION BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1200 S Hutchinson Ave, Adel, GA 31620",
+            "to": "1200 South Hutchinson Avenue, Adel, GA 31620"
+          }
+        }
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER - BANQUET RM",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "6185 Turner Lake Rd NW, Covington, GA 30014",
+            "to": "6185 Turner Lake Rd Nw, Covington, GA 30014"
+          },
+          "hours_advanced_polling": {
+            "from": "05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/12/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/12/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
