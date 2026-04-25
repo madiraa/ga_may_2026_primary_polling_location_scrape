@@ -188,26 +188,27 @@ def _hours_advanced_only(events: list) -> str:
 
 
 def record_to_row(rec: dict) -> dict:
+    import re
     events   = rec.get("eventList", [])
     raw_addr = rec.get("address", "").replace("<br>", ", ").replace("<BR>", ", ").strip()
     addr     = _parse_address(raw_addr)
+    name     = re.sub(r'\s+', ' ', rec.get("name", "").strip())
     return {
         "address_id":                   addr["address_id"],
         "polling_place_county":         rec.get("county", ""),
-        "polling_place_name_raw":       rec.get("name", ""),
-        "polling_place_name":           rec.get("name", ""),
-        "polling_place_address_raw":    raw_addr,
+        "polling_place_name":           name,
         "polling_place_address_full":   addr["full"],
         "polling_place_address_line_1": addr["line_1"],
         "polling_place_address_city":   addr["city"],
         "polling_place_address_state":  addr["state"],
         "polling_place_address_zip":    addr["zip"],
-        "hours_raw":                    flatten_hours(events),
         "image_url":                    "",
         "hours_advanced_polling":       _hours_advanced_only(events),
         "Latitude":                     "",
         "Longitude":                    "",
         "status":                       "",
+        "date_added":                   "",
+        "date_removed":                 "",
     }
 
 
@@ -284,54 +285,36 @@ async def scrape_current() -> list[dict]:
 # ── Comparison logic ──────────────────────────────────────────────────────────
 
 def _row_key(row: dict) -> str:
-    """Normalised matching key: 'COUNTY||NAME_RAW' — collapses internal whitespace."""
+    """Normalised matching key: 'COUNTY||NAME' — collapses internal whitespace."""
     import re
-    county   = re.sub(r'\s+', ' ', row.get("polling_place_county",   row.get("county", "")).strip()).upper()
-    name_raw = re.sub(r'\s+', ' ', row.get("polling_place_name_raw", row.get("name",   "")).strip()).upper()
-    return f"{county}||{name_raw}"
+    county = re.sub(r'\s+', ' ', row.get("polling_place_county", "").strip()).upper()
+    name   = re.sub(r'\s+', ' ', row.get("polling_place_name",   "").strip()).upper()
+    return f"{county}||{name}"
 
 
 def load_baseline_from_sheet() -> dict[str, dict]:
-    """
-    Read all 16 columns from the Google Sheet.
-    Returns a dict keyed by 'COUNTY||NAME_RAW'.
-    """
-    from update_sheet import _get_client, _get_worksheet
+    """Read the Google Sheet; return a dict keyed by normalised COUNTY||NAME."""
+    from update_sheet import _get_client, _get_worksheet, FIELDS as SHEET_FIELDS
     print("  Loading baseline from Google Sheet...")
     client = _get_client()
     ws     = _get_worksheet(client)
     rows   = ws.get_all_values()
 
-    FIELDS = [
-        "address_id", "polling_place_county", "polling_place_name_raw",
-        "polling_place_name", "polling_place_address_raw",
-        "polling_place_address_full", "polling_place_address_line_1",
-        "polling_place_address_city", "polling_place_address_state",
-        "polling_place_address_zip", "hours_raw", "image_url",
-        "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added", "date_removed",
-    ]
-
     baseline: dict[str, dict] = {}
     for i, row in enumerate(rows):
         if i == 0:
             continue
-        row = row + [""] * (18 - len(row))
-        rec = dict(zip(FIELDS, [v.strip() for v in row[:18]]))
-        county   = rec["polling_place_county"]
-        name_raw = rec["polling_place_name_raw"]
-        if county or name_raw:
-            key = f"{county.upper()}||{name_raw.upper()}"
-            baseline[key] = rec
+        row = row + [""] * (15 - len(row))
+        rec = dict(zip(SHEET_FIELDS, [v.strip() for v in row[:15]]))
+        if rec["polling_place_county"] or rec["polling_place_name"]:
+            baseline[_row_key(rec)] = rec
 
     print(f"  Sheet baseline: {len(baseline)} rows")
     return baseline
 
 
 def load_baseline_from_csv() -> dict[str, dict]:
-    """
-    Fallback: read the local CSV when Google credentials are not available.
-    Keyed by 'COUNTY||NAME_RAW'.
-    """
+    """Fallback: read local CSV when GOOGLE_CREDENTIALS is not available."""
     if not BASELINE_CSV.exists():
         return {}
     with open(BASELINE_CSV, newline="", encoding="utf-8") as f:
@@ -341,20 +324,19 @@ def load_baseline_from_csv() -> dict[str, dict]:
 
 def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
     """
-    Compare scraped current data against the baseline (keyed by COUNTY||NAME_RAW).
+    Compare scraped data against the baseline (keyed by COUNTY||NAME).
 
-    Fields checked for changes:
-      polling_place_county      — county reassignment
-      polling_place_name_raw    — location renamed
-      polling_place_address_raw — location moved
-      hours_raw                 — schedule updated
-
-    ADDED  = county+name combo not found in baseline
-    REMOVED = combo disappeared from current data
-    MODIFIED = any field-level change on a matched row
+    Fields checked: county, name, address_full, hours_advanced_polling
+    ADDED   = not in baseline
+    REMOVED = disappeared from current
+    MODIFIED = field-level change on a matched row
     """
-    current_by_key = {_row_key(r): r for r in current}
+    import re
 
+    def _norm(s: str) -> str:
+        return re.sub(r'\s+', ' ', s.strip())
+
+    current_by_key = {_row_key(r): r for r in current}
     added, removed, modified = [], [], []
 
     for key, rec in current_by_key.items():
@@ -363,10 +345,10 @@ def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
         else:
             base    = baseline[key]
             changes: dict[str, dict] = {}
-            for field in ("polling_place_county", "polling_place_name_raw",
-                          "polling_place_address_raw", "hours_raw"):
-                before = base.get(field, "").strip()
-                after  = rec.get(field,  "").strip()
+            for field in ("polling_place_county", "polling_place_name",
+                          "polling_place_address_full", "hours_advanced_polling"):
+                before = _norm(base.get(field, ""))
+                after  = _norm(rec.get(field,  ""))
                 if before != after:
                     changes[field] = {"from": before, "to": after}
             if changes:
@@ -434,14 +416,14 @@ def append_to_log(diff: dict, timestamp: str, total_current: int):
         "removed_count": len(diff["removed"]),
         "modified_count":len(diff["modified"]),
         "added":   [{"county": r.get("polling_place_county",""),
-                     "name":   r.get("polling_place_name_raw",""),
-                     "address":r.get("polling_place_address_raw","")}
+                     "name":   r.get("polling_place_name",""),
+                     "address":r.get("polling_place_address_full","")}
                     for r in diff["added"]],
         "removed": [{"county": r.get("polling_place_county",""),
-                     "name":   r.get("polling_place_name_raw","")}
+                     "name":   r.get("polling_place_name","")}
                     for r in diff["removed"]],
         "modified":[{"county":  e["record"].get("polling_place_county",""),
-                     "name":    e["record"].get("polling_place_name_raw",""),
+                     "name":    e["record"].get("polling_place_name",""),
                      "changes": e["changes"]}
                     for e in diff["modified"]],
     }
@@ -456,9 +438,9 @@ def _fmt_added(records: list[dict]) -> str:
     lines = []
     for r in records:
         county = r.get("polling_place_county", "")
-        name   = r.get("polling_place_name_raw", "")
-        addr   = r.get("polling_place_address_raw", "")
-        hrs    = r.get("hours_raw", "")
+        name   = r.get("polling_place_name", "")
+        addr   = r.get("polling_place_address_full", "")
+        hrs    = r.get("hours_advanced_polling", "")
         lines.append(f"  + [{county}]  {name}")
         lines.append(f"      {addr}")
         if hrs:
@@ -468,7 +450,7 @@ def _fmt_added(records: list[dict]) -> str:
 
 def _fmt_removed(records: list[dict]) -> str:
     return "\n".join(
-        f"  - [{r.get('polling_place_county','')}]  {r.get('polling_place_name_raw','')}"
+        f"  - [{r.get('polling_place_county','')}]  {r.get('polling_place_name','')}"
         for r in records
     )
 
@@ -478,7 +460,7 @@ def _fmt_modified(entries: list[dict]) -> str:
     for e in entries:
         r = e["record"]
         county = r.get("polling_place_county", "")
-        name   = r.get("polling_place_name_raw", "")
+        name   = r.get("polling_place_name", "")
         lines.append(f"  ~ [{county}]  {name}")
         for field, chg in e["changes"].items():
             lines.append(f"      {field.upper()} changed:")
@@ -546,12 +528,11 @@ def send_email(diff: dict, timestamp: str):
 # ── Baseline CSV writer ───────────────────────────────────────────────────────
 
 CSV_FIELDS = [
-    "address_id", "polling_place_county", "polling_place_name_raw",
-    "polling_place_name", "polling_place_address_raw",
+    "address_id", "polling_place_county", "polling_place_name",
     "polling_place_address_full", "polling_place_address_line_1",
     "polling_place_address_city", "polling_place_address_state",
-    "polling_place_address_zip", "hours_raw", "image_url",
-    "hours_advanced_polling", "Latitude", "Longitude", "status", "date_added", "date_removed",
+    "polling_place_address_zip", "image_url", "hours_advanced_polling",
+    "Latitude", "Longitude", "status", "date_added", "date_removed",
 ]
 
 
