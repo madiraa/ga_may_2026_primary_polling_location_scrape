@@ -4801,5 +4801,74 @@
       }
     ],
     "modified": []
+  },
+  {
+    "timestamp": "2026-04-25T05:45:06Z",
+    "total_records": 304,
+    "added_count": 4,
+    "removed_count": 4,
+    "modified_count": 2,
+    "added": [
+      {
+        "county": "COBB",
+        "name": "AIP MAIN OFFICE  MANSOUR",
+        "address": "995 ROSWELL ST NE, MARIETTA GA 30060"
+      },
+      {
+        "county": "FULTON",
+        "name": "AIP-FLIPPER TEMPLE  AME  CHURCH FELLOWSHIP HALL",
+        "address": "580 ATLANTA STUDENT MOVEMENT BLVD SW, ATLANTA GA 30314"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY  OAKLAND LIBRARY",
+        "address": "445 OAKLAND PARKWAY WEST, LEESBURG GA 31763"
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER  - BANQUET RM",
+        "address": "6185 TURNER LAKE RD NW, COVINGTON GA 30014"
+      }
+    ],
+    "removed": [
+      {
+        "county": "COBB",
+        "name": "AIP MAIN OFFICE  MANSOUR"
+      },
+      {
+        "county": "FULTON",
+        "name": "AIP-FLIPPER TEMPLE  AME  CHURCH FELLOWSHIP HALL"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY  OAKLAND LIBRARY"
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER  - BANQUET RM"
+      }
+    ],
+    "modified": [
+      {
+        "county": "JASPER",
+        "name": "JASPER COUNTY COURTHOUSE",
+        "changes": {
+          "hours_raw": {
+            "from": "04/20/2026 - 04/24/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/19/2026 - 05/19/2026 9:00 AM - 5:00 PM (Dropbox Polling Location)",
+            "to": "04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/19/2026 - 05/19/2026 9:00 AM - 5:00 PM (Dropbox Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "TAYLOR",
+        "name": "VOTER REGISTRAR OFFICE",
+        "changes": {
+          "hours_raw": {
+            "from": "04/20/2026 - 04/24/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/18/2026 - 05/18/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/19/2026 - 05/19/2026 8:00 AM - 5:00 PM (Dropbox Polling Location)",
+            "to": "04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Dropbox Polling Location) | 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/18/2026 - 05/18/2026 8:00 AM - 5:00 PM (Dropbox Polling Location) | 05/19/2026 - 05/19/2026 8:00 AM - 5:00 PM (Dropbox Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
