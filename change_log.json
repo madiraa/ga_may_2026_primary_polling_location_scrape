@@ -4753,5 +4753,68 @@
       }
     ],
     "modified": []
+  },
+  {
+    "timestamp": "2026-04-24T22:16:05Z",
+    "total_records": 304,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 4,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "COBB",
+        "name": "AIP MAIN OFFICE  MANSOUR",
+        "changes": {
+          "polling_place_name_raw": {
+            "from": "AIP MAIN OFFICE MANSOUR",
+            "to": "AIP MAIN OFFICE  MANSOUR"
+          },
+          "hours_raw": {
+            "from": "05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "AIP-FLIPPER TEMPLE  AME  CHURCH FELLOWSHIP HALL",
+        "changes": {
+          "polling_place_name_raw": {
+            "from": "AIP-FLIPPER TEMPLE AME CHURCH FELLOWSHIP HALL",
+            "to": "AIP-FLIPPER TEMPLE  AME  CHURCH FELLOWSHIP HALL"
+          },
+          "hours_raw": {
+            "from": "05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY  OAKLAND LIBRARY",
+        "changes": {
+          "polling_place_name_raw": {
+            "from": "THE BINDERY OAKLAND LIBRARY",
+            "to": "THE BINDERY  OAKLAND LIBRARY"
+          }
+        }
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER  - BANQUET RM",
+        "changes": {
+          "polling_place_name_raw": {
+            "from": "TURNER LAKE RECREATION CENTER - BANQUET RM",
+            "to": "TURNER LAKE RECREATION CENTER  - BANQUET RM"
+          },
+          "hours_raw": {
+            "from": "05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) | 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/12/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/13/2026 - 05/13/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) | 05/11/2026 - 05/12/2026 8:00 AM - 5:00 PM (Advanced Polling Location) | 05/13/2026 - 05/13/2026 8:00 AM - 7:00 PM (Advanced Polling Location) | 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) | 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
