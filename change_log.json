@@ -4870,5 +4870,53 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-25T08:44:24Z",
+    "total_records": 304,
+    "added_count": 4,
+    "removed_count": 4,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "COBB",
+        "name": "AIP MAIN OFFICE  MANSOUR",
+        "address": "995 ROSWELL ST NE, MARIETTA GA 30060"
+      },
+      {
+        "county": "FULTON",
+        "name": "AIP-FLIPPER TEMPLE  AME  CHURCH FELLOWSHIP HALL",
+        "address": "580 ATLANTA STUDENT MOVEMENT BLVD SW, ATLANTA GA 30314"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY  OAKLAND LIBRARY",
+        "address": "445 OAKLAND PARKWAY WEST, LEESBURG GA 31763"
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER  - BANQUET RM",
+        "address": "6185 TURNER LAKE RD NW, COVINGTON GA 30014"
+      }
+    ],
+    "removed": [
+      {
+        "county": "COBB",
+        "name": "AIP MAIN OFFICE  MANSOUR"
+      },
+      {
+        "county": "FULTON",
+        "name": "AIP-FLIPPER TEMPLE  AME  CHURCH FELLOWSHIP HALL"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY  OAKLAND LIBRARY"
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER  - BANQUET RM"
+      }
+    ],
+    "modified": []
   }
 ]
