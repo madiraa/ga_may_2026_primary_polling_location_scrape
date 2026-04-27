@@ -8039,5 +8039,131 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-27T20:55:32Z",
+    "total_records": 304,
+    "added_count": 23,
+    "removed_count": 0,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "CLARKE",
+        "name": "ACC COOPERATIVE EXTENSION OFFICE",
+        "address": "275 Cleveland Rd, Bogart, GA 30622"
+      },
+      {
+        "county": "BARTOW",
+        "name": "ALLATOONA RESOURCE CENTER",
+        "address": "6503 Allatoona Gtwy, Acworth, GA 30102"
+      },
+      {
+        "county": "CLARKE",
+        "name": "ATHENS-CLARKE COUNTY TENNIS CENTER",
+        "address": "4460 Lexington Road, Athens, GA 30605"
+      },
+      {
+        "county": "PAULDING",
+        "name": "BURNT HICKORY PARK",
+        "address": "8650 Cartersville Hwy, Dallas, GA 30132"
+      },
+      {
+        "county": "BARTOW",
+        "name": "CARTERSVILLE CIVIC CENTER",
+        "address": "435 West Main Street, Cartersville, GA 30120"
+      },
+      {
+        "county": "WALKER",
+        "name": "CHICKAMAUGA CIVIC CENTER",
+        "address": "1817 Lee Clarkson Rd, Chickamauga, GA 30707"
+      },
+      {
+        "county": "JACKSON",
+        "name": "COMMERCE ADMINISTRATIVE COMPLEX",
+        "address": "110 State St, Commerce, GA 30529"
+      },
+      {
+        "county": "PAULDING",
+        "name": "CROSSROADS LIBRARY",
+        "address": "909 Harmony Grove Church Rd, Acworth, GA 30101"
+      },
+      {
+        "county": "PAULDING",
+        "name": "DIANNE WRIGHT INNOVATION CENTER",
+        "address": "140 Bethel Church Rd, Hiram, GA 30141"
+      },
+      {
+        "county": "HARRIS",
+        "name": "ELECTION'S OFFICE",
+        "address": "757 Carver Circle, Hamilton, GA 31811"
+      },
+      {
+        "county": "PAULDING",
+        "name": "HIRAM UNITED METHODIST CHURCH",
+        "address": "324 Hiram Douglasville Hwy, Hiram, GA 30141"
+      },
+      {
+        "county": "WALKER",
+        "name": "LOOKOUT MOUNTAIN CITY HALL",
+        "address": "1214 Lula Lake Road, Lookout Mountain, GA 30750"
+      },
+      {
+        "county": "BARTOW",
+        "name": "MANNING MILL PARK FACILITY",
+        "address": "163B Manning Mill Rd, Adairsville, GA 30103"
+      },
+      {
+        "county": "CLARKE",
+        "name": "MIRIAM MOORE COMMUNITY CENTER",
+        "address": "410 Mckinley Dr, Athens, GA 30605"
+      },
+      {
+        "county": "PAULDING",
+        "name": "MULBERRY ROCK PARK",
+        "address": "1849 Mulberry Rock Rd, Dallas, GA 30157"
+      },
+      {
+        "county": "JACKSON",
+        "name": "POLICE & MUNICIPAL COURT BLDG",
+        "address": "5040 Highway 53, Braselton, GA 30517"
+      },
+      {
+        "county": "CARROLL",
+        "name": "POWELL PARK RECREATION CENTER",
+        "address": "524 Leslie Dr, Villa Rica, GA 30180-2405"
+      },
+      {
+        "county": "LEE",
+        "name": "REDBONE FIRE STATION #5",
+        "address": "1286 Graves Springs Road, Leesburg, GA 31763"
+      },
+      {
+        "county": "HABERSHAM",
+        "name": "RUBY FULBRIGHT AQUATIC CENTER",
+        "address": "120 Paul Franklin Rd, Clarkesville, GA 30523"
+      },
+      {
+        "county": "TATTNALL",
+        "name": "SOUTHEASTERN TECH SCHOOL",
+        "address": "209 Bolton St, Glennville, GA 30427"
+      },
+      {
+        "county": "CHARLTON",
+        "name": "ST GEORGE",
+        "address": "13063 Florida Avenue, Sst George, GA 31562"
+      },
+      {
+        "county": "CAMDEN",
+        "name": "ST. MARYS WELCOME CENTER ADVANCE IN PERSON",
+        "address": "400 Osborne Street, St. Marys, GA 31558"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY OAKLAND LIBRARY",
+        "address": "445 Oakland Parkway West, Leesburg, GA 31763"
+      }
+    ],
+    "removed": [],
+    "modified": []
   }
 ]
