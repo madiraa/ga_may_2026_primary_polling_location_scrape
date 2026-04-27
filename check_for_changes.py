@@ -175,6 +175,66 @@ def _parse_address(raw_addr: str) -> dict:
             "full": full, "address_id": f"{street}_{city}_{state}_{zip_code}"}
 
 
+def _clean_polling_name(name: str) -> str:
+    """Strip AIP, EV, AIP/EV prefixes and suffixes added by SOS to location names."""
+    import re
+    s = name.strip()
+    prefixes = [
+        r'^AIP/EV\s*[-–]?\s*',
+        r'^AIP\s*[-–/]\s*',
+        r'^AIP\s+',
+        r'^EV\s*[-–/]\s*',
+        r'^EV\s+',
+        r'^ADVANCE\s*[-–]\s*EARLY VOTING\s*',
+    ]
+    for p in prefixes:
+        new = re.sub(p, '', s, flags=re.IGNORECASE).strip()
+        if new != s:
+            s = new
+            break
+    suffixes = [
+        r'\s*[-–/]\s*AIP/EV\s*$',
+        r'\s*[-–/]\s*AIP\s*$',
+        r'\s*[-–/]\s*EV\s*$',
+        r'\s+AIP\s*$',
+        r'\s+EV\s*$',
+        r'\s*\(\s*AIP\s*\)\s*$',
+    ]
+    for p in suffixes:
+        s = re.sub(p, '', s, flags=re.IGNORECASE).strip()
+    return s
+
+
+def _clean_polling_name(name: str) -> str:
+    """Strip AIP, EV, AIP/EV prefixes and suffixes added by SOS to location names."""
+    import re
+    s = name.strip()
+    prefixes = [
+        r'^AIP/EV\s*[-–]?\s*',
+        r'^AIP\s*[-–/]\s*',
+        r'^AIP\s+',
+        r'^EV\s*[-–/]\s*',
+        r'^EV\s+',
+        r'^ADVANCE\s*[-–]\s*EARLY VOTING\s*',
+    ]
+    for p in prefixes:
+        new = re.sub(p, '', s, flags=re.IGNORECASE).strip()
+        if new != s:
+            s = new
+            break
+    suffixes = [
+        r'\s*[-–/]\s*AIP/EV\s*$',
+        r'\s*[-–/]\s*AIP\s*$',
+        r'\s*[-–/]\s*EV\s*$',
+        r'\s+AIP\s*$',
+        r'\s+EV\s*$',
+        r'\s*\(\s*AIP\s*\)\s*$',
+    ]
+    for p in suffixes:
+        s = re.sub(p, '', s, flags=re.IGNORECASE).strip()
+    return s
+
+
 def _hours_advanced_only(events: list) -> str:
     parts = []
     for e in events:
@@ -192,7 +252,7 @@ def record_to_row(rec: dict) -> dict:
     events   = rec.get("eventList", [])
     raw_addr = rec.get("address", "").replace("<br>", ", ").replace("<BR>", ", ").strip()
     addr     = _parse_address(raw_addr)
-    name     = re.sub(r'\s+', ' ', rec.get("name", "").strip())
+    name     = _clean_polling_name(re.sub(r'\s+', ' ', rec.get("name", "").strip()))
     return {
         "address_id":                   addr["address_id"],
         "polling_place_county":         rec.get("county", ""),
