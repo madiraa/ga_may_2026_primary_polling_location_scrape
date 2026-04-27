@@ -176,13 +176,15 @@ def _parse_address(raw_addr: str) -> dict:
 
 
 def _clean_polling_name(name: str) -> str:
-    """Strip AIP, EV, AIP/EV prefixes and suffixes added by SOS to location names."""
+    """Strip AIP, AV, EV, AIP/EV prefixes and suffixes added by SOS to location names."""
     import re
     s = name.strip()
     prefixes = [
         r'^AIP/EV\s*[-–]?\s*',
         r'^AIP\s*[-–/]\s*',
         r'^AIP\s+',
+        r'^AV\s*[-–/]\s*',
+        r'^AV\s+',
         r'^EV\s*[-–/]\s*',
         r'^EV\s+',
         r'^ADVANCE\s*[-–]\s*EARLY VOTING\s*',
@@ -195,38 +197,10 @@ def _clean_polling_name(name: str) -> str:
     suffixes = [
         r'\s*[-–/]\s*AIP/EV\s*$',
         r'\s*[-–/]\s*AIP\s*$',
+        r'\s*[-–/]\s*AV\s*$',
         r'\s*[-–/]\s*EV\s*$',
         r'\s+AIP\s*$',
-        r'\s+EV\s*$',
-        r'\s*\(\s*AIP\s*\)\s*$',
-    ]
-    for p in suffixes:
-        s = re.sub(p, '', s, flags=re.IGNORECASE).strip()
-    return s
-
-
-def _clean_polling_name(name: str) -> str:
-    """Strip AIP, EV, AIP/EV prefixes and suffixes added by SOS to location names."""
-    import re
-    s = name.strip()
-    prefixes = [
-        r'^AIP/EV\s*[-–]?\s*',
-        r'^AIP\s*[-–/]\s*',
-        r'^AIP\s+',
-        r'^EV\s*[-–/]\s*',
-        r'^EV\s+',
-        r'^ADVANCE\s*[-–]\s*EARLY VOTING\s*',
-    ]
-    for p in prefixes:
-        new = re.sub(p, '', s, flags=re.IGNORECASE).strip()
-        if new != s:
-            s = new
-            break
-    suffixes = [
-        r'\s*[-–/]\s*AIP/EV\s*$',
-        r'\s*[-–/]\s*AIP\s*$',
-        r'\s*[-–/]\s*EV\s*$',
-        r'\s+AIP\s*$',
+        r'\s+AV\s*$',
         r'\s+EV\s*$',
         r'\s*\(\s*AIP\s*\)\s*$',
     ]
