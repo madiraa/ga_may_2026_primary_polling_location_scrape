@@ -1333,7 +1333,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 110 STATE ST_COMMERCE_GA_30529,JACKSON,COMMERCE ADMINISTRATIVE COMPLEX,"110 State St, Commerce, GA 30529",110 State St,Commerce,GA,30529,,05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
 909 HARMONY GROVE CHURCH RD_ACWORTH_GA_30101,PAULDING,CROSSROADS LIBRARY,"909 Harmony Grove Church Rd, Acworth, GA 30101",909 Harmony Grove Church Rd,Acworth,GA,30101,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
 140 BETHEL CHURCH RD_HIRAM_GA_30141,PAULDING,DIANNE WRIGHT INNOVATION CENTER,"140 Bethel Church Rd, Hiram, GA 30141",140 Bethel Church Rd,Hiram,GA,30141,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
-757 CARVER CIRCLE_HAMILTON_GA_31811,HARRIS,ELECTION'S OFFICE,"757 Carver Circle, Hamilton, GA 31811",757 Carver Circle,Hamilton,GA,31811,,04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
+757 CARVER CIRCLE_HAMILTON_GA_31811,HARRIS,ELECTION'S OFFICE,"757 Carver Circle, Hamilton, GA 31811",757 Carver Circle,Hamilton,GA,31811,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/757%20CARVER%20CIRCLE_HAMILTON_GA_31811.png,04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
 324 HIRAM DOUGLASVILLE HWY_HIRAM_GA_30141,PAULDING,HIRAM UNITED METHODIST CHURCH,"324 Hiram Douglasville Hwy, Hiram, GA 30141",324 Hiram Douglasville Hwy,Hiram,GA,30141,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
 1214 LULA LAKE ROAD_LOOKOUT MOUNTAIN_GA_30750,WALKER,LOOKOUT MOUNTAIN CITY HALL,"1214 Lula Lake Road, Lookout Mountain, GA 30750",1214 Lula Lake Road,Lookout Mountain,GA,30750,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -1354,3 +1354,24 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 400 OSBORNE STREET_ST. MARYS_GA_31558,CAMDEN,ST. MARYS WELCOME CENTER ADVANCE IN PERSON,"400 Osborne Street, St. Marys, GA 31558",400 Osborne Street,St. Marys,GA,31558,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",,,ADDED 04/27/2026,04/27/2026,
 445 OAKLAND PARKWAY WEST_LEESBURG_GA_31763,LEE,THE BINDERY OAKLAND LIBRARY,"445 Oakland Parkway West, Leesburg, GA 31763",445 Oakland Parkway West,Leesburg,GA,31763,,05/04/2026 - 05/05/2026 2:00 PM - 7:00 PM (Advanced Polling Location),,,ADDED 04/27/2026,04/27/2026,
+400 OSBORNE STREET_ST. MARYS_GA_31558,CAMDEN,ST. MARYS WELCOME CENTER ADVANCE IN PERSON,"400 Osborne Street, St. Marys, GA 31558",400 Osborne Street,St. Marys,GA,31558,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",,,,04/25/2026,
+4460 LEXINGTON RD_ATHENS_GA_30605,CLARKE,ATHENS-CLARKE COUNTY TENNIS CENTER,"4460 Lexington Road, Athens, GA 30605",4460 Lexington Rd,Athens,GA,30605,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/4460%20Lexington%20Rd%2C%20Athens%2C%20GA%2030605/static_map/944387963b88556bfd10926ddeb389bab26b2a415a4754b2626c230d19b3c5b3.jpg,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.9253775,-83.303086,,,
+275 CLEVELAND RD_BOGART_GA_30622,CLARKE,ACC COOPERATIVE EXTENSION OFFICE,"275 Cleveland Rd, Bogart, GA 30622",275 Cleveland Rd,Bogart,GA,30622,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/25/2026,
+410 MCKINLEY DR_ATHENS_GA_30605,CLARKE,MIRIAM MOORE COMMUNITY CENTER,"410 Mckinley Dr, Athens, GA 30605",410 Mckinley Dr,Athens,GA,30605,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/25/2026,
+120 PAUL FRANKLIN RD_CLARKESVILLE_GA_30523,HABERSHAM,RUBY FULBRIGHT AQUATIC CENTER,"120 Paul Franklin Rd, Clarkesville, GA 30523",120 Paul Franklin Rd,Clarkesville,GA,30523,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
+1817 LEE CLARKSON RD_CHICKAMAUGA_GA_30707,WALKER,CHICKAMAUGA CIVIC CENTER,"1817 Lee Clarkson Rd, Chickamauga, GA 30707",1817 Lee Clarkson Rd,Chickamauga,GA,30707,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1817%20Lee%20Clarkson%20Rd%2C%20Chickamauga%2C%20GA%2030707/street_view/b666b7c9984ca177957983854cde61648ade3a3c90e43a39b7ce27e5d172658d.jpg,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
+05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.8690122,-85.2931301,,,
+1214 LULA LAKE RD_LOOKOUT MOUNTAIN_GA_30750,WALKER,LOOKOUT MOUNTAIN CITY HALL,"1214 Lula Lake Road, Lookout Mountain, GA 30750",1214 Lula Lake Rd,Lookout Mountain,GA,30750,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1214%20Lula%20Lake%20Rd%2C%20Lookout%20Mountain%2C%20GA%2030750/street_view/69ee3b81279e0a65909e5bf0cf6088ade91df8732a2ab9da0fbb08b0117a2fe9.jpg,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
+05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.9778433,-85.3579744,,,
