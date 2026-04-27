@@ -31,9 +31,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 1300 JOE FRANK HARRIS PWY_CARTERSVILLE_GA_30120,BARTOW,REGISTRATION OFFICE,"1300 Joe Frank Harris Pwy, Cartersville, GA 30120",1300 Joe Frank Harris Pwy,Cartersville,GA,30120,https://storage.googleapis.com/movement_labs_public2/images/1300%20JOE%20FRANK%20HARRIS%20PWY%2C%20CARTERSVILLE%2C%20GA%2030120/11/polling_street.jpg,"04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",34.2062407,-84.8141196,,,
-6503 ALLATOONA GTWY_ACWORTH_GA_30102,BARTOW,ALLATOONA RESOURCE CENTER,"6503 Allatoona Gtwy, Acworth, GA 30102",6503 Allatoona Gtwy,Acworth,GA,30102,,05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location),34.1138337,-84.6810771,,04/25/2026,
-435 WEST MAIN STREET_CARTERSVILLE_GA_30120,BARTOW,CARTERSVILLE CIVIC CENTER,"435 West Main Street, Cartersville, GA 30120",435 West Main Street,Cartersville,GA,30120,,05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location),34.1635222,-84.8064534,,04/25/2026,
-163B MANNING MILL RD_ADAIRSVILLE_GA_30103,BARTOW,MANNING MILL PARK FACILITY,"163B Manning Mill Rd, Adairsville, GA 30103",163B Manning Mill Rd,Adairsville,GA,30103,,05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location),,,,04/25/2026,
 602 S GRANT ST_FITZGERALD_GA_31750,BENHILL,BOARD OF ELECTIONS,"602 S. Grant St, Fitzgerald, GA 31750",602 S Grant St,Fitzgerald,GA,31750,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/602%20S%20GRANT%20ST%2C%20FITZGERALD%2C%20GA%2C%2031750.png,"04/27/2026 - 05/01/2026 7:30 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:30 AM - 5:00 PM (Advanced Polling Location)
@@ -84,8 +81,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",,,,04/25/2026,
-400 OSBORNE STREET_ST. MARYS_GA_31558,CAMDEN,ST. MARYS WELCOME CENTER ADVANCE IN PERSON,"400 Osborne Street, St. Marys, GA 31558",400 Osborne Street,St. Marys,GA,31558,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",,,,04/25/2026,
 621 W PINE ST_METTER_GA_30439,CANDLER,JACK STRICKLAND COMMUNITY CENTER,"621 W Pine Street, Metter, GA 30439",621 W Pine St,Metter,GA,30439,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/621%20W%20Pine%20St%2C%20Metter%2C%20GA%2030439/street_view/c24d3a5038bb82a8b5f4aa83162ac14fa2dc98be430a9abb6be7ce291cdbd50f.jpg,"04/27/2026 - 05/01/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
@@ -96,7 +91,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",33.567166,-85.0476222,,,
-524 LESLIE DR_VILLA RICA_GA_30180-2405,CARROLL,POWELL PARK RECREATION CENTER,"524 Leslie Dr, Villa Rica, GA 30180-2405",524 Leslie Dr,Villa Rica,GA,30180-2405,,05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location),,,,04/25/2026,
 5238 EVITT ST_RINGGOLD_GA_30736,CATOOSA,RINGGOLD PRECINCT,"5238 Evitt St, Ringgold, GA 30736",5238 Evitt St,Ringgold,GA,30736,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/5238%20EVITT%20ST%2C%20RINGGOLD%2C%20GA%2C%2030736.png,"04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -170,9 +164,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.9449972,-83.403621,,,
-4460 LEXINGTON RD_ATHENS_GA_30605,CLARKE,ATHENS-CLARKE COUNTY TENNIS CENTER,"4460 Lexington Road, Athens, GA 30605",4460 Lexington Rd,Athens,GA,30605,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/4460%20Lexington%20Rd%2C%20Athens%2C%20GA%2030605/static_map/944387963b88556bfd10926ddeb389bab26b2a415a4754b2626c230d19b3c5b3.jpg,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.9253775,-83.303086,,,
 155 E WASHINGTON ST_ATHENS_GA_30601,CLARKE,ELECTIONS OFFICE,"155 E. Washington Street, Athens, GA 30601",155 E Washington St,Athens,GA,30601,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/155%20E%20Washington%20St%2C%20Athens%2C%20GA%2030601/street_view/417e4d6fb784d07dd653f3da4b7449a7df4518549128c2868925c31bac409744.jpg,"04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 1:00 PM - 3:00 PM (Advanced Polling Location)
@@ -180,22 +171,16 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.9594219,-83.376735,,,
-275 CLEVELAND RD_BOGART_GA_30622,CLARKE,ACC COOPERATIVE EXTENSION OFFICE,"275 Cleveland Rd, Bogart, GA 30622",275 Cleveland Rd,Bogart,GA,30622,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/25/2026,
-410 MCKINLEY DR_ATHENS_GA_30605,CLARKE,MIRIAM MOORE COMMUNITY CENTER,"410 Mckinley Dr, Athens, GA 30605",410 Mckinley Dr,Athens,GA,30605,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/25/2026,
 210 S WASHINGTON ST_FORT GAINES_GA_39851,CLAY,CLAY COUNTY COURTHOUSE,"210 S Washington St, Fort Gaines, GA 39851",210 S Washington St,Fort Gaines,GA,39851,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/210%20Washington%20St%2C%20Fort%20Gaines%2C%20GA%2039851/places_api/8b7fc5c290117fcb63b7670c08b40aedf434f328a5ca6e684fc9bad3ff4854a6.jpg,"04/27/2026 - 05/10/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",31.6053156,-85.0486467,,,
-3499 REX RD_REX_GA_30273,CLAYTON,CARL RHODENIZER RECREATION CENTER,"3499 Rex Road, Rex, GA 30273",3499 Rex Rd,Rex,GA,30273,,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+3499 REX RD_REX_GA_30273,CLAYTON,CARL RHODENIZER RECREATION CENTER,"3499 Rex Road, Rex, GA 30273",3499 Rex Rd,Rex,GA,30273,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/3499%20REX%20RD_REX_GA_30273.png,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",33.5872197,-84.2769284,,,
-5087 PARK AVE_FOREST PARK_GA_30297,CLAYTON,CITY OF FOREST PARK SENIOR CENTER,"5087 Park Avenue, Forest Park, GA 30297",5087 Park Ave,Forest Park,GA,30297,,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+5087 PARK AVE_FOREST PARK_GA_30297,CLAYTON,CITY OF FOREST PARK SENIOR CENTER,"5087 Park Avenue, Forest Park, GA 30297",5087 Park Ave,Forest Park,GA,30297,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/compressed_5087%20PARK%20AVE_FOREST%20PARK_GA_30297.png,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
@@ -209,7 +194,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",33.5871826,-84.4231004,,,
-121 S MCDONOUGH ST_JONESBORO_GA_30236,CLAYTON,ELECTIONS AND REGISTRATION,"121 S. Mcdonough Street, Jonesboro, GA 30236",121 S Mcdonough St,Jonesboro,GA,30236,,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+121 S MCDONOUGH ST_JONESBORO_GA_30236,CLAYTON,ELECTIONS AND REGISTRATION,"121 S. Mcdonough Street, Jonesboro, GA 30236",121 S Mcdonough St,Jonesboro,GA,30236,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/121%20S%20MCDONOUGH%20ST_JONESBORO_GA_30236.png,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
@@ -237,7 +222,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",33.5532917,-84.3633391,,,
-1500 MORROW RD_MORROW_GA_30260,CLAYTON,MORROW MUNICIPAL COMPLEX,"1500 Morrow Road, Morrow, GA 30260",1500 Morrow Rd,Morrow,GA,30260,,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+1500 MORROW RD_MORROW_GA_30260,CLAYTON,MORROW MUNICIPAL COMPLEX,"1500 Morrow Road, Morrow, GA 30260",1500 Morrow Rd,Morrow,GA,30260,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/compressed_1500%20MORROW%20RD_MORROW_GA_30260.png,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
@@ -251,14 +236,14 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",33.6304626,-84.2848757,,,
-1837 MCDONOUGH RD_HAMPTON_GA_30228,CLAYTON,SOUTH CLAYTON RECREATION CENTER,"1837 Mcdonough Road, Hampton, GA 30228",1837 Mcdonough Rd,Hampton,GA,30228,,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+1837 MCDONOUGH RD_HAMPTON_GA_30228,CLAYTON,SOUTH CLAYTON RECREATION CENTER,"1837 Mcdonough Road, Hampton, GA 30228",1837 Mcdonough Rd,Hampton,GA,30228,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/1837%20MCDONOUGH%20RD_HAMPTON_GA_30228.png,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",33.4476294,-84.3316024,,,
-1475 E FAYETTEVILLE RD_RIVERDALE_GA_30274,CLAYTON,VIRGINIA BURTON GRAY RECREATION CTR,"1475 East Fayetteville Road, Riverdale, GA 30274",1475 E Fayetteville Rd,Riverdale,GA,30274,,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
+1475 E FAYETTEVILLE RD_RIVERDALE_GA_30274,CLAYTON,VIRGINIA BURTON GRAY RECREATION CTR,"1475 East Fayetteville Road, Riverdale, GA 30274",1475 E Fayetteville Rd,Riverdale,GA,30274,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/compressed_1475%20E%20FAYETTEVILLE%20RD_RIVERDALE_GA_30274.png,"04/27/2026 - 05/01/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location)
@@ -272,12 +257,12 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,04/25/2026
-2753 WATTS DR_KENNESAW GA_30144_2720,COBB,BEN ROBERTSON COMMUNITY CENTER,"2753 Watts Dr, Kennesaw Ga, 30144 2720",2753 Watts Dr,Kennesaw Ga,30144,2720,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+2753 WATTS DR_KENNESAW GA_30144_2720,COBB,BEN ROBERTSON COMMUNITY CENTER,"2753 Watts Dr, Kennesaw Ga, 30144 2720",2753 Watts Dr,Kennesaw Ga,30144,2720,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/2753%20WATTS%20DR%2C%20KENNESAW%2C%20GA%2C%2030144.png,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-4845 DALLAS HWY_POWDER SPRINGS GA_30127_4486,COBB,BOOTS WARD RECREATION CENTER,"4845 Dallas Hwy, Powder Springs Ga, 30127 4486",4845 Dallas Hwy,Powder Springs Ga,30127,4486,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+4845 DALLAS HWY_POWDER SPRINGS GA_30127_4486,COBB,BOOTS WARD RECREATION CENTER,"4845 Dallas Hwy, Powder Springs Ga, 30127 4486",4845 Dallas Hwy,Powder Springs Ga,30127,4486,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/4845%20Dallas%20Hwy%2C%20Powder%20Springs%2C%20GA%2030127/street_view/5aa3540216a4f77b326223e7efef1f96bb48d0f3bad18fc48eaa92cf1e8102b9.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -289,14 +274,14 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-4400 LOWER ROSWELL RD_MARIETTA GA_30068_4233,COBB,EAST COBB GOVT SVC CENTER,"4400 Lower Roswell Rd, Marietta Ga, 30068 4233",4400 Lower Roswell Rd,Marietta Ga,30068,4233,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+4400 LOWER ROSWELL RD_MARIETTA GA_30068_4233,COBB,EAST COBB GOVT SVC CENTER,"4400 Lower Roswell Rd, Marietta Ga, 30068 4233",4400 Lower Roswell Rd,Marietta Ga,30068,4233,https://storage.googleapis.com/movement_labs_public2/images/4400%20LOWER%20ROSWELL%20RD%2C%20MARIETTA%2C%20GA%2030068/60/polling_street.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-1465 WEST BOOTH RD EXT_MARIETTA_GA_30008,COBB,FAIR OAKS RECREATION CENTER,"1465 West Booth Rd Ext, Marietta, GA 30008",1465 West Booth Rd Ext,Marietta,GA,30008,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+1465 WEST BOOTH RD EXT_MARIETTA_GA_30008,COBB,FAIR OAKS RECREATION CENTER,"1465 West Booth Rd Ext, Marietta, GA 30008",1465 West Booth Rd Ext,Marietta,GA,30008,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1465%20W%20Booth%20Rd%20Ext%20SW%2C%20Marietta%2C%20GA%2030066/static_map/18f11ebb9cab801a1b9538a22e53c70d8dd4485cbbaf15ece94c10b4dacd72dc.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -318,7 +303,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-3900 S. MAIN STREET_ACWORTH_GA_30101,COBB,NORTH COBB SENIOR CENTER,"3900 S. Main Street, Acworth, GA 30101",3900 S. Main Street,Acworth,GA,30101,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+3900 S. MAIN STREET_ACWORTH_GA_30101,COBB,NORTH COBB SENIOR CENTER,"3900 S. Main Street, Acworth, GA 30101",3900 S. Main Street,Acworth,GA,30101,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/3900%20SOUTH%20MAIN%20ST%2C%20ACWORTH%2C%20GA%2030101.png,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -330,7 +315,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-620 LIONS CLUB DRIVE_MABLETON_GA_30126,COBB,SOUTH COBB COMMUNITY CENTER,"620 Lions Club Drive, Mableton, GA 30126",620 Lions Club Drive,Mableton,GA,30126,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+620 LIONS CLUB DRIVE_MABLETON_GA_30126,COBB,SOUTH COBB COMMUNITY CENTER,"620 Lions Club Drive, Mableton, GA 30126",620 Lions Club Drive,Mableton,GA,30126,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/620%20Lions%20Club%20Dr%2C%20Mableton%2C%20GA%2030126/street_view/5c0513080d3e5dafa864021576d817846be4ea602f74832f337870c5f6a807d7.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -394,14 +379,14 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 122 W WATER ST_BAINBRIDGE_GA_39817,DECATUR,COURTHOUSE ANNEX,"122 W. Water St, Bainbridge, GA 39817",122 W Water St,Bainbridge,GA,39817,https://storage.googleapis.com/movement_labs_public2/images/122%20W.%20WATER%20ST%2C%20BAINBRIDGE%2C%20GA%2039817/81/polling_street.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.9067067,-84.577141,,,
-2201 YOUNG ROAD_STONE MOUNTAIN_GA_30088,DEKALB,BEREAN CHRISTIAN CHURCH,"2201 Young Road, Stone Mountain, GA 30088",2201 Young Road,Stone Mountain,GA,30088,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+2201 YOUNG ROAD_STONE MOUNTAIN_GA_30088,DEKALB,BEREAN CHRISTIAN CHURCH,"2201 Young Road, Stone Mountain, GA 30088",2201 Young Road,Stone Mountain,GA,30088,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/2201%20Young%20Rd%2C%20Stone%20Mountain%2C%20GA%2030088/places_api/d2794d7708a2651e881443217517fa373dacbca72a426ad21ac0d1b62d654aca.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-2051 DELANO DRIVE NE_ATLANTA_GA_30317,DEKALB,BESSIE BRANHAM RECREATION CENTER,"2051 Delano Drive Ne, Atlanta, GA 30317",2051 Delano Drive Ne,Atlanta,GA,30317,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+2051 DELANO DRIVE NE_ATLANTA_GA_30317,DEKALB,BESSIE BRANHAM RECREATION CENTER,"2051 Delano Drive Ne, Atlanta, GA 30317",2051 Delano Drive Ne,Atlanta,GA,30317,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/2051%20Delano%20Dr%20NE%2C%20Atlanta%2C%20GA%2030317/street_view/ba2e1b4ddc77cfe4d454dff1d08440c61bee19e46cfd50faada3faeb347c84de.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -429,7 +414,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-4331 RIVER RD._ELLENWOOD_GA_30294,DEKALB,COUNTY LINE-ELLENWOOD LIBRARY,"4331 River Rd., Ellenwood, GA 30294",4331 River Rd.,Ellenwood,GA,30294,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+4331 RIVER RD._ELLENWOOD_GA_30294,DEKALB,COUNTY LINE-ELLENWOOD LIBRARY,"4331 River Rd., Ellenwood, GA 30294",4331 River Rd.,Ellenwood,GA,30294,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/4331%20RIVER%20RD.%2C%20ELLENWOOD%2C%20GA%2C%2030294.png,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -471,7 +456,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-4380 MEMORIAL DRIVE STE 500_DECATUR_GA_30032,DEKALB,MEMORIAL 1,"4380 Memorial Drive Ste 500, Decatur, GA 30032",4380 Memorial Drive Ste 500,Decatur,GA,30032,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+4380 MEMORIAL DRIVE STE 500_DECATUR_GA_30032,DEKALB,MEMORIAL 1,"4380 Memorial Drive Ste 500, Decatur, GA 30032",4380 Memorial Drive Ste 500,Decatur,GA,30032,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/4380%20Memorial%20Dr%20%23500%2C%20Decatur%2C%20GA%2030032/places_api/63d4c2104e11486475cbfa6f79ab73ad49179223a22504660b43e5c89fc8ce13.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -492,7 +477,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-3393 MALONE DRIVE_CHAMBLEE_GA_30341,DEKALB,NORTH DEKALB SENIOR CENTER,"3393 Malone Drive, Chamblee, GA 30341",3393 Malone Drive,Chamblee,GA,30341,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+3393 MALONE DRIVE_CHAMBLEE_GA_30341,DEKALB,NORTH DEKALB SENIOR CENTER,"3393 Malone Drive, Chamblee, GA 30341",3393 Malone Drive,Chamblee,GA,30341,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/3393%20MALONE%20DRIVE%2C%20CHAMBLEE%20%2C%20GA%2C%2030341.png,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -527,7 +512,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
-2861 WESLEY CHAPEL ROAD_DECATUR_GA_30034,DEKALB,WESLEY CHAPEL LIBRARY,"2861 Wesley Chapel Road, Decatur, GA 30034",2861 Wesley Chapel Road,Decatur,GA,30034,,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+2861 WESLEY CHAPEL ROAD_DECATUR_GA_30034,DEKALB,WESLEY CHAPEL LIBRARY,"2861 Wesley Chapel Road, Decatur, GA 30034",2861 Wesley Chapel Road,Decatur,GA,30034,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/2861%20Wesley%20Chapel%20Rd%2C%20Decatur%2C%20GA%2030034/street_view/fdea71d4bec0e23adbfd342675a12ae4887724e82d75fb12630851ef8f2b1d96.jpg,"04/27/2026 - 05/01/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 6:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -894,8 +879,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",34.513132,-83.5170503,,,
-120 PAUL FRANKLIN RD_CLARKESVILLE_GA_30523,HABERSHAM,RUBY FULBRIGHT AQUATIC CENTER,"120 Paul Franklin Rd, Clarkesville, GA 30523",120 Paul Franklin Rd,Clarkesville,GA,30523,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",,,,04/25/2026,
 3911 P DAVISON RD_GAINESVILLE_GA_30507,HALL,EAST HALL COMMUNITY BUILDING,"3911 P Davison Road, Gainesville, GA 30507",3911 P Davison Rd,Gainesville,GA,30507,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/3911%20P%20Davidson%20Rd%2C%20Gainesville%2C%20GA%2030507/static_map/400d4f212440c104072be05182dc90b2ca9020cb60d576d4f3754d405a01f2be.jpg,"04/27/2026 - 05/01/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
@@ -994,8 +977,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 441 GORDON ST_JEFFERSON_GA_30549,JACKSON,GORDON STREET CENTER--ELECTION OFFICE,"441 Gordon Street, Jefferson, GA 30549",441 Gordon St,Jefferson,GA,30549,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/441%20Gordon%20Street%2C%20Jefferson%2C%20GA%2C%2030549.png,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.1121695,-83.5684982,,,
-110 STATE ST_COMMERCE_GA_30529,JACKSON,COMMERCE ADMINISTRATIVE COMPLEX,"110 State St, Commerce, GA 30529",110 State St,Commerce,GA,30529,,05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location),,,,04/25/2026,
-5040 HIGHWAY 53_BRASELTON_GA_30517,JACKSON,POLICE & MUNICIPAL COURT BLDG,"5040 Highway 53, Braselton, GA 30517",5040 Highway 53,Braselton,GA,30517,,05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location),,,,04/25/2026,
 "126 W GREENE ST, STE 3_MONTICELLO_GA_31064",JASPER,JASPER COUNTY COURTHOUSE,"126 West Greene Street Suite 3, Monticello, GA 31064","126 W Greene St, Ste 3",Monticello,GA,31064,https://storage.googleapis.com/movement_labs_public2/images/126%20WEST%20GREENE%20STREET%20SUITE%203%2C%20MONTICELLO%2C%20GA%2031064/218/polling_street.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",33.304991,-83.683561,,,
@@ -1018,7 +999,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 166 INDUSTRIAL BLVD_GRAY_GA_31032,JONES,ELECTIONS OFFICE,"166 Industrial Blvd., Gray, GA 31032",166 Industrial Blvd,Gray,GA,31032,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/166%20Industrial%20Blvd%2C%20Gray%2C%20GA%2031032/street_view/a4d254e8665115e7d6172132e07ad1dcc7fd1a95bbb597714979eb0d4a9f45cc.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",33.0213244,-83.5347651,,,
-790 VETERANS PARKWAY SUITE D_BARNESVILLE_GA_30204,LAMAR,LAMAR COUNTY BOARD OF ELECTIONS AND REGISTRATION OFFICE-NEW,"790 Veterans Parkway Suite D, Barnesville, GA 30204",790 Veterans Parkway Suite D,Barnesville,GA,30204,,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+790 VETERANS PARKWAY SUITE D_BARNESVILLE_GA_30204,LAMAR,LAMAR COUNTY BOARD OF ELECTIONS AND REGISTRATION OFFICE-NEW,"790 Veterans Parkway Suite D, Barnesville, GA 30204",790 Veterans Parkway Suite D,Barnesville,GA,30204,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/790%20VETERANS%20PARKWAY%20SUITE%20D%2C%20BARNESVILLE%2C%20GA%2C%2030204.png,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/25/2026,
@@ -1122,11 +1103,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 240 CONSTITUTION BLVD_DALLAS_GA_30132,PAULDING,WATSON GOV'T COMPLEX,"240 Constitution Blvd, Dallas, GA 30132",240 Constitution Blvd,Dallas,GA,30132,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/240%20CONSTITUTION%20BLVD%2C%20DALLAS%2C%20GA%2C%2030132.png,"04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",33.9158972,-84.8456214,,,
-8650 CARTERSVILLE HWY_DALLAS_GA_30132,PAULDING,BURNT HICKORY PARK,"8650 Cartersville Hwy, Dallas, GA 30132",8650 Cartersville Hwy,Dallas,GA,30132,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/25/2026,
-909 HARMONY GROVE CHURCH RD_ACWORTH_GA_30101,PAULDING,CROSSROADS LIBRARY,"909 Harmony Grove Church Rd, Acworth, GA 30101",909 Harmony Grove Church Rd,Acworth,GA,30101,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/25/2026,
-140 BETHEL CHURCH RD_HIRAM_GA_30141,PAULDING,DIANNE WRIGHT INNOVATION CENTER,"140 Bethel Church Rd, Hiram, GA 30141",140 Bethel Church Rd,Hiram,GA,30141,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/25/2026,
-324 HIRAM DOUGLASVILLE HWY_HIRAM_GA_30141,PAULDING,HIRAM UNITED METHODIST CHURCH,"324 Hiram Douglasville Hwy, Hiram, GA 30141",324 Hiram Douglasville Hwy,Hiram,GA,30141,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/25/2026,
-1849 MULBERRY ROCK RD_DALLAS_GA_30157,PAULDING,MULBERRY ROCK PARK,"1849 Mulberry Rock Rd, Dallas, GA 30157",1849 Mulberry Rock Rd,Dallas,GA,30157,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/25/2026,
 902 CAMPUS DR_FORT VALLEY_GA_31030,PEACH,PEACH COUNTY GOVERNMENT CENTER,"902 Campus Drive, Fort Valley, GA 31030",902 Campus Dr,Fort Valley,GA,31030,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/902%20Campus%20Dr%2C%20Fort%20Valley%2C%20GA%2031030/street_view/9dfe0a4deec838e19c97c5a2b123b0663ed5c0abe423dfd6c33464d17e397da3.jpg,"04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -1211,7 +1187,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",32.0861933,-82.1189468,,,
-209 BOLTON ST_GLENNVILLE_GA_30427,TATTNALL,SOUTHEASTERN TECH SCHOOL,"209 Bolton St, Glennville, GA 30427",209 Bolton St,Glennville,GA,30427,,05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location),,,,04/25/2026,
 1 IVY ST_BUTLER_GA_31006,TAYLOR,VOTER REGISTRAR OFFICE,"1 Ivy St., Butler, GA 31006",1 Ivy St,Butler,GA,31006,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1%20Ivy%20St%2C%20Butler%2C%20GA%2031006/street_view/c6db9c09f6bc667dc23ab98e8942489d03163516f45397a61e4ff0865b8571ee.jpg,"04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -1282,19 +1257,11 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.8855802,-84.3092077,,,
-1817 LEE CLARKSON RD_CHICKAMAUGA_GA_30707,WALKER,CHICKAMAUGA CIVIC CENTER,"1817 Lee Clarkson Rd, Chickamauga, GA 30707",1817 Lee Clarkson Rd,Chickamauga,GA,30707,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1817%20Lee%20Clarkson%20Rd%2C%20Chickamauga%2C%20GA%2030707/street_view/b666b7c9984ca177957983854cde61648ade3a3c90e43a39b7ce27e5d172658d.jpg,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.8690122,-85.2931301,,,
 311 S MAIN ST_LAFAYETTE_GA_30728,WALKER,LAFAYETTE-WALKER COUNTY ELECTIONS OFFICE,"311 South Main Street, Lafayette, GA 30728",311 S Main St,Lafayette,GA,30728,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/311%20South%20Main%20St%2C%20LaFayette%2C%20GA%2030728/static_map/a8e0bbe84838f4e65bf7cb00f21d05ac3e821c432f700c745f829b89f3dadc0b.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.7015125,-85.2818635,,,
-1214 LULA LAKE RD_LOOKOUT MOUNTAIN_GA_30750,WALKER,LOOKOUT MOUNTAIN CITY HALL,"1214 Lula Lake Road, Lookout Mountain, GA 30750",1214 Lula Lake Rd,Lookout Mountain,GA,30750,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1214%20Lula%20Lake%20Rd%2C%20Lookout%20Mountain%2C%20GA%2030750/street_view/69ee3b81279e0a65909e5bf0cf6088ade91df8732a2ab9da0fbb08b0117a2fe9.jpg,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.9778433,-85.3579744,,,
 400 MCFARLAND AVE_ROSSVILLE_GA_30741,WALKER,ROSSVILLE MUNICIPAL CIVIC CENTER,"400 Mcfarland Ave, Rossville, GA 30741",400 Mcfarland Ave,Rossville,GA,30741,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/400%20McFarland%20Ave%2C%20Rossville%2C%20GA%2030741/street_view/2373d692b497a2d0b56a2af4ceca0d5644f2a754c867760e23292258a46450fb.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
