@@ -8196,5 +8196,36 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-28T17:42:30Z",
+    "total_records": 308,
+    "added_count": 4,
+    "removed_count": 0,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "BIBB",
+        "name": "ELAINE H LUCAS SENIOR CENTER",
+        "address": "132 Willie Smokie Glover Dr, Macon, GA 31201"
+      },
+      {
+        "county": "HARALSON",
+        "name": "HARALSON COUNTY COURTHOUSE",
+        "address": "4485 Georgia Highway 120, Buchanan, GA 30113"
+      },
+      {
+        "county": "BIBB",
+        "name": "OFFICE",
+        "address": "3661 Eisenhower Pkwy, Macon, GA 31206"
+      },
+      {
+        "county": "BIBB",
+        "name": "THERON USSERY PARK COMMUNITY/ RECREATION CENTER",
+        "address": "815 N Macon Park Dr, Macon, GA 31210"
+      }
+    ],
+    "removed": [],
+    "modified": []
   }
 ]
