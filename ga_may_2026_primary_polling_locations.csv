@@ -41,8 +41,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.2085294,-83.2497989,,,
-"106 E CHERRY ST, COURTHOUSE ANNEX_COCHRAN_GA_31014",BLECKLEY,BOARD OF ELECTIONS AND REGISTRATION,"106 E Cherry St Courthouse Annex, Cochran, GA 31014","106 E Cherry St, Courthouse Annex",Cochran,GA,31014,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/106%20E%20Cherry%20St%2C%20Cochran%2C%20GA%2031014/street_view/20d5fd1961535553d262e7f8be8174fb7e02df74f5f6f9252d2bddb1b1dc7583.jpg,"04/28/2026 - 04/28/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-04/29/2026 - 04/29/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
+"106 E CHERRY ST, COURTHOUSE ANNEX_COCHRAN_GA_31014",BLECKLEY,BOARD OF ELECTIONS AND REGISTRATION,"106 E Cherry St Courthouse Annex, Cochran, GA 31014","106 E Cherry St, Courthouse Annex",Cochran,GA,31014,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/106%20E%20Cherry%20St%2C%20Cochran%2C%20GA%2031014/street_view/20d5fd1961535553d262e7f8be8174fb7e02df74f5f6f9252d2bddb1b1dc7583.jpg,"04/29/2026 - 04/29/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 04/30/2026 - 04/30/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/01/2026 - 05/01/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -56,7 +55,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,,,
+05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,MODIFIED: hours_advanced_polling 04/29/2026,,
 610 S HIGHLAND RD_QUITMAN_GA_31643,BROOKS,MAIN ELECTIONS OFFICE,"610 S Highland Rd, Quitman, GA 31643",610 S Highland Rd,Quitman,GA,31643,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/610%20S%20Highland%20Rd%2C%20Quitman%2C%20GA%2031643/street_view/646dec29e5d11e00ccdaca501d71696e7f05be2fec6f720d54c70b9090ee3320.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.7797979,-83.5521971,,04/25/2026,
@@ -1228,8 +1227,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.0097107,-85.0320972,,04/25/2026,
-1807 US HWY 41 N_SYCAMORE_GA_31790,TURNER,AMERICAN LEGION BUILDING,"1807 Us Highway 41 N, Sycamore, GA 31790",1807 US Hwy 41 N,Sycamore,GA,31790,https://storage.googleapis.com/movement_labs_public2/images/1807%20US%20HIGHWAY%2041%20N%2C%20SYCAMORE%2C%20GA%2031790/293/polling_street.jpg,"04/28/2026 - 04/28/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
-04/29/2026 - 04/29/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
+1807 US HWY 41 N_SYCAMORE_GA_31790,TURNER,AMERICAN LEGION BUILDING,"1807 Us Highway 41 N, Sycamore, GA 31790",1807 US Hwy 41 N,Sycamore,GA,31790,https://storage.googleapis.com/movement_labs_public2/images/1807%20US%20HIGHWAY%2041%20N%2C%20SYCAMORE%2C%20GA%2031790/293/polling_street.jpg,"04/29/2026 - 04/29/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 04/30/2026 - 04/30/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
 05/01/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -1243,7 +1241,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,,,
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,MODIFIED: hours_advanced_polling 04/29/2026,,
 "425 RAILROAD ST, NORT_JEFFERSONVILLE_GA_31044",TWIGGS,TWIGGSCOUNTY COURTHOUSE,"425 Railroad Street Nort, Jeffersonville, GA 31044","425 Railroad St, Nort",Jeffersonville,GA,31044,https://storage.googleapis.com/movement_labs_public2/images/425%20RAILROAD%20STREET%20NORT%2C%20JEFFERSONVILLE%2C%20GA%2031044/294/polling_street.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",32.68776,-83.3456446,,,
@@ -1356,18 +1354,18 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:30 AM - 5:30 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,ADDED 04/28/2026,04/28/2026,
+05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,,04/28/2026,
 4485 GEORGIA HIGHWAY 120_BUCHANAN_GA_30113,HARALSON,HARALSON COUNTY COURTHOUSE,"4485 Georgia Highway 120, Buchanan, GA 30113",4485 Georgia Highway 120,Buchanan,GA,30113,,"04/27/2026 - 05/02/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/28/2026,04/28/2026,
+05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",,,,04/28/2026,
 3661 EISENHOWER PKWY_MACON_GA_31206,BIBB,OFFICE,"3661 Eisenhower Pkwy, Macon, GA 31206",3661 Eisenhower Pkwy,Macon,GA,31206,,"04/27/2026 - 05/01/2026 8:30 AM - 5:30 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/03/2026 - 05/03/2026 11:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:30 AM - 5:30 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,ADDED 04/28/2026,04/28/2026,
+05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,,04/28/2026,
 815 N MACON PARK DR_MACON_GA_31210,BIBB,THERON USSERY PARK COMMUNITY/ RECREATION CENTER,"815 N Macon Park Dr, Macon, GA 31210",815 N Macon Park Dr,Macon,GA,31210,,"04/27/2026 - 05/01/2026 8:30 AM - 5:30 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:30 AM - 5:30 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,ADDED 04/28/2026,04/28/2026,
+05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,,04/28/2026,
