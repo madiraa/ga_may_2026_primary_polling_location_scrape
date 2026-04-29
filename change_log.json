@@ -8305,5 +8305,102 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-29T20:56:45Z",
+    "total_records": 328,
+    "added_count": 15,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [
+      {
+        "county": "DADE",
+        "name": "ADMIN.BLDG CMM/ROOM",
+        "address": "71 Case Ave, Trenton, GA 30752"
+      },
+      {
+        "county": "SEMINOLE",
+        "name": "BEALL CENTER",
+        "address": "222 Cherry St, Donalsonville, GA 39845"
+      },
+      {
+        "county": "WARE",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "address": "408 Tebeau Street, Waycross, GA 31501"
+      },
+      {
+        "county": "OGLETHORPE",
+        "name": "BOARD OF ELECTIONS OFFICE",
+        "address": "41 Fairground Rd, Lexington, GA 30648"
+      },
+      {
+        "county": "BUTTS",
+        "name": "BUTTS COUNTY ADMINISTRATION BUILDING",
+        "address": "625 W 3Rd St, Jackson, GA 30233"
+      },
+      {
+        "county": "COFFEE",
+        "name": "COFFEE COUNTY BOARD OF ELECTIONS OFFICE",
+        "address": "224 W Ashley St Suite A, Douglas, GA 31533"
+      },
+      {
+        "county": "CLINCH",
+        "name": "COURTHOUSE",
+        "address": "25 Court Square, Homerville, GA 31634"
+      },
+      {
+        "county": "TALIAFERRO",
+        "name": "COURTHOUSE",
+        "address": "113 Monument St, Crawfordville, GA 30631"
+      },
+      {
+        "county": "LUMPKIN",
+        "name": "ELECTIONS AND VOTER REGISTRATION OFFICE",
+        "address": "56 Short Street, Dahlonega, GA 30533"
+      },
+      {
+        "county": "LANIER",
+        "name": "LANIER COUNTY BOARD OF ELECTIONS",
+        "address": "162 Wthigpen Ave Ste C, Lakeland, GA 31635"
+      },
+      {
+        "county": "MILLER",
+        "name": "MILLER COUNTY COURTHOUSE",
+        "address": "155 S 1St St Suite 113, Colquitt, GA 39837"
+      },
+      {
+        "county": "PULASKI",
+        "name": "PULASKI COUNTY ANNEX BUILDING",
+        "address": "45 South Lumpkin St, Hawkinsville, GA 31036"
+      },
+      {
+        "county": "SCHLEY",
+        "name": "SCHLEY COUNTY COURT HOUSE ANNEX",
+        "address": "47 N Pecan Street, Ellaville, GA 31806"
+      },
+      {
+        "county": "WARE",
+        "name": "WARE COUNTY ADMINISTRATION BUILDING",
+        "address": "305 Oak Street, Waycross, GA 31501"
+      },
+      {
+        "county": "WILKINSON",
+        "name": "WILKINSON COUNTY COURTHOUSE",
+        "address": "100 Bacon Street, Irwinton, GA 31042"
+      }
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "county": "GLASCOCK",
+        "name": "GLASCOCK CO BOARD OF ELECTIONS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
