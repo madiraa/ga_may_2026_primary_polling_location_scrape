@@ -55,7 +55,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,MODIFIED: hours_advanced_polling 04/29/2026,,
+05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,,,
 610 S HIGHLAND RD_QUITMAN_GA_31643,BROOKS,MAIN ELECTIONS OFFICE,"610 S Highland Rd, Quitman, GA 31643",610 S Highland Rd,Quitman,GA,31643,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/610%20S%20Highland%20Rd%2C%20Quitman%2C%20GA%2031643/street_view/646dec29e5d11e00ccdaca501d71696e7f05be2fec6f720d54c70b9090ee3320.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.7797979,-83.5521971,,04/25/2026,
@@ -815,11 +815,10 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 "1 BROAD ST, STE 107_ELLIJAY_GA_30540",GILMER,ELECTIONS AND VOTER REGISTRATION OFFICE,"1 Broad St, Ste 107, Ellijay, GA 30540","1 Broad St, Ste 107",Ellijay,GA,30540,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1%20Broad%20St%20%23%20107%2C%20Ellijay%2C%20GA%2030540/street_view/407c65244b0564b8df0f32ff24233f4ee61785a825830ec2619ec16e03a512d8.jpg,"04/27/2026 - 05/02/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",34.6951094,-84.4833307,,,
-676 W MAIN ST_GIBSON_GA_30810,GLASCOCK,GLASCOCK CO BOARD OF ELECTIONS,"676 W Main Street, Gibson, GA 30810",676 W Main St,Gibson,GA,30810,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/676%20E%20Main%20St%2C%20Gibson%2C%20GA%2030810/static_map/c49a8c322c3dab3cd5236b58d785ab35911059d095a24297e16d3a2940d1ee66.jpg,"04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
+676 W MAIN ST_GIBSON_GA_30810,GLASCOCK,GLASCOCK CO BOARD OF ELECTIONS,"676 W Main Street, Gibson, GA 30810",676 W Main St,Gibson,GA,30810,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/676%20E%20Main%20St%2C%20Gibson%2C%20GA%2030810/static_map/c49a8c322c3dab3cd5236b58d785ab35911059d095a24297e16d3a2940d1ee66.jpg,"04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.2338318,-82.5998536,,,
+05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.2338318,-82.5998536,MODIFIED: hours_advanced_polling 04/29/2026,,
 30 NIMITZ DR_BRUNSWICK_GA_31520,GLYNN,BALLARD,"30 Nimitz Drive, Brunswick, GA 31520",30 Nimitz Dr,Brunswick,GA,31520,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/30%20Nimitz%20Dr%2C%20Brunswick%2C%20GA%2031520/street_view/08e7efb22fb61fa2fb1bdac90a09b03cc3030b68d55b6bd41908da0d67617521.jpg,"04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -1241,7 +1240,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,MODIFIED: hours_advanced_polling 04/29/2026,,
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,,,
 "425 RAILROAD ST, NORT_JEFFERSONVILLE_GA_31044",TWIGGS,TWIGGSCOUNTY COURTHOUSE,"425 Railroad Street Nort, Jeffersonville, GA 31044","425 Railroad St, Nort",Jeffersonville,GA,31044,https://storage.googleapis.com/movement_labs_public2/images/425%20RAILROAD%20STREET%20NORT%2C%20JEFFERSONVILLE%2C%20GA%2031044/294/polling_street.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",32.68776,-83.3456446,,,
@@ -1369,3 +1368,20 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/04/2026 - 05/08/2026 8:30 AM - 5:30 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",,,,04/28/2026,
+216 MIMS RD RM 114_SYLVANIA_GA_30467,SCREVEN,COURTHOUSE,"216 Mims Rd Rm 114, Sylvania, GA 30467",216 Mims Rd Rm 114,Sylvania,GA,30467,,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/03/2026 - 05/03/2026 10:00 AM - 4:00 PM (Advanced Polling Location)
+05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/29/2026,04/29/2026,
+117 E JACKSON ST  SUITE A_DUBLIN_GA_31021,LAURENS,BOARD OF ELECTIONS AND REGISTRATION,"117 E Jackson St  Suite A, Dublin, GA 31021",117 E Jackson St  Suite A,Dublin,GA,31021,,"04/27/2026 - 05/01/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
+05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/04/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
+05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/29/2026,04/29/2026,
+602 W 6TH STREET_WAYNESBORO_GA_30830,BURKE,COURT HOUSE BURKE CO.,"602 W 6Th Street, Waynesboro, GA 30830",602 W 6Th Street,Waynesboro,GA,30830,,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/29/2026,04/29/2026,
+32 Court Ave._Camilla_GA_31730,MITCHELL,ELECTIONS OFFICE / ADVANCED VOTING,"32 Court Ave., Camilla, GA 31730",32 Court Ave.,Camilla,GA,31730,,"04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/29/2026,04/29/2026,
+37 W TUGALO STREET_TOCCOA_GA_30577,STEPHENS,STEPHENS COUNTY HISTORIC COURTHOUSE,"37 W Tugalo Street, Toccoa, GA 30577",37 W Tugalo Street,Toccoa,GA,30577,,"04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
+05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/29/2026,04/29/2026,
