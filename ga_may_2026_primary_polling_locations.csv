@@ -54,7 +54,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,MODIFIED: hours_advanced_polling 04/30/2026,,
+05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,,,
 610 S HIGHLAND RD_QUITMAN_GA_31643,BROOKS,MAIN ELECTIONS OFFICE,"610 S Highland Rd, Quitman, GA 31643",610 S Highland Rd,Quitman,GA,31643,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/610%20S%20Highland%20Rd%2C%20Quitman%2C%20GA%2031643/street_view/646dec29e5d11e00ccdaca501d71696e7f05be2fec6f720d54c70b9090ee3320.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.7797979,-83.5521971,,04/25/2026,
@@ -1073,7 +1073,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.7919726,-84.7595917,MODIFIED: hours_advanced_polling 04/30/2026,,
+05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.7919726,-84.7595917,,,
 3111 CITIZENS WAY_COLUMBUS_GA_31906,MUSCOGEE,CITY SERVICE CENTER,"3111 Citizens Way, Columbus, GA 31906",3111 Citizens Way,Columbus,GA,31906,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/3111%20CITIZENS%20WAY%2C%20COLUMBUS%2C%20GA%2C%2031906.png,"04/27/2026 - 05/10/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",32.4766623,-84.9456147,,,
 2010 AMERICAN WAY_COLUMBUS_GA_31909,MUSCOGEE,NORTHSIDE REC CENTER,"2010 American Way, Columbus, GA 31909",2010 American Way,Columbus,GA,31909,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/2010%20American%20Way%2C%20Columbus%2C%20GA%2031909/static_map/60eb3c5e8635bfec572067189d7affdbdc15b5d47f5e70931240213be871e329.jpg,"04/27/2026 - 05/10/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -1238,7 +1238,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,MODIFIED: hours_advanced_polling 04/30/2026,,
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,,,
 "425 RAILROAD ST, NORT_JEFFERSONVILLE_GA_31044",TWIGGS,TWIGGSCOUNTY COURTHOUSE,"425 Railroad Street Nort, Jeffersonville, GA 31044","425 Railroad St, Nort",Jeffersonville,GA,31044,https://storage.googleapis.com/movement_labs_public2/images/425%20RAILROAD%20STREET%20NORT%2C%20JEFFERSONVILLE%2C%20GA%2031044/294/polling_street.jpg,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",32.68776,-83.3456446,,,
@@ -1426,3 +1426,6 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 100 BACON STREET_IRWINTON_GA_31042,WILKINSON,WILKINSON COUNTY COURTHOUSE,"100 Bacon Street, Irwinton, GA 31042",100 Bacon Street,Irwinton,GA,31042,,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
+201 N. MAIN ST. ROOM 10._SYLVESTER_GA_31791,WORTH,WORTH COUNTY VOTER REGISTRATION OFFICE,"201 N. Main St. Room 10., Sylvester, GA 31791",201 N. Main St. Room 10.,Sylvester,GA,31791,,"04/27/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 04/30/2026,04/30/2026,

@@ -8443,5 +8443,21 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-30T13:26:46Z",
+    "total_records": 329,
+    "added_count": 1,
+    "removed_count": 0,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "WORTH",
+        "name": "WORTH COUNTY VOTER REGISTRATION OFFICE",
+        "address": "201 N. Main St. Room 10., Sylvester, GA 31791"
+      }
+    ],
+    "removed": [],
+    "modified": []
   }
 ]
