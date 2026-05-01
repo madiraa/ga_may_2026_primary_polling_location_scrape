@@ -8500,5 +8500,32 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-01T20:43:04Z",
+    "total_records": 330,
+    "added_count": 1,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [
+      {
+        "county": "MCINTOSH",
+        "name": "ELECTION OFFICE",
+        "address": "103 Jefferson St, Darien, GA 31305"
+      }
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "county": "GLASCOCK",
+        "name": "GLASCOCK CO BOARD OF ELECTIONS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "04/27/2026 - 05/01/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/02/2026 - 05/02/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
