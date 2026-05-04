@@ -13779,5 +13779,26 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-04T17:25:12Z",
+    "total_records": 328,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "BURKE",
+        "name": "COURT HOUSE BURKE CO.",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "602 W 6Th Street, Waynesboro, GA 30830",
+            "to": "602 N Liberty Street, Waynesboro, GA 30830"
+          }
+        }
+      }
+    ]
   }
 ]
