@@ -12918,5 +12918,866 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-04T06:34:49Z",
+    "total_records": 328,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 85,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "FULTON",
+        "name": "ADAMS PARK LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ALPHARETTA BRANCH LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "BUCKHEAD LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 6:45 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 6:45 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "C.T. MARTIN NATATORIUM AND RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "EAST POINT LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "EAST ROSWELL LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ELECTIONS HUB",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ETRIS COMMUNITY RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "GLADYS S. DENNARD LIBRARY AT SOUTH FULTON",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "GRANT PARK RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "JOAN P. GARNER LIBRARY AT PONCE DE LEON",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "METROPOLITAN LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "MILTON LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTH FULTON SERVICE CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHWEST BRANCH LIBRARY AT SCOTTS CROSSING",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "OCEE LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "PALMETTO LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ROSWELL BRANCH LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 12:00 PM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 12:00 PM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "SANDY SPRINGS BRANCH LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "SOUTH FULTON SERVICE CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "SOUTHWEST ARTS CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "WOLF CREEK LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "BOOTS WARD RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "EAST COBB GOVT SVC CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "MAIN E D MANSOUR",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "MAIN OFFICE MANSOUR",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "NORTH COBB SENIOR CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "SOUTH COBB COMMUNITY CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "FAIRBURN ANNEX",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "SCREVEN",
+        "name": "COURTHOUSE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 10:00 AM - 4:00 PM (Advanced Polling Location) 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "FLIPPER TEMPLE AME CHURCH FELLOWSHIP HALL",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "HUGH C. CONLEY RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "JOHNS CREEK ENVIROMNMENTAL CAMPUS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHEAST SPRUILL OAKS LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHSIDE LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "WELCOME ALL RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BEREAN CHRISTIAN CHURCH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BESSIE BRANHAM RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BEULAH MISSIONARY BAPTIST CHURCH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BRIARWOOD RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "CLARKSTON LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "COUNTY LINE-ELLENWOOD LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "DUNWOODY LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "EMORY UNIVERSITY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "GREATER PINEY GROVE BAPTIST",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "HAIRSTON CROSSING LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "LIVING GRACE LUTHERAN CHURCH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "MEMORIAL 1",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "NEIGHBORHOOD CHURCH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "NEW BETHEL AME CHURCH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "NORTH DEKALB SENIOR CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "REDAN-TROTTI LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "REID H. COFER LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "SALEM PANOLA LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "STONECREST LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "WESLEY CHAPEL LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 6:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "ROCKDALE",
+        "name": "BOARD OF ELECTIONS OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 10:00 AM - 3:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/12/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/12/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "CARL RHODENIZER RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CHEROKEE",
+        "name": "CHEROKEE COUNTY BOARD OF ELECTIONS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/09/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:30 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/09/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:30 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "CITY OF FOREST PARK SENIOR CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "CLAYTON COUNTY LIBRARY NORTHWEST BRANCH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "ELECTIONS AND REGISTRATION",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FORSYTH",
+        "name": "ELECTIONS AND VOTER REGISTRATION OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/02/2026 - 05/03/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 6:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 3:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "FAIRVIEW RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FAYETTE",
+        "name": "FAYETTE COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 4:00 PM (Advanced Polling Location) 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "FLINT RIVER COMMUNITY CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "FORTSON LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "FULTON COUNTY HEALTH AND HUMAN SERVICES-NORTH",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "HERITAGE PARK",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "J. P. MOSELEY PARK",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "LAKE SPIVEY RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "LAMAR",
+        "name": "LAMAR COUNTY BOARD OF ELECTIONS AND REGISTRATION OFFICE-NEW",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "LEE HEADQUARTERS LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "LOCUST GROVE LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "LOWNDES",
+        "name": "LOWNDES TNG CTR",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "MECHANICSVILLE LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "MERLE MANDERS CONFERENCE CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "MORROW MUNICIPAL COMPLEX",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "BIBB",
+        "name": "OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 11:00 AM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:30 AM - 5:30 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:30 AM - 5:30 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:30 AM - 5:30 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "FAYETTE",
+        "name": "PEACHTREE CITY LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 4:00 PM (Advanced Polling Location) 05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "SONNA SINGLETON GREGORY SENIOR CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "SOUTH CLAYTON RECREATION CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "VIRGINIA BURTON GRAY RECREATION CTR",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/03/2026 - 05/03/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CHATHAM",
+        "name": "VOTER REGISTRATION ANNEX",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/02/2026 - 05/03/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/10/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 05/09/2026 - 05/10/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
