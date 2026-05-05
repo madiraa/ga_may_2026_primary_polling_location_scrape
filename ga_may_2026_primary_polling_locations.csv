@@ -865,7 +865,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
 602 W 6TH STREET_WAYNESBORO_GA_30830,BURKE,COURT HOUSE BURKE CO.,"602 N Liberty Street, Waynesboro, GA 30830",602 W 6Th Street,Waynesboro,GA,30830,,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,MODIFIED: polling_place_address_full 05/04/2026,04/29/2026,
+05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
 32 Court Ave._Camilla_GA_31730,MITCHELL,ELECTIONS OFFICE / ADVANCED VOTING,"32 Court Ave., Camilla, GA 31730",32 Court Ave.,Camilla,GA,31730,,"04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
 37 W TUGALO STREET_TOCCOA_GA_30577,STEPHENS,STEPHENS COUNTY HISTORIC COURTHOUSE,"37 W Tugalo Street, Toccoa, GA 30577",37 W Tugalo Street,Toccoa,GA,30577,,"05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -881,8 +881,9 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 625 W 3RD ST_JACKSON_GA_30233,BUTTS,BUTTS COUNTY ADMINISTRATION BUILDING,"625 W 3Rd St, Jackson, GA 30233",625 W 3Rd St,Jackson,GA,30233,,"05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
-224 W ASHLEY ST SUITE A_DOUGLAS_GA_31533,COFFEE,COFFEE COUNTY BOARD OF ELECTIONS OFFICE,"224 W Ashley St Suite A, Douglas, GA 31533",224 W Ashley St Suite A,Douglas,GA,31533,,"04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/19/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
+224 W ASHLEY ST SUITE A_DOUGLAS_GA_31533,COFFEE,COFFEE COUNTY BOARD OF ELECTIONS OFFICE,"224 W Ashley St Suite A, Douglas, GA 31533",224 W Ashley St Suite A,Douglas,GA,31533,,"05/04/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
+05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",,,MODIFIED: hours_advanced_polling 05/05/2026,04/29/2026,
 25 COURT SQUARE_HOMERVILLE_GA_31634,CLINCH,COURTHOUSE,"25 Court Square, Homerville, GA 31634",25 Court Square,Homerville,GA,31634,,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,,04/29/2026,
 113 MONUMENT ST_CRAWFORDVILLE_GA_30631,TALIAFERRO,COURTHOUSE,"113 Monument St, Crawfordville, GA 30631",113 Monument St,Crawfordville,GA,30631,,"04/27/2026 - 05/10/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
