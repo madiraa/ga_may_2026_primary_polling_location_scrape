@@ -34,7 +34,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,MODIFIED: hours_advanced_polling 05/05/2026,,
+05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,,,
 610 S HIGHLAND RD_QUITMAN_GA_31643,BROOKS,MAIN ELECTIONS OFFICE,"610 S Highland Rd, Quitman, GA 31643",610 S Highland Rd,Quitman,GA,31643,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/610%20S%20Highland%20Rd%2C%20Quitman%2C%20GA%2031643/street_view/646dec29e5d11e00ccdaca501d71696e7f05be2fec6f720d54c70b9090ee3320.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.7797979,-83.5521971,,04/25/2026,
 91 LANIER ST_PEMBROKE_GA_31321,BRYAN,HARN COMMUNITY CENTER,"91 Lanier Street, Pembroke, GA 31321",91 Lanier St,Pembroke,GA,31321,https://storage.googleapis.com/movement_labs_public2/images/91%20LANIER%20STREET%2C%20PEMBROKE%2C%20GA%2031321/20/polling_street.jpg,"05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -689,7 +689,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 108 PRIOR ST_CEDARTOWN_GA_30125,POLK,CEDARTOWN EARLY VOTING,"108 Prior Street, Cedartown, GA 30125",108 Prior St,Cedartown,GA,30125,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/108%20Prior%20St%2C%20Cedartown%2C%20GA%2030125/street_view/a7aae2d8a91819284df97c7ea8a5e86cf0f4ec14fd370ec04cf931a30e89e7ae.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.0119835,-85.2626689,,,
 604 GOODYEAR AVE_ROCKMART_GA_30153,POLK,ROCKMART EARLY VOTING,"604 Goodyear Avenue, Rockmart, GA 30153",604 Goodyear Ave,Rockmart,GA,30153,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/604%20Goodyear%20Ave%2C%20Rockmart%2C%20GA%2030153/street_view/d85030ae6f0892c7d62df39d09268b274bd8ddf189a04e52b717b191f5fcbe66.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 5:00 AM - 5:00 PM (Advanced Polling Location)",34.003072,-85.042467,,,
+05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.003072,-85.042467,MODIFIED: hours_advanced_polling 05/05/2026,,
 117 PUTNAM DR_EATONTON_GA_31024,PUTNAM,PUTNAM COUNTY ADMIN BLDG,"117 Putnam Dr, Eatonton, GA 31024",117 Putnam Dr,Eatonton,GA,31024,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/117%20Putnam%20Dr%2C%20Eatonton%2C%20GA%2031024/street_view/6146f9b75e576bced8a1f60b9b50debd44e3601afa504286888c88c4c54cc528.jpg,"05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.3460913,-83.3965301,,,
 37 OLD SCHOOL RD_GEORGETOWN_GA_39854,QUITMAN,GEORGETOWN PRECINCT,"37 Old School Road, Georgetown, GA 39854",37 Old School Rd,Georgetown,GA,39854,,"05/04/2026 - 05/08/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -760,7 +760,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,MODIFIED: hours_advanced_polling 05/05/2026,,
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,,,
 "425 RAILROAD ST, NORT_JEFFERSONVILLE_GA_31044",TWIGGS,TWIGGSCOUNTY COURTHOUSE,"425 Railroad Street Nort, Jeffersonville, GA 31044","425 Railroad St, Nort",Jeffersonville,GA,31044,https://storage.googleapis.com/movement_labs_public2/images/425%20RAILROAD%20STREET%20NORT%2C%20JEFFERSONVILLE%2C%20GA%2031044/294/polling_street.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",32.68776,-83.3456446,,,
 33 ROSCOE COLLINS DR_BLAIRSVILLE_GA_30512,UNION,ABSENTEE,"33 Roscoe Collins Dr, Blairsville, GA 30512",33 Roscoe Collins Dr,Blairsville,GA,30512,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/33%20ROSCOE%20COLLINS%20DR%2C%20BLAIRSVILLE%2C%20GA%2C%2030512.png,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
