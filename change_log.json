@@ -13919,5 +13919,21 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-06T17:25:34Z",
+    "total_records": 328,
+    "added_count": 1,
+    "removed_count": 0,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "HARRIS",
+        "name": "ELECTION'S OFFICE",
+        "address": "757 Carver Circle, Hamilton, GA 31811"
+      }
+    ],
+    "removed": [],
+    "modified": []
   }
 ]

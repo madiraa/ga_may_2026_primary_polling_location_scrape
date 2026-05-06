@@ -33,7 +33,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,MODIFIED: hours_advanced_polling 05/06/2026,,
+05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,,,
 610 S HIGHLAND RD_QUITMAN_GA_31643,BROOKS,MAIN ELECTIONS OFFICE,"610 S Highland Rd, Quitman, GA 31643",610 S Highland Rd,Quitman,GA,31643,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/610%20S%20Highland%20Rd%2C%20Quitman%2C%20GA%2031643/street_view/646dec29e5d11e00ccdaca501d71696e7f05be2fec6f720d54c70b9090ee3320.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.7797979,-83.5521971,,04/25/2026,
 91 LANIER ST_PEMBROKE_GA_31321,BRYAN,HARN COMMUNITY CENTER,"91 Lanier Street, Pembroke, GA 31321",91 Lanier St,Pembroke,GA,31321,https://storage.googleapis.com/movement_labs_public2/images/91%20LANIER%20STREET%2C%20PEMBROKE%2C%20GA%2031321/20/polling_street.jpg,"05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -482,7 +482,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/11/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",34.6951094,-84.4833307,,,
 676 W MAIN ST_GIBSON_GA_30810,GLASCOCK,GLASCOCK CO BOARD OF ELECTIONS,"676 W Main Street, Gibson, GA 30810",676 W Main St,Gibson,GA,30810,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/676%20E%20Main%20St%2C%20Gibson%2C%20GA%2030810/static_map/c49a8c322c3dab3cd5236b58d785ab35911059d095a24297e16d3a2940d1ee66.jpg,"05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.2338318,-82.5998536,MODIFIED: hours_advanced_polling 05/06/2026,,
+05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",33.2338318,-82.5998536,,,
 30 NIMITZ DR_BRUNSWICK_GA_31520,GLYNN,BALLARD,"30 Nimitz Drive, Brunswick, GA 31520",30 Nimitz Dr,Brunswick,GA,31520,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/30%20Nimitz%20Dr%2C%20Brunswick%2C%20GA%2031520/street_view/08e7efb22fb61fa2fb1bdac90a09b03cc3030b68d55b6bd41908da0d67617521.jpg,"05/04/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.2070468,-81.5068353,,,
@@ -758,7 +758,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,MODIFIED: hours_advanced_polling 05/06/2026,,
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,,,
 "425 RAILROAD ST, NORT_JEFFERSONVILLE_GA_31044",TWIGGS,TWIGGSCOUNTY COURTHOUSE,"425 Railroad Street Nort, Jeffersonville, GA 31044","425 Railroad St, Nort",Jeffersonville,GA,31044,https://storage.googleapis.com/movement_labs_public2/images/425%20RAILROAD%20STREET%20NORT%2C%20JEFFERSONVILLE%2C%20GA%2031044/294/polling_street.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",32.68776,-83.3456446,,,
 33 ROSCOE COLLINS DR_BLAIRSVILLE_GA_30512,UNION,ABSENTEE,"33 Roscoe Collins Dr, Blairsville, GA 30512",33 Roscoe Collins Dr,Blairsville,GA,30512,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/33%20ROSCOE%20COLLINS%20DR%2C%20BLAIRSVILLE%2C%20GA%2C%2030512.png,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -823,7 +823,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 110 STATE ST_COMMERCE_GA_30529,JACKSON,COMMERCE ADMINISTRATIVE COMPLEX,"110 State St, Commerce, GA 30529",110 State St,Commerce,GA,30529,,05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location),,,,04/27/2026,
 909 HARMONY GROVE CHURCH RD_ACWORTH_GA_30101,PAULDING,CROSSROADS LIBRARY,"909 Harmony Grove Church Rd, Acworth, GA 30101",909 Harmony Grove Church Rd,Acworth,GA,30101,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/27/2026,
 140 BETHEL CHURCH RD_HIRAM_GA_30141,PAULDING,DIANNE WRIGHT INNOVATION CENTER,"140 Bethel Church Rd, Hiram, GA 30141",140 Bethel Church Rd,Hiram,GA,30141,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/27/2026,
-757 CARVER CIRCLE_HAMILTON_GA_31811,HARRIS,ELECTION'S OFFICE,"757 Carver Circle, Hamilton, GA 31811",757 Carver Circle,Hamilton,GA,31811,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/757%20CARVER%20CIRCLE_HAMILTON_GA_31811.png,04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location),,,REMOVED 05/03/2026,04/27/2026,05/03/2026
+757 CARVER CIRCLE_HAMILTON_GA_31811,HARRIS,ELECTION'S OFFICE,"757 Carver Circle, Hamilton, GA 31811",757 Carver Circle,Hamilton,GA,31811,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/757%20CARVER%20CIRCLE_HAMILTON_GA_31811.png,04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location),,,,04/27/2026,05/03/2026
 324 HIRAM DOUGLASVILLE HWY_HIRAM_GA_30141,PAULDING,HIRAM UNITED METHODIST CHURCH,"324 Hiram Douglasville Hwy, Hiram, GA 30141",324 Hiram Douglasville Hwy,Hiram,GA,30141,,05/11/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location),,,,04/27/2026,
 1214 LULA LAKE ROAD_LOOKOUT MOUNTAIN_GA_30750,WALKER,LOOKOUT MOUNTAIN CITY HALL,"1214 Lula Lake Road, Lookout Mountain, GA 30750",1214 Lula Lake Road,Lookout Mountain,GA,30750,,"05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -905,3 +905,4 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 103 JEFFERSON ST_DARIEN_GA_31305,MCINTOSH,ELECTION OFFICE,"103 Jefferson St, Darien, GA 31305",103 Jefferson St,Darien,GA,31305,,"04/27/2026 - 05/10/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 5:00 PM (Advanced Polling Location)",,,,05/01/2026,
+757 CARVER CIRCLE_HAMILTON_GA_31811,HARRIS,ELECTION'S OFFICE,"757 Carver Circle, Hamilton, GA 31811",757 Carver Circle,Hamilton,GA,31811,,05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location),,,ADDED 05/06/2026,05/06/2026,
