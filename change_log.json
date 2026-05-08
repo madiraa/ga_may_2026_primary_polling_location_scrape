@@ -13986,5 +13986,61 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-08T05:53:02Z",
+    "total_records": 327,
+    "added_count": 0,
+    "removed_count": 1,
+    "modified_count": 4,
+    "added": [],
+    "removed": [
+      {
+        "county": "LEE",
+        "name": "REDBONE FIRE STATION #5"
+      }
+    ],
+    "modified": [
+      {
+        "county": "TURNER",
+        "name": "AMERICAN LEGION BUILDING",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/07/2026 - 05/07/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/08/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/11/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/08/2026 - 05/08/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/11/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "BLECKLEY",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/07/2026 - 05/07/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/08/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/11/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/08/2026 - 05/08/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/11/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DOUGHERTY",
+        "name": "CANDY ROOM",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/07/2026 - 05/07/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "MURRAY",
+        "name": "MURRAY COUNTY RECREATION CENTER VETERANS MEMORIAL PARK",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/07/2026 - 05/07/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
