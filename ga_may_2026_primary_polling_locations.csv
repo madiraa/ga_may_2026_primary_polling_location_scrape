@@ -31,7 +31,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,MODIFIED: hours_advanced_polling 05/08/2026,,
+05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",32.3880136,-83.3551066,,,
 610 S HIGHLAND RD_QUITMAN_GA_31643,BROOKS,MAIN ELECTIONS OFFICE,"610 S Highland Rd, Quitman, GA 31643",610 S Highland Rd,Quitman,GA,31643,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/610%20S%20Highland%20Rd%2C%20Quitman%2C%20GA%2031643/street_view/646dec29e5d11e00ccdaca501d71696e7f05be2fec6f720d54c70b9090ee3320.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",30.7797979,-83.5521971,,04/25/2026,
 91 LANIER ST_PEMBROKE_GA_31321,BRYAN,HARN COMMUNITY CENTER,"91 Lanier Street, Pembroke, GA 31321",91 Lanier St,Pembroke,GA,31321,https://storage.googleapis.com/movement_labs_public2/images/91%20LANIER%20STREET%2C%20PEMBROKE%2C%20GA%2031321/20/polling_street.jpg,"05/04/2026 - 05/09/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
@@ -173,9 +173,9 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 1465 WEST BOOTH RD EXT_MARIETTA_GA_30008,COBB,FAIR OAKS RECREATION CENTER,"1465 West Booth Rd Ext, Marietta, GA 30008",1465 West Booth Rd Ext,Marietta,GA,30008,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1465%20W%20Booth%20Rd%20Ext%20SW%2C%20Marietta%2C%20GA%2030066/static_map/18f11ebb9cab801a1b9538a22e53c70d8dd4485cbbaf15ece94c10b4dacd72dc.jpg,"05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",33.9176327,-84.5645972,,04/25/2026,
-1275 CHURCH ST_SMYRNA_GA_30008,COBB,FIRST BAPTIST CHURCH OF SMYRNA,"1275 Church St, Smyrna, GA 30008",1275 Church St,Smyrna,GA,30008,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1275%20Church%20St%2C%20Smyrna%2C%20GA%2030080/street_view/8a743e11520d1fdbcb1ece82acc7e402bf229f8d7bc352bc2ac88810cacaeb57.jpg,"05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
+1275 CHURCH ST_SMYRNA_GA_30008,COBB,FIRST BAPTIST CHURCH OF SMYRNA,"1275 Church St, Smyrna, GA 30080",1275 Church St,Smyrna,GA,30008,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/1275%20Church%20St%2C%20Smyrna%2C%20GA%2030080/street_view/8a743e11520d1fdbcb1ece82acc7e402bf229f8d7bc352bc2ac88810cacaeb57.jpg,"05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",33.8823577,-84.5157826,,04/25/2026,
+05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",33.8823577,-84.5157826,MODIFIED: polling_place_address_full 05/08/2026,04/25/2026,
 995 ROSWELL ST NE_MARIETTA_GA_30060,COBB,MAIN E D MANSOUR,"995 Roswell St Ne, Marietta, GA 30060",995 Roswell St Ne,Marietta,GA,30060,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2026%20Georgia%20EV/compressed_995%20ROSWELL%20ST%20NE_MARIETTA_GA_30060.png,"05/04/2026 - 05/08/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/10/2026 - 05/10/2026 12:00 PM - 5:00 PM (Advanced Polling Location)
@@ -316,7 +316,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 125 PINE AVE_ALBANY_GA_31701,DOUGHERTY,CANDY ROOM,"125 Pine Ave, Albany, GA 31701",125 Pine Ave,Albany,GA,31701,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/125%20Pine%20Ave%2C%20Albany%2C%20GA%2031701/street_view/1bad9a15120f66a364196ca7c48ef9eb0617c4ba69a2ad090af7d3270d0b0c3f.jpg,"05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",31.5789115,-84.1503627,MODIFIED: hours_advanced_polling 05/08/2026,,
+05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",31.5789115,-84.1503627,,,
 5000 GEORGIA HIGHWAY 92_DOUGLASVILLE_GA_30135,DOUGLAS,BOUNDARY WATERS ACTIVITY CENTER,"5000 Georgia Highway 92, Douglasville, GA 30135",5000 Georgia Highway 92,Douglasville,GA,30135,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/5000%20GA-92%2C%20Douglasville%2C%20GA%2030135/street_view/0452f6a15fb37e8b8c02bd222e7ccec84d0bc0be4d7e6611b174c5767b66e0a1.jpg,"05/04/2026 - 05/08/2026 8:30 AM - 6:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 8:30 AM - 6:00 PM (Advanced Polling Location)",33.6708417,-84.6579863,,,
 2105 MACK RD_DOUGLASVILLE_GA_30135,DOUGLAS,DEER LICK PARK,"2105 Mack Rd, Douglasville, GA 30135",2105 Mack Rd,Douglasville,GA,30135,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/2105%20Mack%20Rd%2C%20Douglasville%2C%20GA%2030135/static_map/dec840467b834adfe097c379902cdd9e2906c9f11701c01e10ab848db07f7e9b.jpg,"05/04/2026 - 05/08/2026 8:30 AM - 6:00 PM (Advanced Polling Location)
@@ -645,7 +645,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 651 HYDEN TYLER RD_CHATSWORTH_GA_30705,MURRAY,MURRAY COUNTY RECREATION CENTER VETERANS MEMORIAL PARK,"651 Hyden Tyler Rd, Chatsworth, GA 30705",651 Hyden Tyler Rd,Chatsworth,GA,30705,https://storage.googleapis.com/movement_labs_public2/images/651%20HYDEN%20TYLER%20RD%2C%20CHATSWORTH%2C%20GA%2030705/246/polling_street.jpg,"05/08/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.7919726,-84.7595917,MODIFIED: hours_advanced_polling 05/08/2026,,
+05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",34.7919726,-84.7595917,,,
 3111 CITIZENS WAY_COLUMBUS_GA_31906,MUSCOGEE,CITY SERVICE CENTER,"3111 Citizens Way, Columbus, GA 31906",3111 Citizens Way,Columbus,GA,31906,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/3111%20CITIZENS%20WAY%2C%20COLUMBUS%2C%20GA%2C%2031906.png,"04/27/2026 - 05/10/2026 7:00 AM - 7:00 PM (Advanced Polling Location) 
 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",32.4766623,-84.9456147,,,
 2010 AMERICAN WAY_COLUMBUS_GA_31909,MUSCOGEE,NORTHSIDE REC CENTER,"2010 American Way, Columbus, GA 31909",2010 American Way,Columbus,GA,31909,https://storage.googleapis.com/ml-data-332522-polling-images-public/images/2010%20American%20Way%2C%20Columbus%2C%20GA%2031909/static_map/60eb3c5e8635bfec572067189d7affdbdc15b5d47f5e70931240213be871e329.jpg,"04/27/2026 - 05/10/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
@@ -750,7 +750,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location)
 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
-05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,MODIFIED: hours_advanced_polling 05/08/2026,,
+05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",31.6830692,-83.6414585,,,
 "425 RAILROAD ST, NORT_JEFFERSONVILLE_GA_31044",TWIGGS,TWIGGSCOUNTY COURTHOUSE,"425 Railroad Street Nort, Jeffersonville, GA 31044","425 Railroad St, Nort",Jeffersonville,GA,31044,https://storage.googleapis.com/movement_labs_public2/images/425%20RAILROAD%20STREET%20NORT%2C%20JEFFERSONVILLE%2C%20GA%2031044/294/polling_street.jpg,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 05/11/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",32.68776,-83.3456446,,,
 33 ROSCOE COLLINS DR_BLAIRSVILLE_GA_30512,UNION,ABSENTEE,"33 Roscoe Collins Dr, Blairsville, GA 30512",33 Roscoe Collins Dr,Blairsville,GA,30512,https://storage.googleapis.com/mlabs-ops-public/PollingCorrections2025/2025%20Georgia%20Archive/33%20ROSCOE%20COLLINS%20DR%2C%20BLAIRSVILLE%2C%20GA%2C%2030512.png,"05/04/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location)

@@ -14042,5 +14042,26 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-08T20:52:08Z",
+    "total_records": 327,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "COBB",
+        "name": "FIRST BAPTIST CHURCH OF SMYRNA",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1275 Church St, Smyrna, GA 30008",
+            "to": "1275 Church St, Smyrna, GA 30080"
+          }
+        }
+      }
+    ]
   }
 ]
