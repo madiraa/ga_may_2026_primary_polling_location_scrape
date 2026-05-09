@@ -15954,5 +15954,57 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-09T20:37:48Z",
+    "total_records": 327,
+    "added_count": 1,
+    "removed_count": 1,
+    "modified_count": 3,
+    "added": [
+      {
+        "county": "FULTON",
+        "name": "EVELYN G. LOWERY LIBRARY AT CASCADE",
+        "address": "3665 Cascade Road, South Fulton, GA 30331"
+      }
+    ],
+    "removed": [
+      {
+        "county": "FULTON",
+        "name": "EAST POINT LIBRARY"
+      }
+    ],
+    "modified": [
+      {
+        "county": "FULTON",
+        "name": "BUCKHEAD LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 6:45 PM (Advanced Polling Location)",
+            "to": "05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 7:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "SUMTER",
+        "name": "AMERICUS SUMTER EXPOSITION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "900 Adderton St, Americus, GA 31709",
+            "to": "903 Adderton St, Americus, GA 31709"
+          }
+        }
+      },
+      {
+        "county": "GLASCOCK",
+        "name": "GLASCOCK CO BOARD OF ELECTIONS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "04/27/2026 - 05/10/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/09/2026 - 05/09/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/11/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
