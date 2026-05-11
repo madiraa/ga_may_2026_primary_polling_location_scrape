@@ -19547,5 +19547,20 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-11T10:55:43Z",
+    "total_records": 325,
+    "added_count": 0,
+    "removed_count": 1,
+    "modified_count": 0,
+    "added": [],
+    "removed": [
+      {
+        "county": "HARRIS",
+        "name": "ELECTION'S OFFICE"
+      }
+    ],
+    "modified": []
   }
 ]
