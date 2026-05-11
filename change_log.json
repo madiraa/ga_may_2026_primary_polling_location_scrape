@@ -19562,5 +19562,26 @@
       }
     ],
     "modified": []
+  },
+  {
+    "timestamp": "2026-05-11T14:33:44Z",
+    "total_records": 326,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "HARRIS",
+        "name": "ELECTION'S OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "04/27/2026 - 05/02/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/04/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
