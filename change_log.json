@@ -19598,5 +19598,91 @@
       }
     ],
     "modified": []
+  },
+  {
+    "timestamp": "2026-05-12T06:33:42Z",
+    "total_records": 324,
+    "added_count": 0,
+    "removed_count": 1,
+    "modified_count": 7,
+    "added": [],
+    "removed": [
+      {
+        "county": "HALL",
+        "name": "EAST HALL COMMUNITY BUILDING"
+      }
+    ],
+    "modified": [
+      {
+        "county": "TURNER",
+        "name": "AMERICAN LEGION BUILDING",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 7:00 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "BLECKLEY",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "WALKER",
+        "name": "CHICKAMAUGA CIVIC CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "WALKER",
+        "name": "LAFAYETTE-WALKER COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "WALKER",
+        "name": "LOOKOUT MOUNTAIN CITY HALL",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "WALKER",
+        "name": "ROSSVILLE MUNICIPAL CIVIC CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "LINCOLN",
+        "name": "ROWLAND YORK",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/11/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/12/2026 - 05/12/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/13/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
