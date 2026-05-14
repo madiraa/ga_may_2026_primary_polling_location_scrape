@@ -19816,5 +19816,125 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-14T06:42:38Z",
+    "total_records": 324,
+    "added_count": 0,
+    "removed_count": 7,
+    "modified_count": 8,
+    "added": [],
+    "removed": [
+      {
+        "county": "CAMDEN",
+        "name": "WOODBINE ADVANCE IN PERSON"
+      },
+      {
+        "county": "FULTON",
+        "name": "EAST POINT LIBRARY"
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHWEST BRANCH LIBRARY AT SCOTTS CROSSING"
+      },
+      {
+        "county": "HALL",
+        "name": "EAST HALL COMMUNITY BUILDING"
+      },
+      {
+        "county": "LEE",
+        "name": "REDBONE FIRE STATION #5"
+      },
+      {
+        "county": "CHARLTON",
+        "name": "ST GEORGE"
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY OAKLAND LIBRARY"
+      }
+    ],
+    "modified": [
+      {
+        "county": "TURNER",
+        "name": "AMERICAN LEGION BUILDING",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/13/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "BLECKLEY",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/13/2026 - 05/13/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DOUGHERTY",
+        "name": "CANDY ROOM",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "MURRAY",
+        "name": "MURRAY COUNTY RECREATION CENTER VETERANS MEMORIAL PARK",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/13/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CATOOSA",
+        "name": "RINGGOLD PRECINCT",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER - BANQUET RM",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/13/2026 - 05/13/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CATOOSA",
+        "name": "WESTSIDE PRECINCT",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "WHITFIELD",
+        "name": "WHITFIELD COUNTY COURTHOUSE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/13/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/14/2026 - 05/14/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/14/2026 - 05/14/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
