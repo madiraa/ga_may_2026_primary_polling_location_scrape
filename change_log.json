@@ -19936,5 +19936,156 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-15T06:51:39Z",
+    "total_records": 324,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 14,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "CLARKE",
+        "name": "ACC COOPERATIVE EXTENSION OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "TURNER",
+        "name": "AMERICAN LEGION BUILDING",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 8:00 AM - 6:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "ATHENS REGIONAL LIBRARY",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "ATHENS-CLARKE COUNTY TENNIS CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "BLECKLEY",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:30 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "DOUGHERTY",
+        "name": "CANDY ROOM",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "MIRIAM MOORE COMMUNITY CENTER",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "MURRAY",
+        "name": "MURRAY COUNTY RECREATION CENTER VETERANS MEMORIAL PARK",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 9:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CATOOSA",
+        "name": "RINGGOLD PRECINCT",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "TERRELL",
+        "name": "TERRELL COUNTY ELECTIONS AND REGISTRATION OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/11/2026 - 05/14/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 05/19/2026 - 05/19/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/19/2026 - 05/19/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER - BANQUET RM",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "CATOOSA",
+        "name": "WESTSIDE PRECINCT",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 8:00 AM - 7:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      },
+      {
+        "county": "WHITFIELD",
+        "name": "WHITFIELD COUNTY COURTHOUSE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "05/14/2026 - 05/14/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "05/15/2026 - 05/15/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
