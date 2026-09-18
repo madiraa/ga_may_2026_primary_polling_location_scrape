@@ -383,7 +383,9 @@ def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
             base    = baseline[key]
             changes: dict[str, dict] = {}
             for field in ("polling_place_county", "polling_place_name",
-                          "polling_place_address_full", "hours_advanced_polling"):
+                          "polling_place_address_full", "polling_place_address_line_1",
+                          "polling_place_address_city", "polling_place_address_state",
+                          "polling_place_address_zip", "hours_advanced_polling"):
                 before = _norm(base.get(field, ""))
                 after  = _norm(rec.get(field,  ""))
                 if before != after:

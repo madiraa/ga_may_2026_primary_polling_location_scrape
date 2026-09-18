@@ -64,7 +64,9 @@ FIELDS = [
 
 # Fields compared for change detection
 COMPARE_FIELDS = ["polling_place_county", "polling_place_name",
-                  "polling_place_address_full", "hours_advanced_polling"]
+                  "polling_place_address_full", "polling_place_address_line_1",
+                  "polling_place_address_city", "polling_place_address_state",
+                  "polling_place_address_zip", "hours_advanced_polling"]
 
 
 def _today() -> str:
@@ -166,10 +168,14 @@ def sync_changes(diff: dict) -> dict[str, int]:
 
     # ── Modified rows ────────────────────────────────────────────────────────
     field_col = {
-        "polling_place_county":       COL_COUNTY,
-        "polling_place_name":         COL_NAME,
-        "polling_place_address_full": COL_ADDR_FULL,
-        "hours_advanced_polling":     COL_HOURS_ADV,
+        "polling_place_county":         COL_COUNTY,
+        "polling_place_name":           COL_NAME,
+        "polling_place_address_full":   COL_ADDR_FULL,
+        "polling_place_address_line_1": COL_ADDR_LINE1,
+        "polling_place_address_city":   COL_ADDR_CITY,
+        "polling_place_address_state":  COL_ADDR_STATE,
+        "polling_place_address_zip":    COL_ADDR_ZIP,
+        "hours_advanced_polling":       COL_HOURS_ADV,
     }
 
     for entry in diff.get("modified", []):
@@ -276,10 +282,14 @@ def clear_resolved_statuses(current: list[dict]) -> int:
         if scraped and all(
             _norm(scraped.get(f, "")) == _norm(row[col - 1] if len(row) >= col else "")
             for f, col in [
-                ("polling_place_county",       COL_COUNTY),
-                ("polling_place_name",         COL_NAME),
-                ("polling_place_address_full", COL_ADDR_FULL),
-                ("hours_advanced_polling",     COL_HOURS_ADV),
+                ("polling_place_county",         COL_COUNTY),
+                ("polling_place_name",           COL_NAME),
+                ("polling_place_address_full",   COL_ADDR_FULL),
+                ("polling_place_address_line_1", COL_ADDR_LINE1),
+                ("polling_place_address_city",   COL_ADDR_CITY),
+                ("polling_place_address_state",  COL_ADDR_STATE),
+                ("polling_place_address_zip",    COL_ADDR_ZIP),
+                ("hours_advanced_polling",       COL_HOURS_ADV),
             ]
         ):
             clears.append(gspread.Cell(i + 1, COL_STATUS, ""))
