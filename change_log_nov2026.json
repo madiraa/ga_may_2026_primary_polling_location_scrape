@@ -1609,5 +1609,1876 @@
     ],
     "removed": [],
     "modified": []
+  },
+  {
+    "timestamp": "2026-09-18T20:05:12Z",
+    "total_records": 323,
+    "added_count": 0,
+    "removed_count": 0,
+    "modified_count": 186,
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "county": "HART",
+        "name": "ADVANCE ABSENTEE VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "182 Cade St. Ste. C, Hartwell, GA 30643",
+            "to": "182 Cade St, Ste C, Hartwell, GA 30643"
+          }
+        }
+      },
+      {
+        "county": "GORDON",
+        "name": "ADVANCED/EARLY VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 S Wall Street Suite 1, Calhoun, GA 30701",
+            "to": "100 S Wall St, Ste 1, Calhoun, GA 30701"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ADAMS PARK LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2231 Campbellton Road Sw, Atlanta, GA 30311",
+            "to": "2231 Campbellton Rd SW, Atlanta, GA 30311"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "BUCKHEAD LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "269 Buckhead Avenue Ne, Atlanta, GA 30305",
+            "to": "269 Buckhead Ave NE, Atlanta, GA 30305"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "C.T. MARTIN NATATORIUM AND RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3201 Martin Luther King Jr. Dr., S.W., Atlanta, GA 30311",
+            "to": "3201 Martin Luther King Jr Dr SW, Atlanta, GA 30311"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "EAST POINT LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2757 Main Street, East Point, GA 30344",
+            "to": "2757 Main St, East Point, GA 30344"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "EAST ROSWELL LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2301 Holcomb Bridge Road, Roswell, GA 30076",
+            "to": "2301 Holcomb Bridge Rd, Roswell, GA 30076"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ELECTIONS HUB",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5600 Campbellton Fairburn Road, Union City, GA 30213",
+            "to": "5600 Campbellton Fairburn Rd, Union City, GA 30213"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "GLADYS S. DENNARD LIBRARY AT SOUTH FULTON",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4055 Flat Shoals Road, South Fulton, GA 30291",
+            "to": "4055 Flat Shoals Rd, South Fulton, GA 30291"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "JOAN P. GARNER LIBRARY AT PONCE DE LEON",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "980 Ponce De Leon Avenue Ne, Atlanta, GA 30306",
+            "to": "980 Ponce De Leon Ave NE, Atlanta, GA 30306"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "METROPOLITAN LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1332 Metropolitan Parkway, Atlanta, GA 30310",
+            "to": "1332 Metropolitan Pkwy, Atlanta, GA 30310"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "MILTON LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "855 Mayfield Road, Milton, GA 30009",
+            "to": "855 Mayfield Rd, Milton, GA 30009"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTH FULTON SERVICE CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "7741 Roswell Road, Sandy Springs, GA 30350",
+            "to": "7741 Roswell Rd, Sandy Springs, GA 30350"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHWEST BRANCH LIBRARY AT SCOTTS CROSSING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2489 Perry Boulevard, Atlanta, GA 30318",
+            "to": "2489 Perry Blvd, Atlanta, GA 30318"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "OCEE LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5090 Abbotts Bridge Road, Johns Creek, GA 30328",
+            "to": "5090 Abbotts Bridge Rd, Johns Creek, GA 30328"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "PALMETTO LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "9111 Cascade Palmetto Hwy., Palmetto, GA 30268",
+            "to": "9111 Cascade Palmetto Hwy, Palmetto, GA 30268"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "ROSWELL BRANCH LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "115 Norcross Street, Roswell, GA 30075",
+            "to": "115 Norcross St, Roswell, GA 30075"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "SANDY SPRINGS BRANCH LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "395 Mount Vernon Highway Ne, Sandy Springs, GA 30328",
+            "to": "395 Mount Vernon Hwy NE, Sandy Springs, GA 30328"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "SOUTH FULTON SERVICE CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5600 Stonewall Tell Road, South Fulton, GA 30349",
+            "to": "5600 Stonewall Tell Rd, South Fulton, GA 30349"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "SOUTHWEST ARTS CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "915 New Hope Road, Sw, South Fulton, GA 30331",
+            "to": "915 New Hope Rd SW, South Fulton, GA 30331"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "WOLF CREEK LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3100 Enon Road, South Fulton, GA 30331",
+            "to": "3100 Enon Rd, South Fulton, GA 30331"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "BEN ROBERTSON COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2753 Watts Dr, Kennesaw Ga, 30144 2720",
+            "to": "2753 Watts Dr, Kennesaw, GA 30144"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "BOOTS WARD RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4845 Dallas Hwy, Powder Springs Ga, 30127 4486",
+            "to": "4845 Dallas Hwy, Powder Springs, GA 30127"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "EAST COBB GOVT SVC CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4400 Lower Roswell Rd, Marietta Ga, 30068 4233",
+            "to": "4400 Lower Roswell Rd, Marietta, GA 30068"
+          }
+        }
+      },
+      {
+        "county": "IRWIN",
+        "name": "IRWIN COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "225 E 4Th St, Ocilla, GA 31774",
+            "to": "225 E 4th St, Ocilla, GA 31774"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "MAIN E D MANSOUR",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "995 Roswell St Ne, Marietta, GA 30060",
+            "to": "995 Roswell St NE, Marietta, GA 30060"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "MAIN OFFICE MANSOUR",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "995 Roswell St Ne, Marietta, GA 30060",
+            "to": "995 Roswell St NE, Marietta, GA 30060"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "MILFORD RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "675 Smyrna Powder Springs Rd Sw, Marietta, GA 30060",
+            "to": "675 Smyrna Powder Springs Rd SW, Marietta, GA 30060"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "NORTH COBB SENIOR CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3900 S. Main Street, Acworth, GA 30101",
+            "to": "3900 S Main St, Acworth, GA 30101"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "SOUTH COBB COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "620 Lions Club Drive, Mableton, GA 30126",
+            "to": "620 Lions Club Dr, Mableton, GA 30126"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "WEST COBB REGIONAL LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1750 Dennis Kemp Ln Nw, Kennesaw, GA 30152",
+            "to": "1750 Dennis Kemp Ln NW, Kennesaw, GA 30152"
+          }
+        }
+      },
+      {
+        "county": "SCREVEN",
+        "name": "COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "216 Mims Rd Rm 114, Sylvania, GA 30467",
+            "to": "216 Mims Rd, Rm 114, Sylvania, GA 30467"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "HUGH C. CONLEY RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3636 College Street, College Park, GA 30337",
+            "to": "3636 College St, College Park, GA 30337"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "JOHNS CREEK ENVIROMNMENTAL CAMPUS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "8100 Holcomb Bridge Road, Roswell, GA 30022",
+            "to": "8100 Holcomb Bridge Rd, Roswell, GA 30022"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHEAST SPRUILL OAKS LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "9560 Spruill Road, Johns Creek, GA 30022",
+            "to": "9560 Spruill Rd, Johns Creek, GA 30022"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "NORTHSIDE LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3295 Northside Parkway Nw, Atlanta, GA 30327",
+            "to": "3295 Northside Pkwy NW, Atlanta, GA 30327"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "WELCOME ALL RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4255 Will Lee Road, South Fulton, GA 30349",
+            "to": "4255 Will Lee Rd, South Fulton, GA 30349"
+          }
+        }
+      },
+      {
+        "county": "TURNER",
+        "name": "AMERICAN LEGION BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1807 Us Highway 41 N, Sycamore, GA 31790",
+            "to": "1807 US Hwy 41 N, Sycamore, GA 31790"
+          }
+        }
+      },
+      {
+        "county": "FLOYD",
+        "name": "ANTHONY RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2901 Garden Lakes Blvd Nw, Rome, GA 30165",
+            "to": "2901 Garden Lakes Blvd NW, Rome, GA 30165"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "ATHENS REGIONAL LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2025 Baxter Street, Athens, GA 30606",
+            "to": "2025 Baxter St, Athens, GA 30606"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "ATHENS-CLARKE COUNTY TENNIS CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4460 Lexington Road, Athens, GA 30605",
+            "to": "4460 Lexington Rd, Athens, GA 30605"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BEREAN CHRISTIAN CHURCH",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2201 Young Road, Stone Mountain, GA 30088",
+            "to": "2201 Young Rd, Stone Mountain, GA 30088"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BESSIE BRANHAM RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2051 Delano Drive Ne, Atlanta, GA 30317",
+            "to": "2051 Delano Dr NE, Atlanta, GA 30317"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "BRIARWOOD RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2235 Briarwood Way Ne, Brookhaven, GA 30319",
+            "to": "2235 Briarwood Way NE, Brookhaven, GA 30319"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "COUNTY LINE-ELLENWOOD LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4331 River Rd., Ellenwood, GA 30294",
+            "to": "4331 River Rd, Ellenwood, GA 30294"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "MEMORIAL 1",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4380 Memorial Drive Ste 500, Decatur, GA 30032",
+            "to": "4380 Memorial Dr, Ste 500, Decatur, GA 30032"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "NEIGHBORHOOD CHURCH",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1561 Mclendon Ave Ne, Atlanta, GA 30307",
+            "to": "1561 Mclendon Ave NE, Atlanta, GA 30307"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "NORTH DEKALB SENIOR CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3393 Malone Drive, Chamblee, GA 30341",
+            "to": "3393 Malone Dr, Chamblee, GA 30341"
+          }
+        }
+      },
+      {
+        "county": "DEKALB",
+        "name": "WESLEY CHAPEL LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2861 Wesley Chapel Road, Decatur, GA 30034",
+            "to": "2861 Wesley Chapel Rd, Decatur, GA 30034"
+          }
+        }
+      },
+      {
+        "county": "BACON",
+        "name": "BACON COUNTY BOARD OF ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "232 West 12Th Street, Alma, GA 31510",
+            "to": "232 W 12th St, Alma, GA 31510"
+          }
+        }
+      },
+      {
+        "county": "BACON",
+        "name": "BACON COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "232 West 12Th Street, Alma, GA 31510",
+            "to": "232 W 12th St, Alma, GA 31510"
+          }
+        }
+      },
+      {
+        "county": "BAKER",
+        "name": "BAKER COUNTY BOARD OF COMMISSIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "439 Ga Hwy 91 Nw, Newton, GA 39870",
+            "to": "439 Ga Hwy 91 NW, Newton, GA 39870"
+          }
+        }
+      },
+      {
+        "county": "GLYNN",
+        "name": "BALLARD",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "30 Nimitz Drive, Brunswick, GA 31520",
+            "to": "30 Nimitz Dr, Brunswick, GA 31520"
+          }
+        }
+      },
+      {
+        "county": "BARROW",
+        "name": "BARROW COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "233 E. Broad St, Winder, GA 30680",
+            "to": "233 E Broad St, Winder, GA 30680"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "BEULAH HEIGHTS UNIVERSITY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "892 Berne St Se, Atlanta, GA 30316",
+            "to": "892 Berne St SE, Atlanta, GA 30316"
+          }
+        }
+      },
+      {
+        "county": "JEFFERSON",
+        "name": "BOARD OF ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1200 School Street, Louisville, GA 30434",
+            "to": "1200 School St, Louisville, GA 30434"
+          }
+        }
+      },
+      {
+        "county": "CRAWFORD",
+        "name": "BOARD OF ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "640 Ga Hwy 128, Suite 124, Roberta, GA 31078",
+            "to": "640 Ga Hwy 128, Ste 124, Roberta, GA 31078"
+          }
+        }
+      },
+      {
+        "county": "BENHILL",
+        "name": "BOARD OF ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "602 S. Grant St, Fitzgerald, GA 31750",
+            "to": "602 S Grant St, Fitzgerald, GA 31750"
+          }
+        }
+      },
+      {
+        "county": "LAURENS",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "117 E Jackson St Suite A, Dublin, GA 31021",
+            "to": "117 E Jackson St, Ste A, Dublin, GA 31021"
+          }
+        }
+      },
+      {
+        "county": "BLECKLEY",
+        "name": "BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "106 E Cherry St Courthouse Annex, Cochran, GA 31014",
+            "to": "106 E Cherry St, Courthouse Annex, Cochran, GA 31014"
+          }
+        }
+      },
+      {
+        "county": "ROCKDALE",
+        "name": "BOARD OF ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1115 West Ave Sw, Conyers, GA 30012",
+            "to": "1115 West Ave SW, Conyers, GA 30012"
+          }
+        }
+      },
+      {
+        "county": "BULLOCH",
+        "name": "BROOKLET CITY HALL",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "104 Church Street, Brooklet, GA 30415",
+            "to": "104 Church St, Brooklet, GA 30415"
+          }
+        }
+      },
+      {
+        "county": "BUTTS",
+        "name": "BUTTS COUNTY ADMINISTRATION BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "625 W 3Rd St, Jackson, GA 30233",
+            "to": "625 W 3rd St, Jackson, GA 30233"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "CARL RHODENIZER RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3499 Rex Road, Rex, GA 30273",
+            "to": "3499 Rex Rd, Rex, GA 30273"
+          }
+        }
+      },
+      {
+        "county": "COLUMBIA",
+        "name": "CCBOE - SUPPORT COMPLEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4395 River Watch Parkway, Evans, GA 30809",
+            "to": "4395 River Watch Pkwy, Evans, GA 30809"
+          }
+        }
+      },
+      {
+        "county": "POLK",
+        "name": "CEDARTOWN EARLY VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "108 Prior Street, Cedartown, GA 30125",
+            "to": "108 Prior St, Cedartown, GA 30125"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "CITY OF FOREST PARK SENIOR CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5087 Park Avenue, Forest Park, GA 30297",
+            "to": "5087 Park Ave, Forest Park, GA 30297"
+          }
+        }
+      },
+      {
+        "county": "UPSON",
+        "name": "CIVIC CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "101 Civic Center Drive, Thomaston, GA 30286",
+            "to": "101 Civic Center Dr, Thomaston, GA 30286"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "CLAYTON COUNTY LIBRARY NORTHWEST BRANCH",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "6131 Riverdale Road, Riverdale, GA 30274",
+            "to": "6131 Riverdale Rd, Riverdale, GA 30274"
+          }
+        }
+      },
+      {
+        "county": "COFFEE",
+        "name": "COFFEE COUNTY BOARD OF ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "224 W Ashley St Suite A, Douglas, GA 31533",
+            "to": "224 W Ashley St, Ste A, Douglas, GA 31533"
+          }
+        }
+      },
+      {
+        "county": "COLUMBIA",
+        "name": "COLUMBIA COUNTY BOARD OF ELECTIONS, BUILDING G3",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "610 Ronald Reagan Drive, G3, Evans, GA 30809",
+            "to": "610 Ronald Reagan Dr G3, Evans, GA 30809"
+          }
+        }
+      },
+      {
+        "county": "WARREN",
+        "name": "COMMUNITY SERVICE BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "48 Warren Street, Warrenton, GA 30828",
+            "to": "48 Warren St, Warrenton, GA 30828"
+          }
+        }
+      },
+      {
+        "county": "COOK",
+        "name": "COOK COUNTY ADMINISTRATION BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1200 South Hutchinson Avenue, Adel, GA 31620",
+            "to": "1200 S Hutchinson Ave, Adel, GA 31620"
+          }
+        }
+      },
+      {
+        "county": "HABERSHAM",
+        "name": "COUNTY ELECTIONS & REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "403 Habersham County Shopping Center Down From Belk And Pizza Hut, Cornelia, GA 30531",
+            "to": "403 Habersham County Shopping Center Down From Belk And Pizza Hut, Cornelia GA 30531"
+          }
+        }
+      },
+      {
+        "county": "CLINCH",
+        "name": "COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "25 Court Square, Homerville, GA 31634",
+            "to": "25 Court Sq, Homerville, GA 31634"
+          }
+        }
+      },
+      {
+        "county": "WILKES",
+        "name": "COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "23 Court St., Washington, GA 30673",
+            "to": "23 Court St, Washington, GA 30673"
+          }
+        }
+      },
+      {
+        "county": "EVANS",
+        "name": "COURTHOUSE ANNEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "201 Freeman St Suite 8 Courtroom 2, Claxton, GA 30417",
+            "to": "201 Freeman ST Suite 8 Courtroom 2, Claxton GA 30417"
+          }
+        }
+      },
+      {
+        "county": "DECATUR",
+        "name": "COURTHOUSE ANNEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "122 W. Water St, Bainbridge, GA 39817",
+            "to": "122 W Water St, Bainbridge, GA 39817"
+          }
+        }
+      },
+      {
+        "county": "COLQUITT",
+        "name": "COURTHOUSE ANNEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "101 East Central Ave Rm 201, Moultrie, GA 31768",
+            "to": "101 E Central Ave, Rm 201, Moultrie, GA 31768"
+          }
+        }
+      },
+      {
+        "county": "DAWSON",
+        "name": "DAWSON CO ELECT & REG OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "96 Academy Avenue, Dawsonville, GA 30534",
+            "to": "96 Academy Ave, Dawsonville, GA 30534"
+          }
+        }
+      },
+      {
+        "county": "DODGE",
+        "name": "DODGE COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5016 Courthouse Circle, Suite B, Eastman, GA 31023",
+            "to": "5016 Courthouse Cir, Ste B, Eastman, GA 31023"
+          }
+        }
+      },
+      {
+        "county": "DOUGLAS",
+        "name": "DOG RIVER LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "6100 Ga. Highway 5, Douglasville, GA 30135",
+            "to": "6100 Ga Highway 5, Douglasville, GA 30135"
+          }
+        }
+      },
+      {
+        "county": "HALL",
+        "name": "EAST HALL COMMUNITY BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3911 P Davison Road, Gainesville, GA 30507",
+            "to": "3911 P Davison Rd, Gainesville, GA 30507"
+          }
+        }
+      },
+      {
+        "county": "COWETA",
+        "name": "EAST SIDE ADV. VOTING SITE AT CENTRAL COMPLEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "65 Literary Lane, Newnan, GA 30265",
+            "to": "65 Literary Ln, Newnan, GA 30265"
+          }
+        }
+      },
+      {
+        "county": "EFFINGHAM",
+        "name": "EFFINGHAM CO. BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "284 Ga Highway 119 S., Springfield, GA 31329",
+            "to": "284 Ga Highway 119 S, Springfield, GA 31329"
+          }
+        }
+      },
+      {
+        "county": "WAYNE",
+        "name": "ELECTION AND REGISTRATION BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "306 East Pine Street, Jesup, GA 31546",
+            "to": "306 E Pine St, Jesup, GA 31546"
+          }
+        }
+      },
+      {
+        "county": "MERIWETHER",
+        "name": "ELECTION HQ",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "756 Woodbury Hwy Suite B, Greenville, GA 30222",
+            "to": "756 Woodbury Hwy, Ste B, Greenville, GA 30222"
+          }
+        }
+      },
+      {
+        "county": "FANNIN",
+        "name": "ELECTION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "400 West Main St Suite 104, Blue Ridge, GA 30513",
+            "to": "400 W Main St, Ste 104, Blue Ridge, GA 30513"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "ELECTIONS AND REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "121 S. Mcdonough Street, Jonesboro, GA 30236",
+            "to": "121 S Mcdonough St, Jonesboro, GA 30236"
+          }
+        }
+      },
+      {
+        "county": "FORSYTH",
+        "name": "ELECTIONS AND VOTER REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1201 Sawnee Drive, Cumming, GA 30040",
+            "to": "1201 Sawnee Dr, Cumming, GA 30040"
+          }
+        }
+      },
+      {
+        "county": "LUMPKIN",
+        "name": "ELECTIONS AND VOTER REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "56 Short Street, Dahlonega, GA 30533",
+            "to": "56 Short St, Dahlonega, GA 30533"
+          }
+        }
+      },
+      {
+        "county": "JONES",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "166 Industrial Blvd., Gray, GA 31032",
+            "to": "166 Industrial Blvd, Gray, GA 31032"
+          }
+        }
+      },
+      {
+        "county": "ECHOLS",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "216 Highway 129 N, Statenville, GA 31648",
+            "to": "216 Hwy 129 N, Statenville, GA 31648"
+          }
+        }
+      },
+      {
+        "county": "MORGAN",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "237 North 2Nd St, Madison, GA 30650",
+            "to": "237 N 2nd St, Madison, GA 30650"
+          }
+        }
+      },
+      {
+        "county": "LEE",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 Starksville Ave North, Leesburg, GA 31763",
+            "to": "100 Starksville Ave N, Leesburg, GA 31763"
+          }
+        }
+      },
+      {
+        "county": "CHARLTON",
+        "name": "ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1520 Third Street, Folkston, GA 31537",
+            "to": "1520 Third St, Folkston, GA 31537"
+          }
+        }
+      },
+      {
+        "county": "MITCHELL",
+        "name": "ELECTIONS OFFICE / ADVANCED VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "32 Court Ave., Camilla, GA 31730",
+            "to": "32 Court Ave, Camilla, GA 31730"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "EVELYN G. LOWERY LIBRARY AT CASCADE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3665 Cascade Road, South Fulton, GA 30331",
+            "to": "3665 Cascade Rd, South Fulton, GA 30331"
+          }
+        }
+      },
+      {
+        "county": "FAYETTE",
+        "name": "FAYETTE COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "175 Johnson Ave. Ste B, Fayetteville, GA 30214",
+            "to": "175 Johnson Ave, Ste B, Fayetteville, GA 30214"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "FIVE FORKS LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2780 Five Forks Trickum Road, Lawrenceville, GA 30044",
+            "to": "2780 Five Forks Trickum Rd, Lawrenceville, GA 30044"
+          }
+        }
+      },
+      {
+        "county": "HALL",
+        "name": "FLOWERY BRANCH CITY HALL",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5410 Pine Street, Flowery Branch, GA 30542",
+            "to": "5410 Pine St, Flowery Branch, GA 30542"
+          }
+        }
+      },
+      {
+        "county": "FLOYD",
+        "name": "FLOYD COUNTY ELECTION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "18 East 12Th Street, Rome, GA 30161",
+            "to": "18 E 12th St, Rome, GA 30161"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "FULTON COUNTY HEALTH AND HUMAN SERVICES-NORTH",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4700 North Point Parkway, Alpharetta, GA 30005",
+            "to": "4700 N Point Pkwy, Alpharetta, GA 30005"
+          }
+        }
+      },
+      {
+        "county": "HALL",
+        "name": "GAINESVILLE CIVIC CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "830 Green Street, Gainesville, GA 30501",
+            "to": "830 Green St, Gainesville, GA 30501"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "GEORGE PIERCE PARK",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "55 Buford Highway, Suwanee, GA 30024",
+            "to": "55 Buford Hwy, Suwanee, GA 30024"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "GEORGIA INSTITUTE OF TECHNOLOGY JOHN LEWIS STUDENT CENTER.",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "351 Ferst Dr Nw, Atlanta, GA 30332",
+            "to": "351 Ferst Dr NW, Atlanta, GA 30332"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "GEORGIA STATE UNIVERSITY AT DAHLBERG HALL",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "30 Courtland Street Se, Atlanta, GA 30303",
+            "to": "30 Courtland St SE, Atlanta, GA 30303"
+          }
+        }
+      },
+      {
+        "county": "GLASCOCK",
+        "name": "GLASCOCK CO BOARD OF ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "676 W Main Street, Gibson, GA 30810",
+            "to": "676 W Main St, Gibson, GA 30810"
+          }
+        }
+      },
+      {
+        "county": "JACKSON",
+        "name": "GORDON STREET CENTER--ELECTION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "441 Gordon Street, Jefferson, GA 30549",
+            "to": "441 Gordon St, Jefferson, GA 30549"
+          }
+        }
+      },
+      {
+        "county": "CRISP",
+        "name": "GOVERNMENT CENTER ANNEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "110 W 13Th Ave Suite A, Cordele, GA 31015",
+            "to": "110 W 13th Ave, Ste A, Cordele, GA 31015"
+          }
+        }
+      },
+      {
+        "county": "GRADY",
+        "name": "GRADY COUNTY ELECTIONS AND REGISTRATION-COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "250 N Broad St Ste 3, Cairo, GA 39828",
+            "to": "250 N Broad St, Ste 3, Cairo, GA 39828"
+          }
+        }
+      },
+      {
+        "county": "GREENE",
+        "name": "GREENE COUNTY ANNEX EARLY VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1180 C Weldon Smith Drive, Greensboro, GA 30642",
+            "to": "1180 Weldon Smith Dr, Greensboro, GA 30642"
+          }
+        }
+      },
+      {
+        "county": "COBB",
+        "name": "GRITTERS LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "880 Shaw Park Road, Marietta, GA 30066",
+            "to": "880 Shaw Park Rd, Marietta, GA 30066"
+          }
+        }
+      },
+      {
+        "county": "BULLOCH",
+        "name": "GSU",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "85 Georgia Avenue, Statesboro, GA 30458",
+            "to": "85 Georgia Ave, Statesboro, GA 30458"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "GWINNETT COUNTY BOARD OF VOTER REGISTRATIONS AND ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "455 Grayson Highway Suite 200, Lawrenceville, GA 30046",
+            "to": "455 Grayson Hwy, Ste 200, Lawrenceville, GA 30046"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "GWINNETT FIRE STATION 30",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1052 Ozora Road, Loganville, GA 30052",
+            "to": "1052 Ozora Rd, Loganville, GA 30052"
+          }
+        }
+      },
+      {
+        "county": "BRYAN",
+        "name": "HARN COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "91 Lanier Street, Pembroke, GA 31321",
+            "to": "91 Lanier St, Pembroke, GA 31321"
+          }
+        }
+      },
+      {
+        "county": "HEARD",
+        "name": "HEARD COUNTY COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "215 E Court Square, Franklin, GA 30217",
+            "to": "215 E Court Sq, Franklin, GA 30217"
+          }
+        }
+      },
+      {
+        "county": "RICHMOND",
+        "name": "HENRY BRIGHAM COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2463 Golden Camp Road, Augusta, GA 30906",
+            "to": "2463 Golden Camp Rd, Augusta, GA 30906"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "HIGH MUSEUM OF ARTS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1280 Peachtree Street Ne, Atlanta, GA 30309",
+            "to": "1280 Peachtree St NE, Atlanta, GA 30309"
+          }
+        }
+      },
+      {
+        "county": "TROUP",
+        "name": "HOGANSVILLE ANNEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "600 E Main Street, Hogansville, GA 30230",
+            "to": "600 E Main St, Hogansville, GA 30230"
+          }
+        }
+      },
+      {
+        "county": "HENRY",
+        "name": "J. P. MOSELEY PARK",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1041 Millers Mill Road, Stockbridge, GA 30281",
+            "to": "1041 Millers Mill Rd, Stockbridge, GA 30281"
+          }
+        }
+      },
+      {
+        "county": "CANDLER",
+        "name": "JACK STRICKLAND COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "621 W Pine Street, Metter, GA 30439",
+            "to": "621 W Pine St, Metter, GA 30439"
+          }
+        }
+      },
+      {
+        "county": "JASPER",
+        "name": "JASPER COUNTY COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "126 West Greene Street Suite 3, Monticello, GA 31064",
+            "to": "126 W Greene St, Ste 3, Monticello, GA 31064"
+          }
+        }
+      },
+      {
+        "county": "JEFFDAVIS",
+        "name": "JEFF DAVIS COUNTY BOARD OF ELECTIONS AND REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "15 Public Safety Drive, Hazlehurst, GA 31539",
+            "to": "15 Public Safety Dr, Hazlehurst, GA 31539"
+          }
+        }
+      },
+      {
+        "county": "WALKER",
+        "name": "LAFAYETTE-WALKER COUNTY ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "311 South Main Street, Lafayette, GA 30728",
+            "to": "311 S Main St, Lafayette, GA 30728"
+          }
+        }
+      },
+      {
+        "county": "LAMAR",
+        "name": "LAMAR COUNTY BOARD OF ELECTIONS AND REGISTRATION OFFICE-NEW",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "790 Veterans Parkway Suite D, Barnesville, GA 30204",
+            "to": "790 Veterans Pkwy, Ste D, Barnesville, GA 30204"
+          }
+        }
+      },
+      {
+        "county": "LANIER",
+        "name": "LANIER COUNTY EXTENSION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "162 W Thigpen Ave Suite C, Lakeland, GA 31635",
+            "to": "162 W Thigpen Ave, Ste C, Lakeland, GA 31635"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "LENORA PARK GYM",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4515 Lenora Church Road, Snellville, GA 30078",
+            "to": "4515 Lenora Church Rd, Snellville, GA 30078"
+          }
+        }
+      },
+      {
+        "county": "LIBERTY",
+        "name": "LIBERTY COUNTY COMPLEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "9397 E. Oglethorpe Hwy., Midway, GA 31320",
+            "to": "9397 E Oglethorpe Hwy, Midway, GA 31320"
+          }
+        }
+      },
+      {
+        "county": "RICHMOND",
+        "name": "LINDA BEAZLEY ROOM-MUNICIPAL BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "535 Telfair Street, Augusta, GA 30901",
+            "to": "535 Telfair St, Augusta, GA 30901"
+          }
+        }
+      },
+      {
+        "county": "WALKER",
+        "name": "LOOKOUT MOUNTAIN CITY HALL",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1214 Lula Lake Road, Lookout Mountain, GA 30750",
+            "to": "1214 Lula Lake Rd, Lookout Mountain, GA 30750"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "LUCKY SHOALS PARK",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4651 Britt Road, Norcross, GA 30093",
+            "to": "4651 Britt Rd, Norcross, GA 30093"
+          }
+        }
+      },
+      {
+        "county": "BIBB",
+        "name": "MACON BIBB COUNTY BOARD OF ELECTIONS",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "3661 Eisenhower Pkwy, Macon Ga, 31206 2829",
+            "to": "3661 Eisenhower Pkwy, Macon, GA 31206"
+          }
+        }
+      },
+      {
+        "county": "MACON",
+        "name": "MACON COUNTY ANNEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 Macon Street, Oglethorpe, GA 31068",
+            "to": "100 Macon St, Oglethorpe, GA 31068"
+          }
+        }
+      },
+      {
+        "county": "LIBERTY",
+        "name": "MAIN OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 N. Main St .Suite 1600, Hinesville, GA 31313",
+            "to": "100 N Main St, Ste 1600, Hinesville, GA 31313"
+          }
+        }
+      },
+      {
+        "county": "WHITE",
+        "name": "MAUNEY BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1241 Helen Hwy Ste 210, Cleveland, GA 30528",
+            "to": "1241 Helen Hwy, Ste 210, Cleveland, GA 30528"
+          }
+        }
+      },
+      {
+        "county": "FULTON",
+        "name": "MECHANICSVILLE LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "400 Formwalt Street Sw, Atlanta, GA 30312",
+            "to": "400 Formwalt St SW, Atlanta, GA 30312"
+          }
+        }
+      },
+      {
+        "county": "MILLER",
+        "name": "MILLER COUNTY COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "155 S 1St St Suite 113, Colquitt, GA 39837",
+            "to": "155 S 1st St, Ste 113, Colquitt, GA 39837"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "MORROW MUNICIPAL COMPLEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1500 Morrow Road, Morrow, GA 30260",
+            "to": "1500 Morrow Rd, Morrow, GA 30260"
+          }
+        }
+      },
+      {
+        "county": "MONTGOMERY",
+        "name": "MOUNT VERNON PRECINCT",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "251 S. Richardson Street, Mount Vernon, GA 30445",
+            "to": "251 S Richardson St, Mount Vernon, GA 30445"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "MOUNTAIN PARK ACTIVITY BUILDING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1063 Rockbridge Road, Stone Mountain, GA 30087",
+            "to": "1063 Rockbridge Rd, Stone Mountain, GA 30087"
+          }
+        }
+      },
+      {
+        "county": "HALL",
+        "name": "MULBERRY CREEK COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4491 Jm Turk Road, Flowery Branch, GA 30542",
+            "to": "4491 Jm Turk Rd, Flowery Branch, GA 30542"
+          }
+        }
+      },
+      {
+        "county": "HALL",
+        "name": "MURRAYVILLE LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4796 Thompson Bridge Road, Gainesville, GA 30506",
+            "to": "4796 Thompson Bridge Rd, Gainesville, GA 30506"
+          }
+        }
+      },
+      {
+        "county": "EMANUEL",
+        "name": "OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "223 W Moring St Suite 102, Swainsboro, GA 30401",
+            "to": "223 W Moring St, Ste 102, Swainsboro, GA 30401"
+          }
+        }
+      },
+      {
+        "county": "TIFT",
+        "name": "OLD GYM",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "222 Chesnutt Ave Bldg B, Tifton, GA 31794",
+            "to": "222 Chesnutt Ave, Bldg B, Tifton, GA 31794"
+          }
+        }
+      },
+      {
+        "county": "PEACH",
+        "name": "PEACH COUNTY GOVERNMENT CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "902 Campus Drive, Fort Valley, GA 31030",
+            "to": "902 Campus Dr, Fort Valley, GA 31030"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "PINCKNEYVILLE COMMUNITY CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4650 Peachtree Industrial Boulevard, Norcross, GA 30071",
+            "to": "4650 Peachtree Industrial Blvd, Norcross, GA 30071"
+          }
+        }
+      },
+      {
+        "county": "CHATHAM",
+        "name": "POOLER CITY HALL",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 Us Highway 80 Sw, Pooler, GA 31322",
+            "to": "100 US Hwy 80 SW, Pooler, GA 31322"
+          }
+        }
+      },
+      {
+        "county": "NEWTON",
+        "name": "PROSPECT CHURCH AT OAK HILL",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "6752 Highway 212, Covington, GA 30016",
+            "to": "6752 Hwy 212, Covington, GA 30016"
+          }
+        }
+      },
+      {
+        "county": "RABUN",
+        "name": "RABUN COUNTY ELECTIONS CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "184 S Main St. Suite 102, Clayton Ga, 30525 7040",
+            "to": "184 S Main St, Ste 102, Clayton, GA 30525"
+          }
+        }
+      },
+      {
+        "county": "LEE",
+        "name": "REDBONE FIRE STATION #5",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1286 Graves Springs Road, Leesburg, GA 31763",
+            "to": "1286 Graves Springs Rd, Leesburg, GA 31763"
+          }
+        }
+      },
+      {
+        "county": "CALHOUN",
+        "name": "REGISTRAR OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "31 Court St Suite F, Morgan, GA 39866",
+            "to": "31 Court St, Ste F, Morgan, GA 39866"
+          }
+        }
+      },
+      {
+        "county": "MONROE",
+        "name": "REGISTRAR'S OFFICE EARLY VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "479 Holiday Circle, Forsyth, GA 31029",
+            "to": "479 Holiday Cir, Forsyth, GA 31029"
+          }
+        }
+      },
+      {
+        "county": "BALDWIN",
+        "name": "REGISTRATION & ELECTIONS OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1601 N Columbia St Suite 110, Milledgeville, GA 31061",
+            "to": "1601 N Columbia St, Ste 110, Milledgeville, GA 31061"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "RHODES JORDAN PARK",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 East Crogan Street, Lawrenceville, GA 30046",
+            "to": "100 E Crogan St, Lawrenceville, GA 30046"
+          }
+        }
+      },
+      {
+        "county": "BRYAN",
+        "name": "RICHMOND HILL RECREATION COMPLEX",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "508 Timber Trail, Richmond Hill, GA 31324",
+            "to": "508 Timber Trl, Richmond Hill, GA 31324"
+          }
+        }
+      },
+      {
+        "county": "POLK",
+        "name": "ROCKMART EARLY VOTING",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "604 Goodyear Avenue, Rockmart, GA 30153",
+            "to": "604 Goodyear Ave, Rockmart, GA 30153"
+          }
+        }
+      },
+      {
+        "county": "CHEROKEE",
+        "name": "ROSE CREEK PUBLIC LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "4476 Towne Lake Parkway, Woodstock, GA 30189",
+            "to": "4476 Towne Lake Pkwy, Woodstock, GA 30189"
+          }
+        }
+      },
+      {
+        "county": "MUSCOGEE",
+        "name": "SHIRLEY B WINSTON CENTER-EARLY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5025 Steam Mill Road, Columbus, GA 31907",
+            "to": "5025 Steam Mill Rd, Columbus, GA 31907"
+          }
+        }
+      },
+      {
+        "county": "GWINNETT",
+        "name": "SHORTY HOWELL PARK",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "2750 Pleasant Hill Road, Duluth, GA 30096",
+            "to": "2750 Pleasant Hill Rd, Duluth, GA 30096"
+          }
+        }
+      },
+      {
+        "county": "CHEROKEE",
+        "name": "SOUTH CHEROKEE ANNEX REC CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "7545 North Main Street, Building 200, Woodstock, GA 30188",
+            "to": "7545 N Main St, Building 200, Woodstock, GA 30188"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "SOUTH CLAYTON RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1837 Mcdonough Road, Hampton, GA 30228",
+            "to": "1837 Mcdonough Rd, Hampton, GA 30228"
+          }
+        }
+      },
+      {
+        "county": "GLYNN",
+        "name": "SSI ADVANCED VOTING/FIRE STATION # 2",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1929 Demere Rd, St. Simons Island, GA 31522",
+            "to": "1929 Demere Rd, St Simons Island, GA 31522"
+          }
+        }
+      },
+      {
+        "county": "CHARLTON",
+        "name": "ST GEORGE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "13063 Florida Avenue, Sst George, GA 31562",
+            "to": "13063 Florida Ave, Sst George, GA 31562"
+          }
+        }
+      },
+      {
+        "county": "CAMDEN",
+        "name": "ST. MARYS WELCOME CENTER ADVANCE IN PERSON",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "400 Osborne Street, St. Marys, GA 31558",
+            "to": "400 Osborne St, St Marys, GA 31558"
+          }
+        }
+      },
+      {
+        "county": "TALBOT",
+        "name": "TALBOT BOARD OF ELECTIONS & REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1761 Geneva Highway, Talbotton, GA 31827",
+            "to": "1761 Geneva Hwy, Talbotton, GA 31827"
+          }
+        }
+      },
+      {
+        "county": "TELFAIR",
+        "name": "TELFAIR CO BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "91 Telfair Ave Annex Bldg 4, Mcrae Helena, GA 31055",
+            "to": "91 Telfair Ave Annex, Bldg 4, Mcrae Helena, GA 31055"
+          }
+        }
+      },
+      {
+        "county": "TERRELL",
+        "name": "TERRELL COUNTY ELECTIONS AND REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "955 Forrester Dr. Se, Dawson, GA 39842",
+            "to": "955 Forrester Dr SE, Dawson, GA 39842"
+          }
+        }
+      },
+      {
+        "county": "LEE",
+        "name": "THE BINDERY OAKLAND LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "445 Oakland Parkway West, Leesburg, GA 31763",
+            "to": "445 Oakland Pkwy W, Leesburg, GA 31763"
+          }
+        }
+      },
+      {
+        "county": "COLUMBIA",
+        "name": "THE FORMER EUCHEE CREEK LIBRARY",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "5907 Euchee Creek Drive, Grovetown, GA 30813",
+            "to": "5907 Euchee Creek Dr, Grovetown, GA 30813"
+          }
+        }
+      },
+      {
+        "county": "TOWNS",
+        "name": "TOWNS COUNTY CIVIC CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "67 Lakeview Circle Suite A, Hiawassee, GA 30546",
+            "to": "67 Lakeview Cir, Ste A, Hiawassee, GA 30546"
+          }
+        }
+      },
+      {
+        "county": "NEWTON",
+        "name": "TURNER LAKE RECREATION CENTER - BANQUET RM",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "6185 Turner Lake Rd Nw, Covington, GA 30014",
+            "to": "6185 Turner Lake Rd NW, Covington, GA 30014"
+          }
+        }
+      },
+      {
+        "county": "TWIGGS",
+        "name": "TWIGGSCOUNTY COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "425 Railroad Street Nort, Jeffersonville, GA 31044",
+            "to": "425 Railroad St, Nort, Jeffersonville, GA 31044"
+          }
+        }
+      },
+      {
+        "county": "FAYETTE",
+        "name": "TYRONE COMMUNITY ROOM -MUSEUM BUILDING-",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "881 Senoia Rd., Tyrone, GA 30290",
+            "to": "881 Senoia Rd, Tyrone, GA 30290"
+          }
+        }
+      },
+      {
+        "county": "CLARKE",
+        "name": "UGA TATE STUDENT CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "45 Baxter Street, Athens, GA 30602",
+            "to": "45 Baxter St, Athens, GA 30602"
+          }
+        }
+      },
+      {
+        "county": "DOOLY",
+        "name": "VIENNA VOTING PRECINCT",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "402 Hawkinsville Road, Vienna, GA 31092",
+            "to": "402 Hawkinsville Rd, Vienna, GA 31092"
+          }
+        }
+      },
+      {
+        "county": "CLAYTON",
+        "name": "VIRGINIA BURTON GRAY RECREATION CTR",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1475 East Fayetteville Road, Riverdale, GA 30274",
+            "to": "1475 E Fayetteville Rd, Riverdale, GA 30274"
+          }
+        }
+      },
+      {
+        "county": "COWETA",
+        "name": "VOTER REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "87 Newnan Station Drive, Newnan, GA 30265",
+            "to": "87 Newnan Station Dr, Newnan, GA 30265"
+          }
+        }
+      },
+      {
+        "county": "RICHMOND",
+        "name": "WARREN RD RECREATION CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "300 Warren Road, Augusta, GA 30907",
+            "to": "300 Warren Rd, Augusta, GA 30907"
+          }
+        }
+      },
+      {
+        "county": "WASHINGTON",
+        "name": "WASHINGTON COUNTY BOARD OF ELECTIONS AND REGISTRATION",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "150 Riddleville Road, Sandersville, GA 31082",
+            "to": "150 Riddleville Rd, Sandersville, GA 31082"
+          }
+        }
+      },
+      {
+        "county": "WEBSTER",
+        "name": "WEBSTER COUNTY COMMISSIONER OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "40 Cemetery Road, Preston, GA 31824",
+            "to": "40 Cemetery Rd, Preston, GA 31824"
+          }
+        }
+      },
+      {
+        "county": "TROUP",
+        "name": "WEST POINT TECH CENTER",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "1122 O G Skinner Dr., West Point, GA 31833",
+            "to": "1122 O G Skinner Dr, West Point, GA 31833"
+          }
+        }
+      },
+      {
+        "county": "WILKINSON",
+        "name": "WILKINSON COUNTY COURTHOUSE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "100 Bacon Street, Irwinton, GA 31042",
+            "to": "100 Bacon St, Irwinton, GA 31042"
+          }
+        }
+      },
+      {
+        "county": "CAMDEN",
+        "name": "WOODBINE ADVANCE IN PERSON",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "200 E 4Th St, Woodbine, GA 31569",
+            "to": "200 E 4th St, Woodbine, GA 31569"
+          }
+        }
+      },
+      {
+        "county": "WORTH",
+        "name": "WORTH COUNTY VOTER REGISTRATION OFFICE",
+        "changes": {
+          "polling_place_address_full": {
+            "from": "201 N. Main St. Room 10., Sylvester, GA 31791",
+            "to": "201 N Main St, Rm 10, Sylvester, GA 31791"
+          }
+        }
+      }
+    ]
   }
 ]
