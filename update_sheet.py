@@ -1,6 +1,6 @@
 """
-Google Sheets Sync — GA May 2026 Primary Polling Locations
-===========================================================
+Google Sheets Sync — GA November 2026 General & Special Elections Polling Locations
+======================================================================================
 Column layout (A–O, 15 columns):
   A  address_id
   B  polling_place_county
@@ -34,8 +34,8 @@ from datetime import datetime, timezone
 import gspread
 from google.oauth2.service_account import Credentials
 
-SPREADSHEET_ID = "192ufA2ffXqTTsQQxJylg1mMC5TBbHndfgIu5UI4WDGQ"
-WORKSHEET_GID  = 571990717
+SPREADSHEET_ID = "1MPKVyxdFGWwQt2-uXDTQ6LTGa6UPH61tTrab1D4cFCs"
+WORKSHEET_GID  = 0
 
 # Column numbers (1-indexed)
 COL_ADDRESS_ID   =  1   # A
@@ -91,9 +91,27 @@ def _get_client() -> gspread.Client:
     return gspread.authorize(creds)
 
 
+HEADER_ROW = [
+    "address_id", "county", "name", "address_full", "address_line_1",
+    "address_city", "address_state", "address_zip", "image_url",
+    "hours_advanced_polling", "Latitude", "Longitude", "status",
+    "date_added", "date_removed",
+]
+
+
 def _get_worksheet(client: gspread.Client) -> gspread.Worksheet:
     sh = client.open_by_key(SPREADSHEET_ID)
-    return sh.get_worksheet_by_id(WORKSHEET_GID)
+    ws = sh.get_worksheet_by_id(WORKSHEET_GID)
+    _ensure_header(ws)
+    return ws
+
+
+def _ensure_header(ws: gspread.Worksheet) -> None:
+    """Write the header row if the sheet is blank (first-run bootstrap)."""
+    first_row = ws.row_values(1)
+    if not any(v.strip() for v in first_row):
+        ws.update("A1:O1", [HEADER_ROW])
+        print("  Sheet was blank — wrote header row.")
 
 
 def _read_sheet(ws: gspread.Worksheet) -> tuple[list[list], dict[str, int]]:
@@ -275,7 +293,7 @@ def clear_resolved_statuses(current: list[dict]) -> int:
     return len(clears)
 
 
-def pull_from_sheet(csv_path: str = "ga_may_2026_primary_polling_locations.csv") -> int:
+def pull_from_sheet(csv_path: str = "ga_nov_2026_general_polling_locations.csv") -> int:
     """Export all 15 sheet columns to the local baseline CSV."""
     import csv as _csv
     print("  Connecting to Google Sheets (pull to CSV)...")

@@ -1,27 +1,31 @@
-# GA May 2026 Primary — Advanced Polling Location Scraper
+# GA November 2026 General & Special Elections — Advanced Polling Location Scraper
 
 Scrapes all **advanced voting / early voting** locations for the
-**May 19, 2026 Georgia General Primary Election** from the Georgia Secretary
-of State's MVP (My Voter Page) portal and saves them to a CSV file.
+**November 3, 2026 Georgia General & Special Elections** from the Georgia
+Secretary of State's MVP (My Voter Page) portal and saves them to a CSV file.
 
-**Source:** https://mvp.sos.ga.gov/s/advanced-voting-location-information?election=a0pcs00000J6e6HAAR&countyName=&page=advpollingplace
+**Source:** https://mvp.sos.ga.gov/s/advanced-voting-location-information?election=a0pcs00000J6eJBAAZ&countyName=&page=advpollingplace
+
+> This repo previously scraped the May 19, 2026 primary. Those files
+> (`ga_may_2026_primary_polling_locations.csv`, `change_log.json`,
+> `check_log.txt`) are kept as a historical archive and are no longer updated.
 
 ---
 
 ## Output
 
-`ga_may_2026_primary_polling_locations.csv`
+`ga_nov_2026_general_polling_locations.csv`
 
 | Column    | Description |
 |-----------|-------------|
-| `county`  | Georgia county name (all-caps) |
-| `name`    | Polling location name |
-| `address` | Street address, City State ZIP |
-| `hours`   | Hours of operation — pipe-separated, one entry per date range and event type (Advanced Polling Location or Dropbox Polling Location) |
+| `polling_place_county`  | Georgia county name (all-caps) |
+| `polling_place_name`    | Polling location name |
+| `polling_place_address_full` | Street address, City State ZIP |
+| `hours_advanced_polling`   | Hours of operation — pipe-separated, one entry per date range and event type (Advanced Polling Location or Dropbox Polling Location) |
 
 **Stats (as of scrape date):**
-- 300 total locations
-- 132 counties covered
+- 323 total locations
+- 144 counties covered
 
 ---
 
@@ -64,7 +68,7 @@ POST https://mvp.sos.ga.gov/s/sfsites/aura?r=N&aura.ApexAction.execute=1
 The key Apex controller method is:
 ```
 vrWebIntegrationController.getAdvPollingPlaces(
-    sarchParam = {"election": "a0pcs00000J6e6HAAR", "countyName": ""},
+    sarchParam = {"election": "a0pcs00000J6eJBAAZ", "countyName": ""},
     recordPerPage = 50,
     skipRecords = 0
 )
@@ -74,7 +78,7 @@ Response structure:
 ```json
 {
   "returnValue": {
-    "totalRecords": "300",
+    "totalRecords": "337",
     "ppList": "[{...}]"   // JSON-encoded string — must be double-parsed
   }
 }
@@ -85,19 +89,19 @@ The scraper:
    dynamic `aura.context` (fwuid + app version key)
 2. Uses `page.evaluate()` to call `fetch()` from inside the browser tab,
    inheriting all session cookies automatically
-3. Paginates with `skipRecords` (50 records per request) until all 300
-   locations are collected
+3. Paginates with `skipRecords` (50 records per request), passing
+   `countyName: ""` — this returns **every county in one query**, it does not
+   loop over the county dropdown
 4. Parses `ppList` (double-JSON), cleans `<br>` tags in addresses, and
    flattens `eventList` into pipe-separated hour strings
 5. De-duplicates by Salesforce record ID and writes the CSV
 
 ---
 
----
-
 ## Automated Change Monitor
 
-A GitHub Actions workflow (`monitor.yml`) runs every 4 hours and:
+A GitHub Actions workflow (`monitor.yml`) runs **daily at 11:00 UTC (7:00 AM
+ET)** and:
 
 1. Scrapes the current data from the SOS portal
 2. Compares it against the stored baseline CSV
@@ -124,6 +128,8 @@ The workflow reads three **GitHub repository secrets**. Add them at:
 | `EMAIL_APP_PASSWORD` | Gmail **App Password** (not your login password) |
 | `EMAIL_RECIPIENT` | Address(es) to receive alerts — comma-separated for multiple |
 
+These were already set up for the primary monitor and don't need to change.
+
 **Getting a Gmail App Password:**
 1. Go to [myaccount.google.com/security](https://myaccount.google.com/security)
 2. Under "How you sign in to Google" → enable **2-Step Verification** if not already on
@@ -149,16 +155,31 @@ python check_for_changes.py
 
 When changes are detected, the monitor also pushes them to the tracking sheet automatically:
 
-**Sheet:** [2026 GA EV Primary Election Locations](https://docs.google.com/spreadsheets/d/192ufA2ffXqTTsQQxJylg1mMC5TBbHndfgIu5UI4WDGQ)
+**Sheet:** [2026 GA EV General Election Locations](https://docs.google.com/spreadsheets/d/1MPKVyxdFGWwQt2-uXDTQ6LTGa6UPH61tTrab1D4cFCs)
 
 | Change type | What happens in the sheet |
 |-------------|--------------------------|
-| New location | New row appended (columns A–D filled; E–F left blank for your team) |
-| Address changed | Column C updated in the existing row |
-| Hours changed | Column D updated in the existing row |
-| Removed location | Row is **kept** in the sheet — flagged in email only |
+| New location | New row appended (columns A–J filled; K–L left blank for geocoding) |
+| Address changed | Column D updated in the existing row |
+| Hours changed | Column J updated in the existing row |
+| Removed location | Row is **kept** in the sheet — flagged in email + tagged `REMOVED` in column M |
+
+The sheet starts blank — `update_sheet.py` writes the header row automatically
+on first run.
 
 **One-time setup (Google Service Account):**
+
+This repo reuses the **same service account** already set up for the May
+primary monitor (the `GOOGLE_CREDENTIALS` GitHub secret doesn't need to change).
+The only new step:
+
+1. Find the service account's email (ends in `@...iam.gserviceaccount.com`) —
+   it's in the JSON key file you downloaded when you first set this up, or
+   under **IAM & Admin → Service Accounts** in the GCP project you created it in.
+2. Open the [new sheet](https://docs.google.com/spreadsheets/d/1MPKVyxdFGWwQt2-uXDTQ6LTGa6UPH61tTrab1D4cFCs)
+   and **share it with that email as Editor**.
+
+If you're setting this up fresh instead (no existing service account):
 
 1. Go to [console.cloud.google.com](https://console.cloud.google.com)
 2. Create a project (or use an existing one) → **APIs & Services → Enable APIs**
@@ -177,8 +198,8 @@ GOOGLE_CREDENTIALS=$(cat your-service-account.json) python update_sheet.py
 
 ### Change log
 
-All detected changes are appended to `change_log.json` with full before/after
-values for every modified field.
+All detected changes are appended to `change_log_nov2026.json` with full
+before/after values for every modified field.
 
 ---
 
@@ -188,8 +209,10 @@ values for every modified field.
 |------|-------------|
 | `scrape_polling_places.py` | One-time full scraper |
 | `check_for_changes.py` | Automated change monitor (run by Actions) |
-| `.github/workflows/monitor.yml` | GitHub Actions schedule (every 4 hours) |
-| `ga_may_2026_primary_polling_locations.csv` | Baseline CSV — auto-updated on changes |
-| `change_log.json` | Append-only log of every detected change |
+| `update_sheet.py` | Google Sheets sync helper |
+| `.github/workflows/monitor.yml` | GitHub Actions schedule (daily) |
+| `ga_nov_2026_general_polling_locations.csv` | Baseline CSV — auto-updated on changes |
+| `change_log_nov2026.json` | Append-only log of every detected change |
 | `all_records_raw.json` | Full raw API response from initial scrape |
 | `requirements.txt` | Python dependencies |
+| `ga_may_2026_primary_polling_locations.csv`, `change_log.json`, `check_log.txt` | Historical archive from the May primary monitor — no longer updated |

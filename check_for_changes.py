@@ -1,7 +1,7 @@
 """
-GA Polling Location Change Monitor
-===================================
-Runs every 4 hours via GitHub Actions. Scrapes the current data from the GA
+GA Polling Location Change Monitor — November 2026 General & Special Elections
+================================================================================
+Runs daily via GitHub Actions. Scrapes the current data from the GA
 SOS MVP portal, compares it against the Google Sheet (primary baseline), and:
 
   • Sends an email notification if anything changed (new location, removed
@@ -37,7 +37,7 @@ from typing import Optional
 from playwright.async_api import async_playwright
 
 # ── Constants ────────────────────────────────────────────────────────────────
-ELECTION_ID      = "a0pcs00000J6e6HAAR"
+ELECTION_ID      = "a0pcs00000J6eJBAAZ"
 PAGE_URI         = (
     "/s/advanced-voting-location-information"
     f"?election={ELECTION_ID}&countyName=&page=advpollingplace"
@@ -47,9 +47,9 @@ AURA_ENDPOINT    = f"{BASE_URL}/s/sfsites/aura"
 PAGE_URL         = f"{BASE_URL}{PAGE_URI}"
 RECORDS_PER_PAGE = 50
 
-BASELINE_CSV     = Path("ga_may_2026_primary_polling_locations.csv")
-CHANGE_LOG       = Path("change_log.json")
-CHECK_LOG_TXT    = Path("check_log.txt")
+BASELINE_CSV     = Path("ga_nov_2026_general_polling_locations.csv")
+CHANGE_LOG       = Path("change_log_nov2026.json")
+CHECK_LOG_TXT    = Path("check_log_nov2026.txt")
 REPO_URL         = "https://github.com/madiraa/ga_may_2026_primary_polling_location_scrape"
 
 # Run headless in CI (GitHub Actions sets CI=true), visible locally
@@ -438,7 +438,7 @@ def append_to_check_log(diff: dict, timestamp: str, total_current: int,
     with open(CHECK_LOG_TXT, "a", encoding="utf-8") as f:
         f.write(line)
 
-    print(f"  check_log.txt → {line.strip()}")
+    print(f"  {CHECK_LOG_TXT} → {line.strip()}")
 
 
 # ── JSON change log ───────────────────────────────────────────────────────────
@@ -531,7 +531,7 @@ def send_email(diff: dict, timestamp: str):
     )
 
     body_parts = [
-        "The GA May 2026 Primary polling location data has changed.\n",
+        "The GA November 2026 General & Special Elections polling location data has changed.\n",
         f"Timestamp : {timestamp}",
         f"Changes   : {n_added} added  |  {n_removed} removed  |  {n_modified} modified\n",
     ]
@@ -545,8 +545,8 @@ def send_email(diff: dict, timestamp: str):
 
     body_parts += [
         "─" * 60,
-        f"Full change log: {REPO_URL}/blob/main/change_log.json",
-        f"Updated CSV    : {REPO_URL}/blob/main/ga_may_2026_primary_polling_locations.csv",
+        f"Full change log: {REPO_URL}/blob/main/change_log_nov2026.json",
+        f"Updated CSV    : {REPO_URL}/blob/main/ga_nov_2026_general_polling_locations.csv",
     ]
 
     body = "\n".join(body_parts)

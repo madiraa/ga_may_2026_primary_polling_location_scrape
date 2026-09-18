@@ -2,8 +2,8 @@ name: GA Polling Location Monitor
 
 on:
   schedule:
-    # Runs every 4 hours (minute 0 of hours 0,4,8,12,16,20 UTC)
-    - cron: "0 */4 * * *"
+    # Runs daily at 11:00 UTC (7:00 AM ET)
+    - cron: "0 11 * * *"
   workflow_dispatch:   # allows manual "Run workflow" trigger from GitHub UI
 
 permissions:
@@ -53,7 +53,7 @@ jobs:
         run: |
           git config user.name  "GA Polling Monitor [bot]"
           git config user.email "actions@github.com"
-          git add ga_may_2026_primary_polling_locations.csv change_log.json check_log.txt || true
+          git add ga_nov_2026_general_polling_locations.csv change_log_nov2026.json check_log_nov2026.txt || true
           # Only commit if there is something staged
           if git diff --cached --quiet; then
             echo "No file changes to commit."

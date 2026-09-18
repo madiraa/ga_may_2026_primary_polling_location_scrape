@@ -1,11 +1,11 @@
 """
-GA May 2026 Primary - Advanced Voting Location Scraper
-=======================================================
+GA November 2026 General & Special Elections - Advanced Voting Location Scraper
+=================================================================================
 Scrapes all advanced polling locations from the Georgia Secretary of State MVP
-portal for the May 19, 2026 General Primary Election.
+portal for the November 3, 2026 General & Special Elections.
 
 Source: https://mvp.sos.ga.gov/s/advanced-voting-location-information
-        ?election=a0pcs00000J6e6HAAR&countyName=&page=advpollingplace
+        ?election=a0pcs00000J6eJBAAZ&countyName=&page=advpollingplace
 
 Strategy:
   1. Open the page with Playwright (to pass Cloudflare + get session cookies)
@@ -18,7 +18,7 @@ Strategy:
      since the requests originate from a real browser tab.
   4. Parse the JSON, flatten the hours-of-operation list, and write a CSV.
 
-Output: ga_may_2026_primary_polling_locations.csv
+Output: ga_nov_2026_general_polling_locations.csv
 """
 
 import asyncio
@@ -30,7 +30,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 # ── Constants ───────────────────────────────────────────────────────────────
-ELECTION_ID   = "a0pcs00000J6e6HAAR"
+ELECTION_ID   = "a0pcs00000J6eJBAAZ"
 PAGE_URI      = (
     "/s/advanced-voting-location-information"
     f"?election={ELECTION_ID}&countyName=&page=advpollingplace"
@@ -39,7 +39,7 @@ BASE_URL      = "https://mvp.sos.ga.gov"
 AURA_ENDPOINT = f"{BASE_URL}/s/sfsites/aura"
 PAGE_URL      = f"{BASE_URL}{PAGE_URI}"
 RECORDS_PER_PAGE = 50   # max the API allows in one call
-OUTPUT_CSV    = "ga_may_2026_primary_polling_locations.csv"
+OUTPUT_CSV    = "ga_nov_2026_general_polling_locations.csv"
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -272,7 +272,7 @@ def extract_record_fields(rec: dict) -> dict:
 
 async def main():
     print("=" * 60)
-    print("GA May 2026 Primary — Advanced Polling Location Scraper")
+    print("GA November 2026 General & Special Elections — Advanced Polling Location Scraper")
     print("=" * 60)
 
     async with async_playwright() as p:
@@ -462,9 +462,9 @@ async def main():
     empty_hours = 0
     empty_addr  = 0
     for r in rows:
-        county_counts[r["county"]] = county_counts.get(r["county"], 0) + 1
-        if not r["hours"]:  empty_hours += 1
-        if not r["address"]: empty_addr += 1
+        county_counts[r["polling_place_county"]] = county_counts.get(r["polling_place_county"], 0) + 1
+        if not r["hours_raw"]:  empty_hours += 1
+        if not r["polling_place_address_full"]: empty_addr += 1
     print(f"  Counties found:      {len(county_counts)}")
     print(f"  Total locations:     {len(rows)}")
     print(f"  Missing hours:       {empty_hours}")
