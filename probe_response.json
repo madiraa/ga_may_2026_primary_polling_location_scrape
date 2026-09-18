@@ -93,14 +93,14 @@
   },
   "perfSummary": {
     "version": "core",
-    "request": 913,
+    "request": 987,
     "actions": {
       "scraper;a": {
-        "total": 898,
-        "db": 111
+        "total": 965,
+        "db": 169
       }
     },
-    "actionsTotal": 898,
+    "actionsTotal": 965,
     "overhead": 0
   }
 }

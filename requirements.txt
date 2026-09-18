@@ -3,3 +3,4 @@ pandas==3.0.2
 requests==2.33.1
 gspread==6.1.4
 google-auth==2.38.0
+usaddress==0.5.10

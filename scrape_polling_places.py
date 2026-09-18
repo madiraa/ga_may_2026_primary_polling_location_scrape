@@ -29,6 +29,8 @@ import urllib.parse
 from pathlib import Path
 from playwright.async_api import async_playwright
 
+import address_standardization
+
 # ── Constants ───────────────────────────────────────────────────────────────
 ELECTION_ID   = "a0pcs00000J6eJBAAZ"
 PAGE_URI      = (
@@ -178,31 +180,13 @@ async def fetch_page(page, aura_context: dict, skip: int, per_page: int) -> dict
 
 def parse_address(raw_addr: str) -> dict:
     """
-    Parse "STREET, CITY STATE ZIP" into components.
+    Standardize a raw "STREET, CITY STATE ZIP" address via usaddress-based
+    normalization (see address_standardization.py).
     Returns dict with keys: line_1, city, state, zip, full, address_id
     """
-    raw_addr = raw_addr.strip()
-    parts = raw_addr.split(", ", 1)
-    if len(parts) != 2:
-        return {"line_1": raw_addr.title(), "city": "", "state": "", "zip": "",
-                "full": raw_addr.title(), "address_id": raw_addr.replace(" ", "_")}
-
-    street, city_state_zip = parts[0].strip(), parts[1].strip()
-    tokens = city_state_zip.split()
-    if len(tokens) >= 3:
-        zip_code, state, city = tokens[-1], tokens[-2], " ".join(tokens[:-2])
-    elif len(tokens) == 2:
-        zip_code, state, city = "", tokens[-1], tokens[0]
-    else:
-        zip_code = state = ""; city = city_state_zip
-
-    line_1 = street.title()
-    city_tc = city.title()
-    full = f"{line_1}, {city_tc}, {state} {zip_code}".strip(", ")
-    address_id = f"{street}_{city}_{state}_{zip_code}"
-
-    return {"line_1": line_1, "city": city_tc, "state": state, "zip": zip_code,
-            "full": full, "address_id": address_id}
+    result = address_standardization.standardize(raw_addr)
+    address_id = f"{result['line_1']}_{result['city']}_{result['state']}_{result['zip']}".replace(" ", "_")
+    return {**result, "address_id": address_id}
 
 
 def hours_advanced_only(event_list: list) -> str:
@@ -267,6 +251,7 @@ def extract_record_fields(rec: dict) -> dict:
         "Latitude":                  "",
         "Longitude":                 "",
         "status":                    "",
+        "_address_review":           addr["status"] == "review",  # dropped by DictWriter (extrasaction="ignore")
     }
 
 
@@ -448,6 +433,12 @@ async def main():
             writer.writerows(rows)
 
         print(f"[✓] CSV written: {OUTPUT_CSV}  ({len(rows)} rows)")
+
+        review_rows = [r for r in rows if r.get("_address_review")]
+        if review_rows:
+            print(f"  [!] {len(review_rows)} address(es) could not be confidently parsed — review manually:")
+            for r in review_rows:
+                print(f"      [{r['polling_place_county']}] {r['polling_place_name']}: {r['polling_place_address_raw']}")
 
         # Also save raw JSON for reference
         with open("all_records_raw.json", "w") as f:
