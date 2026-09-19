@@ -5483,5 +5483,36 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-19T11:15:13Z",
+    "total_records": 327,
+    "added_count": 4,
+    "removed_count": 0,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "BARTOW",
+        "name": "ALLATOONA RESOURCE CENTER",
+        "address": "6503 Allatoona Gtwy, Acworth, GA 30102"
+      },
+      {
+        "county": "BARTOW",
+        "name": "CARTERSVILLE CIVIC CENTER",
+        "address": "435 W Main St, Cartersville, GA 30120"
+      },
+      {
+        "county": "BARTOW",
+        "name": "MANNING MILL PARK FACILITY",
+        "address": "163B Manning Mill Rd, Adairsville, GA 30103"
+      },
+      {
+        "county": "BARTOW",
+        "name": "REGISTRATION OFFICE",
+        "address": "1300 Joe Frank Harris Pwy, Cartersville, GA 30120"
+      }
+    ],
+    "removed": [],
+    "modified": []
   }
 ]
