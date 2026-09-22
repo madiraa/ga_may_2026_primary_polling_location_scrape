@@ -5514,5 +5514,26 @@
     ],
     "removed": [],
     "modified": []
+  },
+  {
+    "timestamp": "2026-09-22T11:18:32Z",
+    "total_records": 329,
+    "added_count": 2,
+    "removed_count": 0,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "ELBERT",
+        "name": "ELBERT COUNTY ROCK GYM",
+        "address": "45 Forest Ave, Elberton, GA 30635"
+      },
+      {
+        "county": "PULASKI",
+        "name": "PULASKI COUNTY ANNEX BUILDING",
+        "address": "45 S Lumpkin St, Ga, GA 31036"
+      }
+    ],
+    "removed": [],
+    "modified": []
   }
 ]
