@@ -5572,5 +5572,32 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-26T11:16:06Z",
+    "total_records": 331,
+    "added_count": 1,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [
+      {
+        "county": "CLAY",
+        "name": "REGISTRARS OFFICE",
+        "address": "210 S Washington Fort, Gaines, GA 39851"
+      }
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "county": "CHEROKEE",
+        "name": "CHEROKEE COUNTY BOARD OF ELECTIONS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "10/25/2026 - 10/25/2026 1:00 PM - 5:00 PM (Advanced Polling Location)",
+            "to": "10/13/2026 - 10/17/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 10/19/2026 - 10/24/2026 8:30 AM - 5:00 PM (Advanced Polling Location) 10/25/2026 - 10/25/2026 1:00 PM - 5:00 PM (Advanced Polling Location) 10/26/2026 - 10/30/2026 8:30 AM - 7:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]

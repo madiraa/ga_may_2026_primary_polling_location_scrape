@@ -637,7 +637,10 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 10/19/2026 - 10/23/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
 10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/26/2026 - 10/30/2026 8:30 AM - 6:00 PM (Advanced Polling Location)",,,,09/18/2026,
-193 LAMAR HALEY PKWY_CANTON_GA_30114,CHEROKEE,CHEROKEE COUNTY BOARD OF ELECTIONS,"193 Lamar Haley Pkwy, Canton, GA 30114",193 Lamar Haley Pkwy,Canton,GA,30114,,10/25/2026 - 10/25/2026 1:00 PM - 5:00 PM (Advanced Polling Location),,,,09/18/2026,
+193 LAMAR HALEY PKWY_CANTON_GA_30114,CHEROKEE,CHEROKEE COUNTY BOARD OF ELECTIONS,"193 Lamar Haley Pkwy, Canton, GA 30114",193 Lamar Haley Pkwy,Canton,GA,30114,,"10/13/2026 - 10/17/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
+10/19/2026 - 10/24/2026 8:30 AM - 5:00 PM (Advanced Polling Location)
+10/25/2026 - 10/25/2026 1:00 PM - 5:00 PM (Advanced Polling Location)
+10/26/2026 - 10/30/2026 8:30 AM - 7:00 PM (Advanced Polling Location)",,,MODIFIED: hours_advanced_polling 09/26/2026,09/18/2026,
 1817 LEE CLARKSON RD_CHICKAMAUGA_GA_30707,WALKER,CHICKAMAUGA CIVIC CENTER,"1817 Lee Clarkson Rd, Chickamauga, GA 30707",1817 Lee Clarkson Rd,Chickamauga,GA,30707,,"10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/26/2026 - 10/26/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/27/2026 - 10/27/2026 8:00 AM - 6:00 PM (Advanced Polling Location)
@@ -1341,7 +1344,7 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,MODIFIED: hours_advanced_polling 09/23/2026,09/18/2026,
+10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,09/18/2026,
 955 Forrester Dr. SE_Dawson_GA_39842,TERRELL,TERRELL COUNTY ELECTIONS AND REGISTRATION OFFICE,"955 Forrester Dr SE, Dawson, GA 39842",955 Forrester Dr SE,Dawson,GA,39842,,"10/13/2026 - 10/16/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/19/2026 - 10/23/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
@@ -1482,9 +1485,11 @@ address_id,polling_place_county,polling_place_name,polling_place_address_full,po
 10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,09/22/2026,
 4515_Lenora_Church_Rd_Snellville_GA_30078,GWINNETT,LENORA PARK COMMUNITY RECREATION CENTER,"4515 Lenora Church Rd, Snellville, GA 30078",4515 Lenora Church Rd,Snellville,GA,30078,,"10/13/2026 - 10/26/2026 7:00 AM - 7:00 PM (Advanced Polling Location)
-10/27/2026 - 10/30/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,ADDED 09/23/2026,09/23/2026,
+10/27/2026 - 10/30/2026 7:00 AM - 7:00 PM (Advanced Polling Location)",,,,09/23/2026,
 1_Ivy_St_Butler_GA_31006,TAYLOR,VOTER REGISTRAR OFFICE,"1 Ivy St, Butler, GA 31006",1 Ivy St,Butler,GA,31006,,"10/13/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
 10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location)
 10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
-10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 09/23/2026,09/23/2026,
+10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",,,,09/23/2026,
+210_S_Washington_Fort_Gaines_GA_39851,CLAY,REGISTRARS OFFICE,"210 S Washington Fort, Gaines, GA 39851",210 S Washington Fort,Gaines,GA,39851,,"10/13/2026 - 10/26/2026 9:00 AM - 5:00 PM (Advanced Polling Location)
+10/27/2026 - 10/31/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",,,ADDED 09/26/2026,09/26/2026,
