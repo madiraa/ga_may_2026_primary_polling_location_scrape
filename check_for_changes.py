@@ -52,6 +52,7 @@ RECORDS_PER_PAGE = 50
 BASELINE_CSV     = Path("ga_nov_2026_general_polling_locations.csv")
 CHANGE_LOG       = Path("change_log_nov2026.json")
 CHECK_LOG_TXT    = Path("check_log_nov2026.txt")
+HISTORY_FILE     = Path("location_history.json")
 REPO_URL         = "https://github.com/madiraa/ga_may_2026_primary_polling_location_scrape"
 
 # Run headless in CI (GitHub Actions sets CI=true), visible locally
@@ -215,6 +216,7 @@ def record_to_row(rec: dict) -> dict:
     addr     = _parse_address(raw_addr)
     name     = _clean_polling_name(re.sub(r'\s+', ' ', rec.get("name", "").strip()))
     return {
+        "location_id":                  rec.get("id", ""),
         "address_id":                   addr["address_id"],
         "polling_place_county":         rec.get("county", ""),
         "polling_place_name":           name,
@@ -312,75 +314,40 @@ async def scrape_current() -> list[dict]:
 
 
 # ── Comparison logic ──────────────────────────────────────────────────────────
-
-def _row_key(row: dict) -> str:
-    """Normalised matching key: 'COUNTY||NAME' — collapses internal whitespace."""
-    import re
-    county = re.sub(r'\s+', ' ', row.get("polling_place_county", "").strip()).upper()
-    name   = re.sub(r'\s+', ' ', row.get("polling_place_name",   "").strip()).upper()
-    return f"{county}||{name}"
-
-
-def load_baseline_from_sheet() -> dict[str, dict]:
-    """Read the Google Sheet; return a dict keyed by normalised COUNTY||NAME."""
-    from update_sheet import _get_client, _get_worksheet, FIELDS as SHEET_FIELDS
-    print("  Loading baseline from Google Sheet...")
-    client = _get_client()
-    ws     = _get_worksheet(client)
-    rows   = ws.get_all_values()
-
-    baseline: dict[str, dict] = {}
-    skipped_removed = 0
-    for i, row in enumerate(rows):
-        if i == 0:
-            continue
-        row = row + [""] * (15 - len(row))
-        rec = dict(zip(SHEET_FIELDS, [v.strip() for v in row[:15]]))
-        if not (rec["polling_place_county"] or rec["polling_place_name"]):
-            continue
-        # Skip rows already marked REMOVED — they are tracked history, not active locations
-        if rec.get("status", "").startswith("REMOVED"):
-            skipped_removed += 1
-            continue
-        baseline[_row_key(rec)] = rec
-
-    if skipped_removed:
-        print(f"  Skipped {skipped_removed} already-REMOVED row(s) from baseline")
-    print(f"  Sheet baseline: {len(baseline)} rows")
-    return baseline
-
+# Matched by location_id — the Salesforce record id — never by county/name text.
+# County+name text is display data the county can rename; the id is what's stable.
 
 def load_baseline_from_csv() -> dict[str, dict]:
-    """Fallback: read local CSV when GOOGLE_CREDENTIALS is not available."""
+    """Baseline is always the local CSV from the previous run (git-committed by CI)."""
     if not BASELINE_CSV.exists():
         return {}
     with open(BASELINE_CSV, newline="", encoding="utf-8") as f:
-        return {_row_key(row): row for row in csv.DictReader(f)
-                if row.get("polling_place_county")}
+        return {row["location_id"]: row for row in csv.DictReader(f)
+                if row.get("location_id")}
 
 
 def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
     """
-    Compare scraped data against the baseline (keyed by COUNTY||NAME).
+    Compare scraped data against the baseline (keyed by location_id).
 
-    Fields checked: county, name, address_full, hours_advanced_polling
-    ADDED   = not in baseline
-    REMOVED = disappeared from current
-    MODIFIED = field-level change on a matched row
+    Fields checked: county, name, address_full, address components, hours
+    ADDED    = location_id not in baseline
+    REMOVED  = location_id disappeared from current
+    MODIFIED = field-level change on a matched location_id
     """
     import re
 
     def _norm(s: str) -> str:
         return re.sub(r'\s+', ' ', s.strip())
 
-    current_by_key = {_row_key(r): r for r in current}
+    current_by_id = {r["location_id"]: r for r in current}
     added, removed, modified = [], [], []
 
-    for key, rec in current_by_key.items():
-        if key not in baseline:
+    for loc_id, rec in current_by_id.items():
+        if loc_id not in baseline:
             added.append(rec)
         else:
-            base    = baseline[key]
+            base    = baseline[loc_id]
             changes: dict[str, dict] = {}
             for field in ("polling_place_county", "polling_place_name",
                           "polling_place_address_full", "polling_place_address_line_1",
@@ -393,8 +360,8 @@ def compare(baseline: dict[str, dict], current: list[dict]) -> dict:
             if changes:
                 modified.append({"record": rec, "changes": changes})
 
-    for key, rec in baseline.items():
-        if key not in current_by_key:
+    for loc_id, rec in baseline.items():
+        if loc_id not in current_by_id:
             removed.append(rec)
 
     return {"added": added, "removed": removed, "modified": modified}
@@ -567,7 +534,7 @@ def send_email(diff: dict, timestamp: str):
 # ── Baseline CSV writer ───────────────────────────────────────────────────────
 
 CSV_FIELDS = [
-    "address_id", "polling_place_county", "polling_place_name",
+    "location_id", "address_id", "polling_place_county", "polling_place_name",
     "polling_place_address_full", "polling_place_address_line_1",
     "polling_place_address_city", "polling_place_address_state",
     "polling_place_address_zip", "image_url", "hours_advanced_polling",
@@ -583,29 +550,108 @@ def save_baseline(rows: list[dict]):
     print(f"  Baseline updated: {BASELINE_CSV} ({len(rows)} rows)")
 
 
+# ── Persistent per-location history (survives across runs; drives the sheet
+#    rebuild's date_added/date_removed/status columns without ever reading
+#    those back out of the sheet) ──────────────────────────────────────────
+
+_LAST_KNOWN_FIELDS = [
+    "address_id", "polling_place_county", "polling_place_name",
+    "polling_place_address_full", "polling_place_address_line_1",
+    "polling_place_address_city", "polling_place_address_state",
+    "polling_place_address_zip", "hours_advanced_polling",
+]
+
+
+def load_history() -> dict[str, dict]:
+    if not HISTORY_FILE.exists():
+        return {}
+    try:
+        return json.loads(HISTORY_FILE.read_text())
+    except Exception:
+        return {}
+
+
+def save_history(history: dict[str, dict]) -> None:
+    HISTORY_FILE.write_text(json.dumps(history, indent=2, sort_keys=True))
+
+
+def update_history(history: dict[str, dict], current: list[dict], today: str) -> dict[str, dict]:
+    """Advance history one run: refresh last_known for present ids, stamp
+    date_added for new ids, stamp date_removed (once) for ids that dropped out."""
+    current_ids = set()
+    for rec in current:
+        loc_id = rec["location_id"]
+        current_ids.add(loc_id)
+        entry = history.get(loc_id)
+        if entry is None:
+            entry = {"date_added": today, "date_removed": ""}
+            history[loc_id] = entry
+        entry["last_known"] = {f: rec.get(f, "") for f in _LAST_KNOWN_FIELDS}
+
+    for loc_id, entry in history.items():
+        if loc_id not in current_ids and not entry.get("date_removed"):
+            entry["date_removed"] = today
+
+    return history
+
+
+def build_formatted_rows(history: dict[str, dict], diff: dict, today: str) -> list[dict]:
+    """One row per location ever seen, in stable county/name order, with
+    status/date columns derived entirely from history + this run's diff —
+    never from re-reading the sheet."""
+    added_ids    = {r["location_id"] for r in diff["added"]}
+    removed_ids  = {r["location_id"] for r in diff["removed"]}
+    modified     = {e["record"]["location_id"]: e["changes"] for e in diff["modified"]}
+
+    rows = []
+    for loc_id, entry in history.items():
+        lk = entry["last_known"]
+        if loc_id in added_ids:
+            status = f"ADDED {today}"
+        elif loc_id in modified:
+            status = f"MODIFIED: {', '.join(modified[loc_id].keys())} {today}"
+        elif loc_id in removed_ids or entry.get("date_removed"):
+            status = f"REMOVED {entry['date_removed']}"
+        else:
+            status = ""
+
+        rows.append({
+            "location_id":                   loc_id,
+            "address_id":                    lk.get("address_id", ""),
+            "polling_place_county":          lk.get("polling_place_county", ""),
+            "polling_place_name":            lk.get("polling_place_name", ""),
+            "polling_place_address_full":    lk.get("polling_place_address_full", ""),
+            "polling_place_address_line_1":  lk.get("polling_place_address_line_1", ""),
+            "polling_place_address_city":    lk.get("polling_place_address_city", ""),
+            "polling_place_address_state":   lk.get("polling_place_address_state", ""),
+            "polling_place_address_zip":     lk.get("polling_place_address_zip", ""),
+            "hours_advanced_polling":        lk.get("hours_advanced_polling", ""),
+            "status":                        status,
+            "date_added":                    entry.get("date_added", ""),
+            "date_removed":                  entry.get("date_removed", ""),
+        })
+
+    rows.sort(key=lambda r: (r["polling_place_county"], r["polling_place_name"]))
+    return rows
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 async def main():
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    today     = datetime.now(timezone.utc).strftime("%m/%d/%Y")
     print(f"\n{'=' * 60}")
     print(f"GA Polling Monitor  —  {timestamp}")
     print(f"{'=' * 60}")
 
-    # 1. Load baseline — prefer Google Sheet, fall back to CSV
-    if os.getenv("GOOGLE_CREDENTIALS"):
-        print("\n[1/4] Loading baseline from Google Sheet...")
-        try:
-            baseline = load_baseline_from_sheet()
-        except Exception as e:
-            print(f"  [!] Sheet read failed ({e}), falling back to CSV...")
-            baseline = load_baseline_from_csv()
-    else:
-        print("\n[1/4] Loading baseline from CSV (no Google credentials)...")
-        baseline = load_baseline_from_csv()
+    # 1. Baseline is always the local CSV from the previous run — the sheet is
+    #    a write target now, never a read-back source of truth.
+    print("\n[1/5] Loading baseline from local CSV...")
+    baseline = load_baseline_from_csv()
     print(f"  Baseline records: {len(baseline)}")
 
     # 2. Scrape current data
-    print("\n[2/4] Scraping current data from SOS portal...")
+    print("\n[2/5] Scraping current data from SOS portal...")
     try:
         current = await scrape_current()
     except Exception as e:
@@ -614,56 +660,48 @@ async def main():
 
     print(f"  Current records: {len(current)}")
 
-    # 3. Compare
-    print("\n[3/4] Comparing...")
+    # 3. Compare (keyed by location_id)
+    print("\n[3/5] Comparing...")
     diff = compare(baseline, current)
     print(f"  Added:    {len(diff['added'])}")
     print(f"  Removed:  {len(diff['removed'])}")
     print(f"  Modified: {len(diff['modified'])}")
 
-    # Always attempt to clear resolved status tags from previous runs
-    if os.getenv("GOOGLE_CREDENTIALS"):
-        try:
-            from update_sheet import clear_resolved_statuses
-            clear_resolved_statuses(current)
-        except Exception as e:
-            print(f"  [!] Status clear failed: {e}")
+    # 4. Advance persistent history and derive the full formatted-tab row set.
+    #    This happens every run, changes or not — it's what lets ADDED/MODIFIED
+    #    status tags auto-clear the day after they stop showing up in the diff.
+    print("\n[4/5] Updating location history...")
+    history = load_history()
+    update_history(history, current, today)
+    save_history(history)
+    formatted_rows = build_formatted_rows(history, diff, today)
+    print(f"  History: {len(history)} locations tracked")
 
-    if not has_changes(diff):
-        append_to_check_log(diff, timestamp, len(current))
-        print("\n  No changes detected. Baseline unchanged.")
-        return
-
-    # 4. Handle changes
-    print(f"\n[4/4] Changes detected — updating files and notifying...")
-    append_to_log(diff, timestamp, len(current))
     save_baseline(current)
-    send_email(diff, timestamp)
 
-    # 5. Sync to Google Sheet (only runs if GOOGLE_CREDENTIALS is set)
+    # 5. Rewrite both sheet tabs wholesale (see update_sheet.py docstring for why)
     sheet_result: Optional[dict] = None
     if os.getenv("GOOGLE_CREDENTIALS"):
-        print("\n[5/5] Syncing changes to Google Sheet...")
+        print("\n[5/5] Rewriting Google Sheet tabs...")
         try:
-            from update_sheet import sync_changes
-            sheet_result = sync_changes(diff)
+            from update_sheet import write_raw_tab, rebuild_formatted_tab
+            n_raw       = write_raw_tab(current)
+            n_formatted = rebuild_formatted_tab(formatted_rows)
+            sheet_result = {"raw_rows": n_raw, "formatted_rows": n_formatted}
             print(f"  Sheet result: {sheet_result}")
         except Exception as e:
-            print(f"  [!] Sheet sync failed: {e}")
-            sheet_result = {"appended": 0, "updated": 0, "error": str(e)}
+            print(f"  [!] Sheet rewrite failed: {e}")
+            sheet_result = {"error": str(e)}
     else:
-        print("\n[5/5] GOOGLE_CREDENTIALS not set — skipping sheet sync.")
+        print("\n[5/5] GOOGLE_CREDENTIALS not set — skipping sheet rewrite.")
 
-    # Write to check log AFTER sheet sync so the result is included
     append_to_check_log(diff, timestamp, len(current), sheet_result)
 
-    # Keep local CSV in sync with the sheet after every change run
-    if os.getenv("GOOGLE_CREDENTIALS"):
-        try:
-            from update_sheet import pull_from_sheet
-            pull_from_sheet()
-        except Exception as e:
-            print(f"  [!] CSV pull from sheet failed: {e}")
+    if has_changes(diff):
+        append_to_log(diff, timestamp, len(current))
+        send_email(diff, timestamp)
+    else:
+        print("\n  No content changes today.")
 
     print("\nDone.")
 
