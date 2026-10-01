@@ -7265,5 +7265,26 @@
     ],
     "removed": [],
     "modified": []
+  },
+  {
+    "timestamp": "2026-10-01T11:18:54Z",
+    "total_records": 331,
+    "added_count": 1,
+    "removed_count": 1,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "BULLOCH",
+        "name": "BULLOCH COUNTY ANNEX",
+        "address": "113 N Main St, Statesboro, GA 30458"
+      }
+    ],
+    "removed": [
+      {
+        "county": "BULLOCH",
+        "name": "BROOKLET CITY HALL"
+      }
+    ],
+    "modified": []
   }
 ]

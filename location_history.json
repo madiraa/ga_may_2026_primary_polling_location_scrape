@@ -1141,7 +1141,7 @@
   },
   "a0v3d0000000hZoAAI": {
     "date_added": "09/29/2026",
-    "date_removed": "",
+    "date_removed": "10/01/2026",
     "last_known": {
       "address_id": "104_Church_St_Brooklet_GA_30415",
       "hours_advanced_polling": "10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
@@ -1152,6 +1152,21 @@
       "polling_place_address_zip": "30415",
       "polling_place_county": "BULLOCH",
       "polling_place_name": "BROOKLET CITY HALL"
+    }
+  },
+  "a0v3d0000000hZpAAI": {
+    "date_added": "10/01/2026",
+    "date_removed": "",
+    "last_known": {
+      "address_id": "113_N_Main_St_Statesboro_GA_30458",
+      "hours_advanced_polling": "10/13/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+      "polling_place_address_city": "Statesboro",
+      "polling_place_address_full": "113 N Main St, Statesboro, GA 30458",
+      "polling_place_address_line_1": "113 N Main St",
+      "polling_place_address_state": "GA",
+      "polling_place_address_zip": "30458",
+      "polling_place_county": "BULLOCH",
+      "polling_place_name": "BULLOCH COUNTY ANNEX"
     }
   },
   "a0v3d0000000hZqAAI": {
