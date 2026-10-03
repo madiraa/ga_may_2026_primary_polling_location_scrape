@@ -3839,6 +3839,21 @@
       "polling_place_name": "ROCKMART EARLY VOTING"
     }
   },
+  "a0v3d000001qKDYAA2": {
+    "date_added": "10/03/2026",
+    "date_removed": "",
+    "last_known": {
+      "address_id": "133_E_Washington_St_Athens_GA_30601",
+      "hours_advanced_polling": "10/13/2026 - 10/26/2026 8:00 AM - 6:00 PM (Advanced Polling Location)\n10/27/2026 - 10/30/2026 8:00 AM - 6:00 PM (Advanced Polling Location)",
+      "polling_place_address_city": "Athens",
+      "polling_place_address_full": "133 E Washington St, Athens, GA 30601",
+      "polling_place_address_line_1": "133 E Washington St",
+      "polling_place_address_state": "GA",
+      "polling_place_address_zip": "30601",
+      "polling_place_county": "CLARKE",
+      "polling_place_name": "ELECTIONS OFFICE- COSTA BUILDING"
+    }
+  },
   "a0v3d000001qKFeAAM": {
     "date_added": "09/29/2026",
     "date_removed": "",
@@ -3919,7 +3934,7 @@
     "date_removed": "",
     "last_known": {
       "address_id": "602_S_Grant_St_Fitzgerald_GA_31750",
-      "hours_advanced_polling": "10/12/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+      "hours_advanced_polling": "10/13/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
       "polling_place_address_city": "Fitzgerald",
       "polling_place_address_full": "602 S Grant St, Fitzgerald, GA 31750",
       "polling_place_address_line_1": "602 S Grant St",

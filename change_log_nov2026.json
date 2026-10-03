@@ -7286,5 +7286,32 @@
       }
     ],
     "modified": []
+  },
+  {
+    "timestamp": "2026-10-03T11:53:04Z",
+    "total_records": 332,
+    "added_count": 1,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [
+      {
+        "county": "CLARKE",
+        "name": "ELECTIONS OFFICE- COSTA BUILDING",
+        "address": "133 E Washington St, Athens, GA 30601"
+      }
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "county": "BENHILL",
+        "name": "BOARD OF ELECTIONS",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "10/12/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "10/13/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location) 10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]
