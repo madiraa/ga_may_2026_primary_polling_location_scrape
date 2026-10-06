@@ -7313,5 +7313,32 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-06T11:19:08Z",
+    "total_records": 333,
+    "added_count": 1,
+    "removed_count": 0,
+    "modified_count": 1,
+    "added": [
+      {
+        "county": "EARLY",
+        "name": "EARLY COUNTY BOARD OF ELECTIONS",
+        "address": "17 Mcdonald Ave, Blakely, GA 39823"
+      }
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "county": "CALHOUN",
+        "name": "REGISTRAR OFFICE",
+        "changes": {
+          "hours_advanced_polling": {
+            "from": "10/13/2026 - 10/26/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/27/2026 - 10/30/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+            "to": "10/13/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/19/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location) 10/26/2026 - 10/30/2026 9:00 AM - 5:00 PM (Advanced Polling Location)"
+          }
+        }
+      }
+    ]
   }
 ]

@@ -2764,7 +2764,7 @@
     "date_removed": "",
     "last_known": {
       "address_id": "31_Court_St,_Ste_F_Morgan_GA_39866",
-      "hours_advanced_polling": "10/13/2026 - 10/26/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/27/2026 - 10/30/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+      "hours_advanced_polling": "10/13/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
       "polling_place_address_city": "Morgan",
       "polling_place_address_full": "31 Court St, Ste F, Morgan, GA 39866",
       "polling_place_address_line_1": "31 Court St, Ste F",
@@ -3387,6 +3387,21 @@
       "polling_place_address_zip": "30134",
       "polling_place_county": "DOUGLAS",
       "polling_place_name": "DOUGLAS COUNTY COURTHOUSE"
+    }
+  },
+  "a0v3d000000rXgbAAE": {
+    "date_added": "10/06/2026",
+    "date_removed": "",
+    "last_known": {
+      "address_id": "17_Mcdonald_Ave_Blakely_GA_39823",
+      "hours_advanced_polling": "10/13/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 9:00 AM - 5:00 PM (Advanced Polling Location)",
+      "polling_place_address_city": "Blakely",
+      "polling_place_address_full": "17 Mcdonald Ave, Blakely, GA 39823",
+      "polling_place_address_line_1": "17 Mcdonald Ave",
+      "polling_place_address_state": "GA",
+      "polling_place_address_zip": "39823",
+      "polling_place_county": "EARLY",
+      "polling_place_name": "EARLY COUNTY BOARD OF ELECTIONS"
     }
   },
   "a0v3d000000rXgeAAE": {
