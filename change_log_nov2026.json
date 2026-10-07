@@ -7340,5 +7340,26 @@
         }
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-07T11:18:19Z",
+    "total_records": 333,
+    "added_count": 1,
+    "removed_count": 1,
+    "modified_count": 0,
+    "added": [
+      {
+        "county": "HARRIS",
+        "name": "ELECTION'S OFFICE",
+        "address": "757 Carver Cir, Hamilton, GA 31811"
+      }
+    ],
+    "removed": [
+      {
+        "county": "MARION",
+        "name": "ADVANCE VOTING"
+      }
+    ],
+    "modified": []
   }
 ]

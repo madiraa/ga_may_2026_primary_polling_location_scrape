@@ -254,6 +254,21 @@
       "polling_place_name": "WARREN RD RECREATION CENTER"
     }
   },
+  "a0v3d0000000hJNAAY": {
+    "date_added": "10/07/2026",
+    "date_removed": "",
+    "last_known": {
+      "address_id": "757_Carver_Cir_Hamilton_GA_31811",
+      "hours_advanced_polling": "10/13/2026 - 10/17/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/24/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
+      "polling_place_address_city": "Hamilton",
+      "polling_place_address_full": "757 Carver Cir, Hamilton, GA 31811",
+      "polling_place_address_line_1": "757 Carver Cir",
+      "polling_place_address_state": "GA",
+      "polling_place_address_zip": "31811",
+      "polling_place_county": "HARRIS",
+      "polling_place_name": "ELECTION'S OFFICE"
+    }
+  },
   "a0v3d0000000hJPAAY": {
     "date_added": "09/29/2026",
     "date_removed": "",
@@ -1426,7 +1441,7 @@
   },
   "a0v3d0000000hazAAA": {
     "date_added": "09/29/2026",
-    "date_removed": "",
+    "date_removed": "10/07/2026",
     "last_known": {
       "address_id": "100_E_Burkhalter_Av_Buena_Vista_GA_31803",
       "hours_advanced_polling": "10/13/2026 - 10/16/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/17/2026 - 10/17/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/19/2026 - 10/23/2026 8:00 AM - 5:00 PM (Advanced Polling Location)\n10/24/2026 - 10/24/2026 9:00 AM - 5:00 PM (Advanced Polling Location)\n10/26/2026 - 10/30/2026 8:00 AM - 5:00 PM (Advanced Polling Location)",
